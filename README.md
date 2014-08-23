@@ -1,4 +1,1 @@
-CPR
-===
-
-Website
+The website for the City of Prince Rupert. More to come...

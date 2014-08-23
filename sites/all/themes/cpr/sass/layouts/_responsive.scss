@@ -1,0 +1,5973 @@
+/**
+ * @file
+ * Positioning for a responsive layout.
+ *
+ * Define CSS classes to create a fluid grid layout with optional sidebars
+ * depending on whether blocks are placed in the left or right sidebars.
+ *
+ * This layout uses the Zen Grids plugin for Compass: http://zengrids.com
+ */
+
+// We are going to create a fluid grid with 1, 3, or 5 columns and 20px gutters
+// between columns (applied as 10px of left/right padding on each column).
+$zen-column-count:  1;
+$zen-gutter-width:  30px;
+
+// If you need IE6/7 support for box-sizing: border-box (default), see _base.scss
+//$zen-box-sizing: content-box;
+
+// You can generate more efficient CSS if you manually apply the
+// zen-grid-item-base mixin to all grid items from within a single ruleset.
+$zen-auto-include-item-base: false;
+// $zen-auto-include-flow-item-base: false;
+
+// Suppress this section of CSS for RTL layouts since it contains no LTR-specific styles.
+@if $zen-reverse-all-floats == false {
+
+/**
+ * Center the page.
+ *
+ * For screen sizes larger than 1200px, prevent excessively long lines of text
+ * by setting a max-width.
+ */
+.header-section-inner,
+.search-section-inner,
+.path-section-inner,
+.main-content-inner,
+.footer-top-inner,
+.footer-middle-inner,
+.footer-bottom-inner {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
+}
+
+/* Apply the shared properties of grid items in a single, efficient ruleset. */
+.search,
+.path,
+.main-top-column,
+.popular,
+.popular .block-title,
+.popular .views-row,
+.popular .views-field-field-image,
+.main-nav-column,
+.content-nav,
+.main-left-column,
+.news,
+.news .block-title,
+.news .views-row,
+.news .views-field-field-image,
+.news .views-field-title,
+.news .views-field-field-date,
+.news .views-field-body,
+.content-left-column,
+.sub-nav,
+.content-middle-column,
+.news-page,
+.news-page .node,
+.news-page .node-left-column,
+.news-page .node-right-column,
+.news-page .field-name-field-date,
+.news-page .field-name-body,
+.news-page .share-buttons,
+.events-page,
+.events-page .node,
+.events-page .node-left-column,
+.events-page .node-right-column,
+.events-page .info-wrapper,
+.events-page .date-wrapper,
+.events-page .time-wrapper,
+.events-page .location-wrapper,
+.events-page .field-name-body,
+.events-page .share-buttons,
+.notices-page,
+.notices-page .node,
+.notices-page .field-name-field-date,
+.notices-page .field-name-body,
+.notices-page .share-buttons,
+.main-right-column,
+.notices,
+.notices .block-title,
+.notices .views-row,
+.notices .views-field-title,
+.notices .views-field-field-date,
+.council,
+.council .block-title,
+.council #video_wrapper,
+.connect,
+.connect .block-title,
+.connect #twitter-widget-0,
+.content-right-column,
+.content,
+.content .node,
+.content .field-name-body,
+.content .profile,
+.content form,
+.content .search-results-section,
+.news-content,
+.news-content .views-row,
+.news-content .views-field-field-image,
+.news-content .views-field-title,
+.news-content .views-field-field-date,
+.news-content .views-field-body,
+.events-content,
+.events-content .views-row,
+.events-content .views-field-field-image,
+.events-content .views-field-title,
+.events-content .views-field-nothing,
+.events-content .views-field-field-link,
+.events-content .views-field-field-date,
+.events-content .views-field-body,
+.notices-content,
+.notices-content .views-row,
+.notices-content .views-field-title,
+.notices-content .views-field-field-date,
+.notices-content .views-field-body,
+.subcontent,
+.subcontent .node,
+.subcontent .field-name-field-image,
+.subcontent .node-title,
+.subcontent .field-name-body,
+.main-bottom-column,
+.events,
+.events .block-title,
+.events .views-row,
+.events .views-field-field-date,
+.events .views-field-title,
+.events .views-field-nothing,
+.events .views-field-field-link,
+.events .views-field-body,
+.footer-top,
+.footer-middle,
+.footer-bottom {
+  // See the note about $zen-auto-include-item-base above.
+  @include zen-grid-item-base();
+}
+
+/* Containers for grid items and flow items. */
+#header-section-inner,
+#search-section-inner,
+#path-section-inner,
+#main-content-inner,
+#main-top-column,
+.popular,
+.popular .views-row,
+#main-nav-column,
+#main-left-column,
+.news,
+.news .views-row,
+#content-left-column,
+#content-middle-column,
+.news-page,
+.news-page .node,
+.news-page .node-left-column,
+.news-page .node-right-column,
+.news-page .share-buttons,
+.events-page,
+.events-page .node,
+.events-page .node-left-column,
+.events-page .info-wrapper,
+.events-page .node-right-column,
+.events-page .share-buttons,
+.notices-page,
+.notices-page .node,
+.notices-page .share-buttons,
+#main-right-column,
+.notices,
+.notices .views-row,
+.council,
+.connect,
+#content-right-column,
+.content,
+.content .node,
+.news-content,
+.news-content .view,
+.news-content .views-row,
+.events-content,
+.events-content .view,
+.events-content .views-row,
+.notices-content,
+.notices-content .view,
+.notices-content .views-row,
+.subcontent,
+.subcontent .node,
+#main-bottom-column,
+.events,
+.events .views-row,
+#footer-top-inner,
+#footer-middle-inner,
+#footer-bottom-inner {
+  @include zen-grid-container();
+}
+
+} // End of @if $zen-reverse-all-floats == true
+
+/**
+ * Use 12 grid columns for smaller screens.
+ */
+@media all and (max-width: 479px) {
+  
+  $zen-column-count: 12;
+
+  /**
+   * The layout for the header section
+   */
+  .header-section {
+    width: 100%;
+  }
+
+  .header-section-inner {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .logo {
+    padding: 10px 15px 10px 15px;
+    float: left;
+    max-width: 75px;
+
+    img {
+      max-width: 75px;
+      height: auto;
+    }
+  }
+
+  .main-nav {
+    display: none;
+  }
+
+  .tablet-btn {
+    display: none;
+  }
+
+  .mobile-btn {
+
+    span {
+      float: right;
+      padding: 23px;
+      font-size: 1.9em;
+      margin-right: 15px;
+    }
+  }
+
+  .search-btn {
+    display: none;
+  }
+
+  .search-section {
+    display: none !important;
+  }
+
+  .tablet-nav {
+    display: none !important;
+  }
+
+  .mobile-nav {
+    display: none;
+    width: 100%;
+
+    .mobile-search {
+      padding: 10px 30px 10px 30px;
+
+      .form-item label {
+        display: none;
+      }
+
+      .form-item input {
+        width: 75%;
+        height: 35px;
+        font-size: 1.8em;
+      }
+
+      .form-actions input {
+        width: 20%;
+        height: 35px;
+        font-size: 1em;
+        float: right;
+      }
+    }
+
+    .mobile-mainnav {
+
+      .menu {
+
+        li {
+            
+          a { 
+            padding: 15px 30px 15px 30px;
+            font-size: 1.4em;
+            line-height: 1.2em;
+          }
+        }
+
+        .menu {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .weather-btn {
+    display: none;
+  }
+  /**
+   * End of the layout for the header section
+   */
+
+  /**
+   * The layout for the top section
+   */
+  .council {
+    display: none;
+  }
+
+  .connect {
+    display: none;
+  }
+
+  .gallery {
+    position: relative;
+
+    .views-slideshow-cycle-main-frame {
+      width: 100% !important;
+      height: 250px !important;
+    }
+
+    .views-slideshow-cycle-main-frame-row {
+      width: 100% !important;
+      height: 250px !important;
+    }
+
+    .views-field-uri {
+
+      .gallery-background {
+        width: 100%;
+        height: 250px;
+      }
+    }
+
+    .views-field-body {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+
+      .field-content {
+        padding-left: 60px;
+        padding-right: 60px;
+        
+        a {
+          font-size: 2.4em;
+        }
+
+        p {
+          display: none;
+        }
+
+        .dots {
+          display: none;
+        }
+      }
+    }
+
+    .views-slideshow-controls-bottom {
+      display: none;
+    }
+  }
+  /**
+   * End of the layout for the top section
+   */
+  
+  /**
+   * The layout for the path section
+   */
+  .path-section {
+    width: 100%;
+  }
+
+  .path-section-inner {
+    padding: 10px 15px 10px 15px;
+  }
+
+  .path {
+    @include zen-grid-item(12, 1);
+    font-size: 1.2em;
+    line-height: 2em;
+
+    li {
+      padding: 0 10px 0 0;
+    }
+
+    a {
+      padding-right: 10px;
+    }
+  }
+  /**
+   * End of the layout for the path section
+   */
+  
+  /**
+   * The layout for the main content section
+   */
+  .main-content {
+    width: 100%;
+  }
+
+  .main-content-inner {
+    padding: 0 15px 60px 15px;
+  }
+
+  .main-content-padding {
+    padding-bottom: 0;
+  }
+  /**
+   * End of the layout for the main content section
+   */
+
+  /**
+   * The layout for the main top section
+   */
+  .main-top-column {
+    display: none;
+  }
+  /**
+   * End of the layout for the main top section
+   */
+
+  /**
+   * The layout for the main nav column section
+   */
+  .main-nav-column {
+    @include zen-clear();
+    @include zen-grid-item(12, 1);
+    margin-top: 30px;
+  }
+
+  .content-nav {
+    @include zen-grid-item(12, 1);
+    @include zen-nested-container();
+    margin-bottom: 30px;
+
+    .menu {
+
+      li {
+          
+        span {
+          width: 50%;
+          padding-left: 5px;
+          padding-right: 5px;
+          float: left;
+
+          .block-title {
+            font-size: 2em;
+            line-height: 2em;
+          }
+        }
+
+        #firstTab {
+          color: #0094BF;
+          border-top: 1px solid #0094BF;
+        }
+      }
+    }
+  }
+  /**
+   * End of the layout for the main nav column section
+   */
+
+  /**
+   * The layout for the main left section
+   */
+  .main-left-column {
+    @include zen-clear();
+    @include zen-grid-item(12, 1);
+  }
+  /**
+   * End of the layout for the main left section
+   */
+
+  /**
+   * The layout for the events section
+   */
+  .events {
+    @include zen-grid-item(12, 1);
+    @include zen-nested-container();
+
+    .block-title {
+      @include zen-grid-item(12, 1);
+      @include zen-nested-container();
+      font-size: 2em;
+      line-height: 2em;
+    }
+
+    .views-row {
+      @include zen-clear();
+      @include zen-grid-item(12, 1);
+      @include zen-nested-container();
+      padding-top: 30px;
+
+      .views-field-field-image {
+        @include zen-grid-item(12, 1);
+        @include zen-nested-container();
+
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      .views-field-field-date {
+        @include zen-grid-item(12, 1);
+        @include zen-nested-container();
+        font-size: 1.6em;
+        padding: 15px 10px 15px 10px;
+      }
+
+      .views-field-title {
+        @include zen-clear();
+        @include zen-grid-item(12, 1);
+        font-size: 1.6em;
+        padding-top: 15px;
+      }
+
+      .views-field-nothing {
+        @include zen-clear();
+        @include zen-grid-item(12, 1);
+        font-size: 2.4em;
+        padding-top: 10px;
+      }
+
+      .views-field-field-link {
+        @include zen-clear();
+        @include zen-grid-item(12, 1);
+        font-size: 1.4em;
+        padding-bottom: 15px;
+        border-bottom: 3px solid #cccccc;
+      }
+
+      .views-field-body {
+        display: none;
+      }
+    }
+  }
+  /**
+   * The layout for the events section
+   */
+
+  /**
+  * The layout for the content left section
+  */
+  .content-left-column {
+    @include zen-grid-item(12, 1);
+    padding-top: 30px;
+  }
+  /**
+   * End of the layout for the content left section
+   */
+
+  /**
+   * The layout for the news section
+   */
+  .news {
+    @include zen-grid-item(12, 1);
+    @include zen-nested-container();
+
+    .block-title {
+      display: none;
+    }
+
+    .page-title {
+      font-size: 3.2em;
+      line-height: 1em;
+      padding-bottom: 15px;
+    }
+
+    @include zen-grid-item(12, 1);
+    @include zen-nested-container();
+
+    .block-title {
+      @include zen-grid-item(12, 1);
+      @include zen-nested-container();
+      font-size: 2em;
+      line-height: 2em;
+      margin-bottom: 30px;
+    }
+
+    .page-title {
+      font-size: 3.8em;
+      line-height: 1em;
+      padding-bottom: 15px;
+    }
+
+    .views-row {
+      @include zen-clear();
+      @include zen-grid-item(12, 1);
+      @include zen-nested-container();
+      padding-top: 15px;
+      padding-bottom: 15px;
+      border-bottom: 1px dotted #cccccc;
+
+      .views-field-field-image {
+        @include zen-grid-item(5, 1);
+        @include zen-nested-container();
+
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      .views-field-title {
+        @include zen-grid-item(7, 6);
+        float: none;
+        font-size: 1.6em;
+      }
+
+      .views-field-field-date {
+        @include zen-grid-item(7, 6);
+        float: none;
+        font-size: 1.2em;
+      }
+
+      .views-field-body {
+        display: none;
+      }
+    }
+
+    .views-row-first {
+      padding-top: 0;
+    }
+
+    .views-row-last {
+      padding-bottom: 0;
+    }
+
+    .views-row-last {
+      border-bottom: none;
+    }
+  }
+  /**
+   * The layout for the news section
+   */
+
+  /**
+  * The layout for the main right section
+  */
+  .main-right-column {
+    display: none;
+    @include zen-clear();
+    @include zen-grid-item(12, 1);
+  }
+  /**
+   * End of the layout for the main right section
+   */
+
+  /**
+  * The layout for the main bottom section
+  */
+  .main-bottom-column {
+    @include zen-clear();
+    @include zen-grid-item(12, 1);
+    margin-top: 60px;
+  }
+  /**
+   * End of the layout for the main bottom section
+   */
+
+  /**
+  * The layout for the notices section
+  */
+  .notices {
+    @include zen-clear();
+    @include zen-grid-item(12, 1);
+    @include zen-nested-container();
+
+    .block-title {
+      display: none;
+    }
+
+    .views-row {
+      @include zen-clear();
+      @include zen-grid-item(12, 1);
+      @include zen-nested-container();
+      padding-top: 10px;
+      padding-bottom: 10px;
+
+      .views-field-title {
+        @include zen-grid-item(12, 1);
+        font-size: 1.6em;
+      }
+
+      .views-field-field-date {
+        @include zen-clear();
+        @include zen-grid-item(12, 1);
+        font-size: 1.2em;
+      }
+    }
+  }
+  /**
+  * End of the layout for the notices section
+  */
+
+  /**
+  * The layout for the content middle section
+  */
+  .content-middle-column {
+    @include zen-grid-item(12, 1);
+    padding-top: 30px;
+  }
+  /**
+   * End of the layout for the content middle section
+   */
+
+  /**
+  * The layout for the content right section
+  */
+  .content-right-column {
+    display: none;
+  }
+  /**
+   * End of the layout for the content right section
+   */
+
+  /**
+  * The layout for the content section
+  */
+  .section-background {
+    display: none;
+  }
+
+  .error-background {
+    width: 100%;
+    height: 250px;
+    position: relative;
+
+    .page-title {
+      position: absolute;
+      top: 40%;
+      width: 100%;
+      font-size: 3.2em;
+    }
+  }
+
+  .content-background {
+    width: 100%;
+    height: 250px;
+  }
+
+  .content {
+    @include zen-grid-item(12, 1);
+    @include zen-nested-container();
+
+    .page-title {
+      font-size: 3.2em;
+      line-height: 1em;
+      padding-bottom: 10px;
+      margin-bottom: 30px;
+    }
+
+    .profile {
+      @include zen-clear();
+      @include zen-grid-item(12, 1);
+      @include zen-nested-container();
+      font-size: 1.4em;
+
+      h3 {
+        margin-top: 0;
+      }
+    }
+
+    form {
+      @include zen-clear();
+      @include zen-grid-item(12, 1);
+      @include zen-nested-container();
+      font-size: 1.4em;
+
+      .form-item {
+        margin-top: 0;
+      }
+    }
+
+    .search-results-section {
+      @include zen-clear();
+      @include zen-grid-item(12, 1);
+      @include zen-nested-container();
+      font-size: 1.4em;
+
+      h2 {
+        margin-top: 0;
+      }
+    }
+
+    .node {
+      @include zen-grid-item(12, 1);
+      @include zen-nested-container();
+
+      .field-name-body {
+        @include zen-grid-item(12, 1);
+        @include zen-nested-container();
+        font-size: 1.4em;
+
+        h3 {
+          font-size: 1.2em;
+          margin-top: 0;
+          margin-bottom: 0;
+        }
+
+        table {
+          width: 100%;
+          margin-top: 0;
+          margin-bottom: 0;
+
+          th {
+            padding: 5px;
+          }
+
+          td {
+            padding: 5px;
+          }
+        }
+
+        .btn {
+          padding: 10px 15px;
+        }
+
+        ul {
+          margin-top: 0;
+          margin-bottom: 0;
+        }
+
+        p {
+          margin-top: 0;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  /**
+  * End of the layout for the content section
+  */
+
+  /**
+  * The layout for the subcontent section
+  */
+  .subcontent {
+    @include zen-clear();
+    @include zen-grid-item(12, 1);
+    @include zen-nested-container();
+    
+    .block {
+      margin-left: -15px;
+      margin-right: -15px;
+    }
+
+    .node:nth-child(2n + 1) {
+      @include zen-clear();
+      @include zen-grid-item(6, 1);
+    }
+
+    .node:nth-child(2n + 2) {
+      @include zen-grid-item(6, 7);
+    }
+
+    .node {
+      @include zen-nested-container();
+      padding-top: 30px;
+
+      .field-name-field-image {
+        @include zen-grid-item(12, 1);
+
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      .node-title {
+        @include zen-clear();
+        @include zen-grid-item(12, 1);
+        font-size: 1.6em;
+      }
+
+      .field-name-body {
+        @include zen-clear();
+        @include zen-grid-item(12, 1);
+        font-size: 1.2em;
+
+        p {
+          margin-top: 0;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  /**
+  * End of the layout for the subcontent section
+  */
+
+  /**
+   * The layout for the news section
+   */
+  .news-content {
+    @include zen-grid-item(12, 1);
+    @include zen-nested-container();
+
+    .page-title {
+      font-size: 3.2em;
+      line-height: 1em;
+      padding-bottom: 10px;
+      margin-bottom: 30px;
+    }
+
+    .views-row {
+      @include zen-clear();
+      @include zen-grid-item(12, 1);
+      @include zen-nested-container();
+      padding-top: 15px;
+      padding-bottom: 15px;
+      border-bottom: 1px dotted #cccccc;
+
+      .views-field-field-image {
+        @include zen-grid-item(5, 1);
+        @include zen-nested-container();
+
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      .views-field-title {
+        @include zen-grid-item(7, 6);
+        float: none;
+        font-size: 1.6em;
+      }
+
+      .views-field-field-date {
+        @include zen-grid-item(7, 6);
+        float: none;
+        font-size: 1.2em;
+      }
+
+      .views-field-body {
+        display: none;
+      }
+    }
+
+    .views-row-first {
+      padding-top: 0;
+    }
+
+    .views-row-last {
+      padding-bottom: 0;
+    }
+
+    .views-row-last {
+      border-bottom: none;
+    }
+  }
+  /**
+   * End of the layout for the news section
+   */
+
+  /**
+   * End of the layout for the news section
+   */
+  .news-page {
+    @include zen-grid-item(12, 1);
+    @include zen-nested-container();
+
+    .page-title {
+      font-size: 3.2em;
+      line-height: 1em;
+      padding-bottom: 15px;
+    }
+
+    .node {
+      @include zen-grid-item(12, 1);
+      @include zen-nested-container();
+
+      .node-left-column {
+        @include zen-grid-item(12, 1);
+        @include zen-nested-container();
+
+        .field-name-field-date { 
+          @include zen-grid-item(12, 1);
+          @include zen-nested-container();
+          font-size: 1.6em;
+        }
+
+        .field-name-body {
+          @include zen-clear();
+          @include zen-grid-item(12, 1);
+          @include zen-nested-container();
+          font-size: 1.4em;
+          padding-top: 30px;
+          padding-bottom: 30px;
+
+          h3 {
+            font-size: 1.2em;
+            margin-top: 0;
+            margin-bottom: 0;
+          }
+
+          table {
+            width: 100%;
+            margin-top: 0;
+            margin-bottom: 0;
+
+            th {
+              padding: 5px;
+            }
+
+            td {
+              padding: 5px;
+            }
+          }
+
+          .btn {
+            padding: 10px 15px;
+          }
+
+          ul {
+            margin-top: 0;
+            margin-bottom: 0;
+          }
+
+          p {
+            margin-top: 0;
+            margin-bottom: 0;
+          }
+        }
+      }
+
+      .node-right-column {
+        display: none;
+      }
+    }
+
+    .share-buttons {
+      @include zen-clear();
+      @include zen-grid-item(12, 1);
+      @include zen-nested-container();
+
+      a {
+        font-size: 3.2em;
+      }
+    }
+  }
+  /**
+   * End of the layout for the news section
+   */
+
+  /**
+   * The layout for the events section
+   */
+  .events-content {
+    @include zen-grid-item(12, 1);
+    @include zen-nested-container();
+
+    .page-title {
+      font-size: 3.2em;
+      line-height: 1em;
+      padding-bottom: 10px;
+    }
+
+    .views-row {
+      @include zen-clear();
+      @include zen-grid-item(12, 1);
+      @include zen-nested-container();
+      padding-top: 30px;
+
+      .views-field-field-image {
+        @include zen-grid-item(12, 1);
+        @include zen-nested-container();
+
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      .views-field-field-date {
+        @include zen-grid-item(12, 1);
+        @include zen-nested-container();
+        font-size: 1.6em;
+        padding: 15px 10px 15px 10px;
+      }
+
+      .views-field-title {
+        @include zen-clear();
+        @include zen-grid-item(12, 1);
+        font-size: 1.6em;
+        padding-top: 15px;
+      }
+
+      .views-field-nothing {
+        @include zen-clear();
+        @include zen-grid-item(12, 1);
+        font-size: 2.4em;
+        padding-top: 10px;
+      }
+
+      .views-field-field-link {
+        @include zen-clear();
+        @include zen-grid-item(12, 1);
+        font-size: 1.4em;
+        padding-bottom: 15px;
+        border-bottom: 3px solid #cccccc;
+      }
+
+      .views-field-body {
+        display: none;
+      }
+    }
+  }
+  /**
+   * End of the layout for the events section
+   */
+
+  /**
+   * The layout for the events section
+   */
+  .events-page {
+    @include zen-grid-item(12, 1);
+    @include zen-nested-container();
+
+    .page-title {
+      font-size: 3.2em;
+      line-height: 1em;
+      padding-bottom: 30px;
+    }
+
+    .node {
+      @include zen-clear();
+      @include zen-grid-item(12, 1);
+      @include zen-nested-container();
+
+      .node-left-column {
+        @include zen-grid-item(12, 1);
+        @include zen-nested-container();
+
+        .info-wrapper {
+          @include zen-grid-item(12, 1);
+          @include zen-nested-container();
+          padding-top: 15px;
+          padding-bottom: 15px;
+
+          .date-wrapper {
+            @include zen-grid-item(4, 1);
+            @include zen-nested-container();
+
+            .icon-calendar {
+              font-size: 2.4em;
+            }
+
+            .field-name-field-date {
+              font-size: 1.6em;
+            }
+          }
+
+          .time-wrapper {
+            @include zen-grid-item(4, 5);
+            @include zen-nested-container();
+
+            .icon-clock {
+              font-size: 2.4em;
+            }
+
+            .field-name-field-time {
+              font-size: 1.6em;
+            }
+          }
+
+          .location-wrapper {
+            @include zen-grid-item(4, 9);
+            @include zen-nested-container();
+
+            .icon-location {
+              font-size: 2.4em;
+            }
+
+            .field-name-field-link {
+              font-size: 1.6em;
+            }
+          }
+        }
+
+        .field-name-body {
+          @include zen-clear();
+          @include zen-grid-item(12, 1);
+          @include zen-nested-container();
+          padding-top: 30px;
+          padding-bottom: 30px;
+          font-size: 1.4em;
+
+          h3 {
+            font-size: 1.2em;
+            margin-top: 0;
+            margin-bottom: 0;
+          }
+
+          table {
+            width: 100%;
+            margin-top: 0;
+            margin-bottom: 0;
+
+            th {
+              padding: 5px;
+            }
+
+            td {
+              padding: 5px;
+            }
+          }
+
+          .btn {
+            padding: 10px 15px;
+          }
+
+          ul {
+            margin-top: 0;
+            margin-bottom: 0;
+          }
+
+          p {
+            margin-top: 0;
+            margin-bottom: 0;
+          }
+        }
+      }
+
+      .node-right-column {
+        display: none;
+      }     
+    }
+
+    .share-buttons { 
+      @include zen-clear();
+      @include zen-grid-item(12, 1);
+      @include zen-nested-container();
+
+      a {
+        font-size: 3.2em;
+      }
+    }
+  }
+  /**
+   * End of the layout for the events section
+   */
+
+  /**
+   * The layout for the notices section
+   */
+  .notices-content {
+    @include zen-grid-item(12, 1);
+    @include zen-nested-container();
+
+    .page-title {
+      font-size: 3.2em;
+      line-height: 1em;
+      padding-bottom: 10px;
+      margin-bottom: 30px;
+    }
+
+    .views-row {
+      @include zen-clear();
+      @include zen-grid-item(12, 1);
+      @include zen-nested-container();
+      padding-top: 15px;
+      padding-bottom: 15px;
+
+      .views-field-title {
+        @include zen-grid-item(12, 1);
+        @include zen-nested-container();
+        font-size: 1.6em;
+      }
+
+      .views-field-field-date {
+        @include zen-clear();
+        @include zen-grid-item(12, 1);
+        @include zen-nested-container();
+        font-size: 1.2em;
+      }
+    }
+
+    .views-row-first {
+      padding-top: 0;
+    }
+
+    .views-row-last {
+      padding-bottom: 0;
+    }
+  }
+  /**
+   * The layout for the notices section
+   */
+
+  /**
+   * End of the layout for the notices section
+   */
+  .notices-page {
+    @include zen-grid-item(12, 1);
+    @include zen-nested-container();
+
+    .page-title {
+      font-size: 3.2em;
+      line-height: 1em;
+      padding-bottom: 15px;
+    }
+
+    .node {
+      @include zen-grid-item(12, 1);
+      @include zen-nested-container();
+
+      .field-name-field-date { 
+        @include zen-clear();
+        @include zen-grid-item(12, 1);
+        @include zen-nested-container();
+        font-size: 1.6em;
+      }
+
+      .field-name-body {
+        @include zen-clear();
+        @include zen-grid-item(12, 1);
+        @include zen-nested-container();
+        font-size: 1.4em;
+        padding-top: 30px;
+        padding-bottom: 30px;
+
+        h3 {
+          font-size: 1.2em;
+          margin-top: 0;
+          margin-bottom: 0;
+        }
+
+        table {
+          width: 100%;
+          margin-top: 0;
+          margin-bottom: 0;
+
+          th {
+            padding: 5px;
+          }
+
+          td {
+            padding: 5px;
+          }
+        }
+
+        .btn {
+          padding: 10px 15px;
+        }
+
+        ul {
+          margin-top: 0;
+          margin-bottom: 0;
+        }
+
+        p {
+          margin-top: 0;
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .share-buttons {
+      @include zen-clear();
+      @include zen-grid-item(12, 1);
+      @include zen-nested-container();
+
+      a {
+        font-size: 3.2em;
+      }
+    }
+  }
+  /**
+   * End of the layout for the notices section
+   */
+  
+  /**
+   * The layout for the footer section
+   */
+  .footer-top-outter {
+    width: 100%;
+  }
+
+  .footer-middle-outter {
+    width: 100%;
+  }
+
+  .footer-bottom-outter {
+    width: 100%;
+  }
+
+  .footer-top-inner {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .footer-middle-inner {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .footer-bottom-inner {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .footer-top {
+    @include zen-grid-item(12, 1);
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    ul {
+      font-size: 1.2em;
+      margin: 0;
+      padding: 0;
+
+      a {
+        line-height: 3.2em;
+        padding: 0 10px;
+      }
+    }
+  }
+
+  .footer-middle {
+    @include zen-clear();
+    @include zen-grid-item(12, 1);
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    ul {
+      font-size: 1.4em;
+      margin: 0;
+      padding: 0;
+
+      a {
+        padding: 20px 30px;
+
+        span {
+          font-size: 2.4em;
+          padding-bottom: 10px;
+        }
+      }
+    }
+  }
+
+  .footer-bottom {
+    @include zen-clear();
+    @include zen-grid-item(12, 1);
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    p {
+      line-height: 3.2em;
+      font-size: 1em;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+  /**
+   * End of the layout for the footer section
+   */
+}
+
+/**
+ * Use 12 grid columns for smaller screens.
+ */
+@media all and (min-width: 480px) and (max-width: 767px) {
+
+  $zen-column-count: 12;
+  
+  /**
+   * The layout for the header section
+   */
+  .header-section {
+    width: 100%;
+  }
+
+  .header-section-inner {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .logo {
+    padding: 10px 15px 10px 15px;
+    float: left;
+    max-width: 75px;
+
+    img {
+      max-width: 75px;
+      height: auto;
+    }
+  }
+
+  .main-nav {
+    display: none;
+  }
+
+  .tablet-btn {
+    display: none;
+  }
+
+  .mobile-btn {
+
+    span {
+      float: right;
+      padding: 23px;
+      font-size: 1.9em;
+      margin-right: 15px;
+    }
+  }
+
+  .search-btn {
+    display: none;
+  }
+
+  .search-section {
+    display: none !important;
+  }
+
+  .tablet-nav {
+    display: none !important;
+  }
+
+  .mobile-nav {
+    display: none;
+    width: 100%;
+
+    .mobile-search {
+      padding: 10px 30px 10px 30px;
+
+      .form-item label {
+        display: none;
+      }
+
+      .form-item input {
+        width: 80%;
+        height: 35px;
+        font-size: 1.8em;
+      }
+
+      .form-actions input {
+        width: 15%;
+        height: 35px;
+        font-size: 1em;
+        float: right;
+      }
+    }
+
+    .mobile-mainnav {
+
+      .menu {
+
+        li {
+            
+          a { 
+            padding: 15px 30px 15px 30px;
+            font-size: 1.4em;
+            line-height: 1.2em;
+          }
+        }
+
+        .menu {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .weather-btn {
+    float: right;
+
+    a {
+      padding: 0 23px;
+      line-height: 65px;
+      font-size: 1.9em;
+    }
+  }
+  /**
+   * End of the layout for the header section
+   */
+
+  /**
+   * The layout for the top section
+   */
+  .council {
+    display: none;
+  }
+
+  .connect {
+    display: none;
+  }
+
+  .gallery {
+    position: relative;
+
+    .views-slideshow-cycle-main-frame {
+      width: 100% !important;
+      height: 300px !important;
+    }
+
+    .views-slideshow-cycle-main-frame-row {
+      width: 100% !important;
+      height: 300px !important;
+    }
+
+    .views-field-uri {
+
+      .gallery-background {
+        width: 100%;
+        height: 300px;
+      }
+    }
+
+    .views-field-body {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+
+      .field-content {
+        padding-left: 60px;
+        padding-right: 60px;
+        
+        a {
+          font-size: 2.8em;
+        }
+
+        p {
+          display: none;
+        }
+
+        .dots {
+          display: none;
+        }
+      }
+    }
+
+    .views-slideshow-controls-bottom {
+      display: none;
+    }
+  }
+  /**
+   * End of the layout for the top section
+   */
+  
+  /**
+   * The layout for the path section
+   */
+  .path-section {
+    width: 100%;
+  }
+
+  .path-section-inner {
+    padding: 10px 15px 10px 15px;
+  }
+
+  .path {
+    @include zen-grid-item(12, 1);
+    font-size: 1.2em;
+    line-height: 2em;
+
+    li {
+      padding: 0 10px 0 0;
+    }
+
+    a {
+      padding-right: 10px;
+    }
+  }
+  /**
+   * End of the layout for the path section
+   */
+  
+  /**
+   * The layout for the main content section
+   */
+  .main-content {
+    width: 100%;
+  }
+
+  .main-content-inner {
+    padding: 0 15px 60px 15px;
+  }
+
+  .main-content-padding {
+    padding-bottom: 0;
+  }
+  /**
+   * End of the layout for the main content section
+   */
+
+  /**
+   * The layout for the main top section
+   */
+  .main-top-column {
+    @include zen-clear();
+    @include zen-grid-item(12, 1);
+    margin-top: 30px;
+    margin-bottom: 60px;
+  }
+  /**
+   * End of the layout for the main top section
+   */
+
+  /**
+   * The layout for the popular section
+   */
+  .popular {
+    @include zen-grid-item(12, 1);
+    @include zen-nested-container();
+
+    .block-title {
+      @include zen-grid-item(12, 1);
+      font-size: 2em;
+      line-height: 2em;
+      margin-bottom: 30px;
+    }
+
+    .views-row-1 {
+      @include zen-clear();
+      @include zen-grid-item(4, 1);
+    }
+
+    .views-row-2 {
+      @include zen-grid-item(4, 5);
+    }
+
+    .views-row-3 {
+      @include zen-grid-item(4, 9);
+    }
+
+    .views-row-4 {
+      @include zen-clear();
+      @include zen-grid-item(4, 1);
+    }
+
+    .views-row-5 {
+      @include zen-grid-item(4, 5);
+    }
+
+    .views-row-6 {
+      @include zen-grid-item(4, 9);
+    }
+
+    .views-row-7 {
+      display: none;
+    }
+
+    .views-row-8 {
+      display: none;
+    }
+
+    .views-row {
+      @include zen-nested-container();
+      position: relative;
+
+      .views-field-field-image {
+        @include zen-grid-item(12, 1);
+        @include zen-nested-container();
+
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      .views-field-title {
+        font-size: 1.4em;
+        line-height: 1.2em;
+
+        a {
+          position: absolute;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          padding: 10px;
+        }
+      }
+    }
+  }
+  /**
+   * End of the layout for the popular section
+   */
+
+  /**
+   * The layout for the main nav column section
+   */
+  .main-nav-column {
+    @include zen-clear();
+    @include zen-grid-item(12, 1);
+  }
+
+  .content-nav {
+    @include zen-grid-item(12, 1);
+    @include zen-nested-container();
+
+    .menu {
+
+      li {
+          
+        span {
+          width: 50%;
+          padding-left: 5px;
+          padding-right: 5px;
+          float: left;
+
+          .block-title {
+            font-size: 2em;
+            line-height: 2em;
+          }
+        }
+
+        #firstTab {
+          color: #0094BF;
+          border-top: 1px solid #0094BF;
+        }
+      }
+    }
+  }
+  /**
+   * End of the layout for the main nav column section
+   */
+
+  /**
+   * The layout for the main left section
+   */
+  .main-left-column {
+    @include zen-clear();
+    @include zen-grid-item(12, 1);
+  }
+  /**
+   * End of the layout for the main left section
+   */
+
+  /**
+   * The layout for the events section
+   */
+  .events {
+    @include zen-grid-item(12, 1);
+    @include zen-nested-container();
+
+    .block-title {
+      @include zen-grid-item(12, 1);
+      @include zen-nested-container();
+      font-size: 2em;
+      line-height: 2em;
+    }
+
+    .view {
+      margin-left: -15px;
+      margin-right: -15px;
+    }
+
+    .views-row-1 {
+      @include zen-clear();
+      @include zen-grid-item(6, 1);
+    }
+
+    .views-row-2 {
+      @include zen-grid-item(6, 7);
+    }
+
+    .views-row-3 {
+      @include zen-clear();
+      @include zen-grid-item(6, 1);
+    }
+
+    .views-row-4 {
+      @include zen-grid-item(6, 7);
+    }
+
+    .views-row {
+      padding-top: 30px;
+
+      .views-field-field-image {
+        @include zen-grid-item(12, 1);
+        @include zen-nested-container();
+
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      .views-field-field-date {
+        @include zen-grid-item(12, 1);
+        @include zen-nested-container();
+        font-size: 1.6em;
+        padding: 15px 10px 15px 10px;
+      }
+
+      .views-field-title {
+        @include zen-clear();
+        @include zen-grid-item(12, 1);
+        font-size: 1.6em;
+        padding-top: 15px;
+      }
+
+      .views-field-nothing {
+        @include zen-clear();
+        @include zen-grid-item(12, 1);
+        font-size: 2.4em;
+        padding-top: 10px;
+      }
+
+      .views-field-field-link {
+        @include zen-clear();
+        @include zen-grid-item(12, 1);
+        font-size: 1.4em;
+        padding-bottom: 15px;
+      }
+
+      .views-field-body {
+        @include zen-clear();
+        @include zen-grid-item(12, 1);
+        font-size: 1.2em;
+
+        p {
+          margin-top: 0;
+          margin-bottom: 0;
+          padding-top: 15px;
+          padding-bottom: 15px;
+          border-top: 1px solid #cccccc;
+        }
+      }
+    }
+  }
+  /**
+   * The layout for the events section
+   */
+
+  /**
+  * The layout for the content left section
+  */
+  .content-left-column {
+    @include zen-grid-item(12, 1);
+    padding-top: 30px;
+  }
+  /**
+   * End of the layout for the content left section
+   */
+
+  /**
+   * The layout for the news section
+   */
+  .news {
+    @include zen-grid-item(12, 1);
+    @include zen-nested-container();
+
+    .block-title {
+      display: none;
+    }
+
+    .page-title {
+      font-size: 3.2em;
+      line-height: 1em;
+      padding-bottom: 15px;
+    }
+
+    .view {
+      margin-left: -15px;
+      margin-right: -15px;
+    }
+
+    .views-row-1 {
+      @include zen-clear();
+      @include zen-grid-item(6, 1);
+    }
+
+    .views-row-2 {
+      @include zen-grid-item(6, 7);
+    }
+
+    .views-row-3 {
+      @include zen-clear();
+      @include zen-grid-item(6, 1);
+    }
+
+    .views-row-4 {
+      @include zen-grid-item(6, 7);
+    }
+
+    .views-row-5 {
+      display: none;
+    }
+
+    .views-row {
+      padding-top: 30px;
+
+      .views-field-field-image {
+        @include zen-grid-item(12, 1);
+        @include zen-nested-container();
+
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      .views-field-title {
+        @include zen-clear();
+        @include zen-grid-item(12, 1);
+        @include zen-nested-container();
+        font-size: 1.6em;
+        padding-top: 10px;
+      }
+
+      .views-field-field-date {
+        @include zen-clear();
+        @include zen-grid-item(12, 1);
+        @include zen-nested-container();
+        font-size: 1.2em;
+      }
+
+      .views-field-body {
+        @include zen-clear();
+        @include zen-grid-item(12, 1);
+        @include zen-nested-container();
+        font-size: 1.2em;
+
+        p {
+          margin-top: 0;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  /**
+   * The layout for the news section
+   */
+
+  /**
+  * The layout for the main right section
+  */
+  .main-right-column {
+    display: none;
+    @include zen-clear();
+    @include zen-grid-item(12, 1);
+  }
+  /**
+   * End of the layout for the main right section
+   */
+
+  /**
+  * The layout for the main bottom section
+  */
+  .main-bottom-column {
+    @include zen-clear();
+    @include zen-grid-item(12, 1);
+    margin-top: 60px;
+  }
+  /**
+   * End of the layout for the main bottom section
+   */
+
+  /**
+  * The layout for the notices section
+  */
+  .notices {
+    @include zen-grid-item(12, 1);
+    @include zen-nested-container();
+    margin-top: 30px;
+
+    .block-title {
+      display: none;
+    }
+
+    .views-row {
+      @include zen-clear();
+      @include zen-grid-item(12, 1);
+      @include zen-nested-container();
+      padding-top: 10px;
+      padding-bottom: 10px;
+
+      .views-field-title {
+        @include zen-grid-item(12, 1);
+        font-size: 1.6em;
+      }
+
+      .views-field-field-date {
+        @include zen-clear();
+        @include zen-grid-item(12, 1);
+        font-size: 1.2em;
+      }
+    }
+  }
+  /**
+  * End of the layout for the notices section
+  */
+
+  /**
+  * The layout for the content middle section
+  */
+  .content-middle-column {
+    @include zen-grid-item(12, 1);
+    padding-top: 30px;
+  }
+  /**
+   * End of the layout for the content middle section
+   */
+
+  /**
+  * The layout for the content right section
+  */
+  .content-right-column {
+    display: none;
+  }
+  /**
+   * End of the layout for the content right section
+   */
+
+  /**
+  * The layout for the content section
+  */
+  .section-background {
+    width: 100%;
+    height: 200px;
+    position: relative;
+
+    .page-title {
+      position: absolute;
+      top: 40%;
+      width: 100%;
+      font-size: 3.2em;
+    }
+  }
+
+  .error-background {
+    width: 100%;
+    height: 300px;
+    position: relative;
+
+    .page-title {
+      position: absolute;
+      top: 40%;
+      width: 100%;
+      font-size: 3.2em;
+    }
+  }
+
+  .content-background {
+    width: 100%;
+    height: 300px;
+  }
+
+  .content {
+    @include zen-grid-item(12, 1);
+    @include zen-nested-container();
+
+    .page-title {
+      font-size: 3.2em;
+      line-height: 1em;
+      padding-bottom: 10px;
+      margin-bottom: 30px;
+    }
+
+    .profile {
+      @include zen-clear();
+      @include zen-grid-item(12, 1);
+      @include zen-nested-container();
+      font-size: 1.4em;
+
+      h3 {
+        margin-top: 0;
+      }
+    }
+
+    form {
+      @include zen-clear();
+      @include zen-grid-item(12, 1);
+      @include zen-nested-container();
+      font-size: 1.4em;
+
+      .form-item {
+        margin-top: 0;
+      }
+    }
+
+    .search-results-section {
+      @include zen-clear();
+      @include zen-grid-item(12, 1);
+      @include zen-nested-container();
+      font-size: 1.4em;
+
+      h2 {
+        margin-top: 0;
+      }
+    }
+
+    .node {
+      @include zen-grid-item(12, 1);
+      @include zen-nested-container();
+
+      .field-name-body {
+        @include zen-grid-item(12, 1);
+        @include zen-nested-container();
+        font-size: 1.4em;
+
+        h3 {
+          font-size: 1.2em;
+          margin-top: 0;
+          margin-bottom: 0;
+        }
+
+        table {
+          width: 100%;
+          margin-top: 0;
+          margin-bottom: 0;
+
+          th {
+            padding: 5px;
+          }
+
+          td {
+            padding: 5px;
+          }
+        }
+
+        .btn {
+          padding: 10px 15px;
+        }
+
+        ul {
+          margin-top: 0;
+          margin-bottom: 0;
+        }
+
+        p {
+          margin-top: 0;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  /**
+  * End of the layout for the content section
+  */
+
+  /**
+  * The layout for the subcontent section
+  */
+  .subcontent {
+    @include zen-clear();
+    @include zen-grid-item(12, 1);
+    @include zen-nested-container();
+    
+    .block {
+      margin-left: -15px;
+      margin-right: -15px;
+    }
+
+    .node:nth-child(2n + 1) {
+      @include zen-clear();
+      @include zen-grid-item(6, 1);
+    }
+
+    .node:nth-child(2n + 2) {
+      @include zen-grid-item(6, 7);
+    }
+
+    .node {
+      @include zen-nested-container();
+      padding-top: 30px;
+
+      .field-name-field-image {
+        @include zen-grid-item(12, 1);
+
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      .node-title {
+        @include zen-clear();
+        @include zen-grid-item(12, 1);
+        font-size: 1.6em;
+      }
+
+      .field-name-body {
+        @include zen-clear();
+        @include zen-grid-item(12, 1);
+        font-size: 1.2em;
+
+        p {
+          margin-top: 0;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  /**
+  * End of the layout for the subcontent section
+  */
+
+  /**
+   * The layout for the news section
+   */
+  .news-content {
+    @include zen-grid-item(12, 1);
+    @include zen-nested-container();
+
+    .page-title {
+      font-size: 3.2em;
+      line-height: 1em;
+      padding-bottom: 10px;
+    }
+
+    .view {
+      margin-left: -15px;
+      margin-right: -15px;
+    }
+
+    .views-row:nth-child(2n + 1) {
+      @include zen-clear();
+      @include zen-grid-item(6, 1);
+    }
+
+    .views-row:nth-child(2n + 2) {
+      @include zen-grid-item(6, 7);
+    }
+
+    .views-row {
+      padding-top: 30px;
+
+      .views-field-field-image {
+        @include zen-grid-item(12, 1);
+        @include zen-nested-container();
+
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      .views-field-title {
+        @include zen-clear();
+        @include zen-grid-item(12, 1);
+        @include zen-nested-container();
+        font-size: 1.8em;
+        padding-top: 15px;
+      }
+
+      .views-field-field-date {
+        @include zen-clear();
+        @include zen-grid-item(12, 1);
+        @include zen-nested-container();
+        font-size: 1.2em;
+      }
+
+      .views-field-body {
+        @include zen-clear();
+        @include zen-grid-item(12, 1);
+        @include zen-nested-container();
+        font-size: 1.2em;
+
+        p {
+          margin-top: 0;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  /**
+   * End of the layout for the news section
+   */
+
+  /**
+   * End of the layout for the news section
+   */
+  .news-page {
+    @include zen-grid-item(12, 1);
+    @include zen-nested-container();
+
+    .page-title {
+      font-size: 3.2em;
+      line-height: 1em;
+      padding-bottom: 15px;
+    }
+
+    .node {
+      @include zen-grid-item(12, 1);
+      @include zen-nested-container();
+
+      .node-left-column {
+        @include zen-grid-item(12, 1);
+        @include zen-nested-container();
+
+        .field-name-field-date { 
+          @include zen-grid-item(12, 1);
+          @include zen-nested-container();
+          font-size: 1.6em;
+        }
+
+        .field-name-body {
+          @include zen-clear();
+          @include zen-grid-item(12, 1);
+          @include zen-nested-container();
+          font-size: 1.4em;
+          padding-top: 30px;
+          padding-bottom: 30px;
+
+          h3 {
+            font-size: 1.2em;
+            margin-top: 0;
+            margin-bottom: 0;
+          }
+
+          table {
+            width: 100%;
+            margin-top: 0;
+            margin-bottom: 0;
+
+            th {
+              padding: 5px;
+            }
+
+            td {
+              padding: 5px;
+            }
+          }
+
+          .btn {
+            padding: 10px 15px;
+          }
+
+          ul {
+            margin-top: 0;
+            margin-bottom: 0;
+          }
+
+          p {
+            margin-top: 0;
+            margin-bottom: 0;
+          }
+        }
+      }
+
+      .node-right-column {
+        display: none;
+      }
+    }
+
+    .share-buttons {
+      @include zen-clear();
+      @include zen-grid-item(12, 1);
+      @include zen-nested-container();
+
+      a {
+        font-size: 3.2em;
+      }
+    }
+  }
+  /**
+   * End of the layout for the news section
+   */
+
+  /**
+   * The layout for the events section
+   */
+  .events-content {
+    @include zen-grid-item(12, 1);
+    @include zen-nested-container();
+
+    .page-title {
+      font-size: 3.2em;
+      line-height: 1em;
+      padding-bottom: 10px;
+    }
+
+    .view {
+      margin-left: -15px;
+      margin-right: -15px;
+    }
+
+    .views-row:nth-child(2n + 1) {
+      @include zen-clear();
+      @include zen-grid-item(6, 1);
+    }
+
+    .views-row:nth-child(2n + 2) {
+      @include zen-grid-item(6, 7);
+    }
+
+    .views-row {
+      padding-top: 30px;
+
+      .views-field-field-image {
+        @include zen-grid-item(12, 1);
+        @include zen-nested-container();
+
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      .views-field-field-date {
+        @include zen-grid-item(12, 1);
+        @include zen-nested-container();
+        font-size: 1.6em;
+        padding: 15px 10px 15px 10px;
+      }
+
+      .views-field-title {
+        @include zen-clear();
+        @include zen-grid-item(12, 1);
+        font-size: 1.8em;
+        padding-top: 15px;
+      }
+
+      .views-field-nothing {
+        @include zen-clear();
+        @include zen-grid-item(12, 1);
+        font-size: 2.4em;
+        padding-top: 10px;
+      }
+
+      .views-field-field-link {
+        @include zen-clear();
+        @include zen-grid-item(12, 1);
+        font-size: 1.4em;
+        padding-bottom: 15px;
+      }
+
+      .views-field-body {
+        @include zen-clear();
+        @include zen-grid-item(12, 1);
+        font-size: 1.2em;
+
+        p {
+          margin-top: 0;
+          margin-bottom: 0;
+          padding-top: 15px;
+          padding-bottom: 15px;
+          border-top: 1px solid #cccccc;
+        }
+      }
+    }
+  }
+  /**
+   * End of the layout for the events section
+   */
+
+  /**
+   * The layout for the events section
+   */
+  .events-page {
+    @include zen-grid-item(12, 1);
+    @include zen-nested-container();
+
+    .page-title {
+      font-size: 3.2em;
+      line-height: 1em;
+      padding-bottom: 30px;
+    }
+
+    .node {
+      @include zen-grid-item(12, 1);
+      @include zen-nested-container();
+
+      .node-left-column {
+        @include zen-grid-item(12, 1);
+        @include zen-nested-container();
+
+        .info-wrapper {
+          @include zen-grid-item(12, 1);
+          @include zen-nested-container();
+          padding-top: 15px;
+          padding-bottom: 15px;
+
+          .date-wrapper {
+            @include zen-grid-item(4, 1);
+            @include zen-nested-container();
+
+            .icon-calendar {
+              font-size: 2.4em;
+            }
+
+            .field-name-field-date {
+              font-size: 1.6em;
+            }
+          }
+
+          .time-wrapper {
+            @include zen-grid-item(4, 5);
+            @include zen-nested-container();
+
+            .icon-clock {
+              font-size: 2.4em;
+            }
+
+            .field-name-field-time {
+              font-size: 1.6em;
+            }
+          }
+
+          .location-wrapper {
+            @include zen-grid-item(4, 9);
+            @include zen-nested-container();
+
+            .icon-location {
+              font-size: 2.4em;
+            }
+
+            .field-name-field-link {
+              font-size: 1.6em;
+            }
+          }
+        }
+
+        .field-name-body {
+          @include zen-clear();
+          @include zen-grid-item(12, 1);
+          @include zen-nested-container();
+          padding-top: 30px;
+          padding-bottom: 30px;
+          font-size: 1.4em;
+
+          h3 {
+            font-size: 1.2em;
+            margin-top: 0;
+            margin-bottom: 0;
+          }
+
+          table {
+            width: 100%;
+            margin-top: 0;
+            margin-bottom: 0;
+
+            th {
+              padding: 5px;
+            }
+
+            td {
+              padding: 5px;
+            }
+          }
+
+          .btn {
+            padding: 10px 15px;
+          }
+
+          ul {
+            margin-top: 0;
+            margin-bottom: 0;
+          }
+
+          p {
+            margin-top: 0;
+            margin-bottom: 0;
+          }
+        }
+      }
+
+      .node-right-column {
+        display: none;
+      }     
+    }
+
+    .share-buttons {
+      @include zen-clear();
+      @include zen-grid-item(12, 1);
+      @include zen-nested-container();
+
+      a {
+        font-size: 3.2em;
+      }
+    }
+  }
+  /**
+   * End of the layout for the events section
+   */
+
+  /**
+   * The layout for the notices section
+   */
+  .notices-content {
+    @include zen-grid-item(12, 1);
+    @include zen-nested-container();
+
+    .page-title {
+      font-size: 3.2em;
+      line-height: 1em;
+      padding-bottom: 10px;
+      margin-bottom: 30px;
+    }
+
+    .views-row {
+      @include zen-clear();
+      @include zen-grid-item(12, 1);
+      @include zen-nested-container();
+      padding-top: 15px;
+      padding-bottom: 15px;
+
+      .views-field-title {
+        @include zen-grid-item(12, 1);
+        @include zen-nested-container();
+        font-size: 1.6em;
+      }
+
+      .views-field-field-date {
+        @include zen-clear();
+        @include zen-grid-item(12, 1);
+        @include zen-nested-container();
+        font-size: 1.2em;
+      }
+    }
+
+    .views-row-first {
+      padding-top: 0;
+    }
+
+    .views-row-last {
+      padding-bottom: 0;
+    }
+  }
+  /**
+   * The layout for the notices section
+   */
+
+  /**
+   * End of the layout for the notices section
+   */
+  .notices-page {
+    @include zen-grid-item(12, 1);
+    @include zen-nested-container();
+
+    .page-title {
+      font-size: 3.2em;
+      line-height: 1em;
+      padding-bottom: 15px;
+    }
+
+    .node {
+      @include zen-grid-item(12, 1);
+      @include zen-nested-container();
+
+      .field-name-field-date { 
+        @include zen-clear();
+        @include zen-grid-item(12, 1);
+        @include zen-nested-container();
+        font-size: 1.6em;
+      }
+
+      .field-name-body {
+        @include zen-clear();
+        @include zen-grid-item(12, 1);
+        @include zen-nested-container();
+        font-size: 1.4em;
+        padding-top: 30px;
+        padding-bottom: 30px;
+
+        h3 {
+          font-size: 1.2em;
+          margin-top: 0;
+          margin-bottom: 0;
+        }
+
+        table {
+          width: 100%;
+          margin-top: 0;
+          margin-bottom: 0;
+
+          th {
+            padding: 5px;
+          }
+
+          td {
+            padding: 5px;
+          }
+        }
+
+        .btn {
+          padding: 10px 15px;
+        }
+
+        ul {
+          margin-top: 0;
+          margin-bottom: 0;
+        }
+
+        p {
+          margin-top: 0;
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .share-buttons {
+      @include zen-clear();
+      @include zen-grid-item(12, 1);
+      @include zen-nested-container();
+
+      a {
+        font-size: 3.2em;
+      }
+    }
+  }
+  /**
+   * End of the layout for the notices section
+   */
+  
+  /**
+   * The layout for the footer section
+   */
+  .footer-top-outter {
+    width: 100%;
+  }
+
+  .footer-middle-outter {
+    width: 100%;
+  }
+
+  .footer-bottom-outter {
+    width: 100%;
+  }
+
+  .footer-top-inner {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .footer-middle-inner {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .footer-bottom-inner {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .footer-top {
+    @include zen-grid-item(12, 1);
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    ul {
+      font-size: 1.2em;
+      margin: 0;
+      padding: 0;
+
+      a {
+        line-height: 3.2em;
+        padding: 0 10px;
+      }
+    }
+  }
+
+  .footer-middle {
+    @include zen-clear();
+    @include zen-grid-item(12, 1);
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    ul {
+      font-size: 1.4em;
+      margin: 0;
+      padding: 0;
+
+      a {
+        padding: 20px 30px;
+
+        span {
+          font-size: 2.4em;
+          padding-bottom: 10px;
+        }
+      }
+    }
+  }
+
+  .footer-bottom {
+    @include zen-clear();
+    @include zen-grid-item(12, 1);
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    p {
+      line-height: 3.2em;
+      font-size: 1em;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+  /**
+   * End of the layout for the footer section
+   */
+}
+
+/**
+ * Use 12 grid columns for smaller screens.
+ */
+@media all and (min-width: 768px) and (max-width: 1023px) {
+
+  $zen-column-count: 12;
+
+  /**
+   * The layout for the header section
+   */
+  .header-section {
+    width: 100%;
+  }
+
+  .header-section-inner {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .logo {
+    padding: 10px 30px 10px 15px;
+    float: left;
+    max-width: 75px;
+
+    img {
+      max-width: 75px;
+      height: auto;
+    }
+  }
+
+  .main-nav {
+    display: none;
+  }
+
+  .tablet-btn {
+    float: left;
+
+    a {
+      font-size: 1.4em;
+      padding-left: 20px;
+      padding-right: 20px;
+      line-height: 65px;
+    }
+  }
+
+  .mobile-btn {
+    display: none;
+  }
+
+  .search-btn {
+
+    span {
+      float: right;
+      padding: 23px;
+      margin-right: 15px;
+      font-size: 1.9em;
+    }
+  }
+
+  .search-section {
+    display: none;
+    width: 100%;
+  }
+
+  .search-section-inner {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .search {
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    .form-item label {
+      display: none;
+    }
+
+    .form-item input {
+      width: 80%;
+      height: 45px;
+      font-size: 2.4em;
+    }
+
+    .form-actions input {
+      width: 15%;
+      height: 45px;
+      font-size: 1.2em;
+      float: right;
+    }
+  }
+
+  .tablet-nav {
+    display: none;
+    width: 100%;
+
+    .menu {
+
+      li {
+          
+        a { 
+          padding: 15px 30px 15px 30px;
+          font-size: 1.4em;
+          line-height: 1.2em;
+        }
+      }
+
+      .menu {
+        display: none;
+      }
+    }
+  }
+
+  .mobile-nav {
+    display: none !important;
+  }
+
+  .weather-btn {
+    float: right;
+    
+    a {
+      padding: 0 23px;
+      line-height: 65px;
+      font-size: 1.9em;
+    }
+  }
+  /**
+   * End of the layout for the header section
+   */
+
+  /**
+   * The layout for the top section
+   */
+  .council {
+    @include zen-clear();
+    @include zen-grid-item(12, 1);
+    @include zen-nested-container();
+    margin-bottom: 60px;
+
+    .block-title {
+      @include zen-grid-item(12, 1);
+      @include zen-nested-container();
+      font-size: 2em;
+      line-height: 2em;
+      margin-bottom: 30px;
+    }
+
+    #video_wrapper {
+      @include zen-clear();
+      @include zen-grid-item(12, 1);
+      @include zen-nested-container();
+    }
+  }
+
+  .connect {
+    @include zen-clear();
+    @include zen-grid-item(12, 1);
+    @include zen-nested-container();
+
+    .block-title {
+      @include zen-grid-item(12, 1);
+      @include zen-nested-container();
+      font-size: 2em;
+      line-height: 2em;
+      margin-bottom: 30px;
+    }
+
+    #twitter-widget-0 {
+      @include zen-clear();
+      @include zen-grid-item(12, 1);
+      @include zen-nested-container();
+      min-width: 100% !important;
+    }
+  }
+
+  .gallery {
+    position: relative;
+
+    .views-slideshow-cycle-main-frame {
+      width: 100% !important;
+      height: 350px !important;
+    }
+
+    .views-slideshow-cycle-main-frame-row {
+      width: 100% !important;
+      height: 350px !important;
+    }
+
+    .views-field-uri {
+
+      .gallery-background {
+        width: 100%;
+        height: 350px;
+      }
+    }
+
+    .views-field-body {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+
+      .field-content { 
+        padding-left: 60px;
+        padding-right: 60px;
+        
+        a {
+          font-size: 2.8em;
+        }
+
+        p {
+          width: 45%;
+          font-size: 1.8em;
+          margin: 20px auto 0 auto;
+        }
+
+        .dots {
+          margin: 5px auto 0 auto;
+          font-size: 2.8em;
+        }
+      }
+    }
+
+    .views-slideshow-controls-bottom {
+
+      .views-slideshow-controls-text-previous {
+        position: absolute;
+        top: 45%;
+        left: 1%;
+        font-size: 3.2em;
+      }
+
+      .views-slideshow-controls-text-pause {
+        display: none;
+      }
+
+      .views-slideshow-controls-text-next {
+        position: absolute;
+        top: 45%;
+        right: 1%;
+        font-size: 3.2em;
+      }
+    }
+  }
+  /**
+   * End of the layout for the top section
+   */
+  
+  /**
+   * The layout for the path section
+   */
+  .path-section {
+    width: 100%;
+  }
+
+  .path-section-inner {
+    padding: 10px 15px 10px 15px;
+  }
+
+  .path {
+    @include zen-grid-item(12, 1);
+    font-size: 1.2em;
+    line-height: 2em;
+
+    li {
+      padding: 0 10px 0 0;
+    }
+
+    a {
+      padding-right: 10px;
+    }
+  }
+  /**
+   * End of the layout for the path section
+   */
+  
+  /**
+   * The layout for the main content section
+   */
+  .main-content {
+    width: 100%;
+  }
+
+  .main-content-inner {
+    padding: 0 15px 60px 15px;
+  }
+
+  .main-content-padding {
+    padding-bottom: 0;
+  }
+  /**
+   * End of the layout for the main content section
+   */
+
+  /**
+   * The layout for the main top section
+   */
+  .main-top-column {
+    @include zen-clear();
+    @include zen-grid-item(12, 1);
+    margin-top: 30px;
+    margin-bottom: 60px;
+  }
+  /**
+   * End of the layout for the main top section
+   */
+
+  /**
+   * The layout for the popular section
+   */
+  .popular {
+    @include zen-grid-item(12, 1);
+    @include zen-nested-container();
+
+    .block-title {
+      @include zen-grid-item(12, 1);
+      font-size: 2em;
+      line-height: 2em;
+      margin-bottom: 30px;
+    }
+
+    .views-row-1 {
+      @include zen-clear();
+      @include zen-grid-item(3, 1);
+    }
+
+    .views-row-2 {
+      @include zen-grid-item(3, 4);
+    }
+
+    .views-row-3 {
+      @include zen-grid-item(3, 7);
+    }
+
+    .views-row-4 {
+      @include zen-grid-item(3, 10);
+    }
+
+    .views-row-5 {
+      @include zen-clear();
+      @include zen-grid-item(3, 1);
+    }
+
+    .views-row-6 {
+      @include zen-grid-item(3, 4);
+    }
+
+    .views-row-7 {
+      @include zen-grid-item(3, 7);
+    }
+
+    .views-row-8 {
+      @include zen-grid-item(3, 10);
+    }
+
+    .views-row {
+      @include zen-nested-container();
+      position: relative;
+
+      .views-field-field-image {
+        @include zen-grid-item(12, 1);
+        @include zen-nested-container();
+
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      .views-field-title {
+        font-size: 1.6em;
+        line-height: 1.2em;
+
+        a {
+          position: absolute;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          padding: 10px;
+        }
+      }
+    }
+  }
+  /**
+   * End of the layout for the popular section
+   */
+
+  /**
+   * The layout for the main nav column section
+   */
+  .main-nav-column {
+    display: none;
+  }
+  /**
+   * End of the layout for the main nav column section
+   */
+
+  /**
+   * The layout for the main left section
+   */
+  .main-left-column {
+    display: initial !important;
+    @include zen-clear();
+    @include zen-grid-item(8, 1);
+  }
+  /**
+   * End of the layout for the main left section
+   */
+
+  /**
+   * The layout for the events section
+   */
+  .events {
+    @include zen-grid-item(12, 1);
+    @include zen-nested-container();
+
+    .block-title {
+      @include zen-grid-item(12, 1);
+      @include zen-nested-container();
+      font-size: 2em;
+      line-height: 2em;
+    }
+
+    .view {
+      margin-left: -15px;
+      margin-right: -15px;
+    }
+
+    .views-row-1 {
+      @include zen-clear();
+      @include zen-grid-item(4, 1);
+    }
+
+    .views-row-2 {
+      @include zen-grid-item(4, 5);
+    }
+
+    .views-row-3 {
+      @include zen-grid-item(4, 9);
+    }
+
+    .views-row-4 {
+      display: none;
+    }
+
+    .views-row {
+      padding-top: 30px;
+
+      .views-field-field-image {
+        @include zen-grid-item(12, 1);
+        @include zen-nested-container();
+
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      .views-field-field-date {
+        @include zen-grid-item(12, 1);
+        @include zen-nested-container();
+        font-size: 1.6em;
+        padding: 15px 10px 15px 10px;
+      }
+
+      .views-field-title {
+        @include zen-clear();
+        @include zen-grid-item(12, 1);
+        font-size: 1.8em;
+        padding-top: 15px;
+      }
+
+      .views-field-nothing {
+        @include zen-clear();
+        @include zen-grid-item(12, 1);
+        font-size: 2.4em;
+        padding-top: 10px;
+      }
+
+      .views-field-field-link {
+        @include zen-clear();
+        @include zen-grid-item(12, 1);
+        font-size: 1.4em;
+        padding-bottom: 15px;
+      }
+
+      .views-field-body {
+        @include zen-clear();
+        @include zen-grid-item(12, 1);
+        font-size: 1.2em;
+
+        p {
+          margin-top: 0;
+          margin-bottom: 0;
+          padding-top: 15px;
+          padding-bottom: 15px;
+          border-top: 1px solid #cccccc;
+        }
+      }
+    }
+  }
+  /**
+   * The layout for the events section
+   */
+
+  /**
+  * The layout for the content left section
+  */
+  .content-left-column {
+    @include zen-grid-item(8, 1);
+    padding-top: 30px;
+  }
+  /**
+   * End of the layout for the content left section
+   */
+
+  /**
+  * The layout for the subnav section
+  */
+  .sub-nav {
+    @include zen-grid-item(12, 1);
+    @include zen-nested-container();
+    padding-top: 30px;
+
+    .block-title {
+      font-size: 2.2em;
+      line-height: 1em;
+      padding: 15px 10px;
+    }
+
+    .menu {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+
+      li {
+        list-style-type: none;
+        list-style-image: none;
+      }
+
+      a {
+        padding: 10px;
+        font-size: 1.4em;
+        line-height: 1.4em;
+      }
+
+      .menu {
+
+        a {
+          padding: 10px 10px 10px 20px;
+        }
+      }
+    }
+  }
+  /**
+  * End of the layout for the subnav section
+  */
+
+  /**
+   * The layout for the news section
+   */
+  .news {
+    @include zen-grid-item(12, 1);
+    @include zen-nested-container();
+
+    .block-title {
+      @include zen-grid-item(12, 1);
+      @include zen-nested-container();
+      font-size: 2em;
+      line-height: 2em;
+      margin-bottom: 30px;
+    }
+
+    .page-title {
+      font-size: 3.8em;
+      line-height: 1em;
+      padding-bottom: 15px;
+    }
+
+    .views-row {
+      @include zen-clear();
+      @include zen-grid-item(12, 1);
+      @include zen-nested-container();
+      padding-top: 15px;
+      padding-bottom: 15px;
+      border-bottom: 1px dotted #cccccc;
+
+      .views-field-field-image {
+        @include zen-grid-item(5, 1);
+        @include zen-nested-container();
+
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      .views-field-title {
+        @include zen-grid-item(7, 6);
+        float: none;
+        font-size: 1.8em;
+      }
+
+      .views-field-field-date {
+        @include zen-grid-item(7, 6);
+        float: none;
+        font-size: 1.2em;
+      }
+
+      .views-field-body {
+        @include zen-grid-item(7, 6);
+        float: none;
+        font-size: 1.2em;
+
+        p {
+          margin-top: 0;
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .views-row-first {
+      padding-top: 0;
+    }
+
+    .views-row-last {
+      padding-bottom: 0;
+    }
+
+    .views-row-last {
+      border-bottom: none;
+    }
+  }
+  /**
+   * The layout for the news section
+   */
+
+  /**
+  * The layout for the main right section
+  */
+  .main-right-column {
+    display: initial !important;
+    @include zen-grid-item(4, 9);
+  }
+  /**
+   * End of the layout for the main right section
+   */
+
+  /**
+  * The layout for the main bottom section
+  */
+  .main-bottom-column {
+    @include zen-clear();
+    @include zen-grid-item(12, 1);
+    margin-top: 60px;
+  }
+  /**
+   * End of the layout for the main bottom section
+   */
+
+  /**
+  * The layout for the notices section
+  */
+  .notices {
+    @include zen-clear();
+    @include zen-grid-item(12, 1);
+    @include zen-nested-container();
+    margin-bottom: 60px;
+
+    .block-title {
+      @include zen-grid-item(12, 1);
+      @include zen-nested-container();
+      font-size: 2em;
+      line-height: 2em;
+      margin-bottom: 30px;
+    }
+
+    .views-row {
+      @include zen-clear();
+      @include zen-grid-item(12, 1);
+      @include zen-nested-container();
+      padding-top: 10px;
+      padding-bottom: 10px;
+
+      .views-field-title {
+        @include zen-grid-item(12, 1);
+        font-size: 1.6em;
+      }
+
+      .views-field-field-date {
+        @include zen-clear();
+        @include zen-grid-item(12, 1);
+        font-size: 1.2em;
+      }
+    }
+  }
+  /**
+  * End of the layout for the notices section
+  */
+
+  /**
+  * The layout for the content middle section
+  */
+  .content-middle-column {
+    @include zen-grid-item(10, 2);
+    padding-top: 30px;
+  }
+  /**
+   * End of the layout for the content middle section
+   */
+
+  /**
+  * The layout for the content right section
+  */
+  .content-right-column {
+    @include zen-grid-item(4, 9);
+  }
+  /**
+   * End of the layout for the content right section
+   */
+
+  /**
+  * The layout for the content section
+  */
+  .section-background {
+    width: 100%;
+    height: 250px;
+    position: relative;
+
+    .page-title {
+      position: absolute;
+      top: 40%;
+      width: 100%;
+      font-size: 3.8em;
+    }
+  }
+
+  .error-background {
+    width: 100%;
+    height: 350px;
+    position: relative;
+
+    .page-title {
+      position: absolute;
+      top: 40%;
+      width: 100%;
+      font-size: 3.8em;
+    }
+  }
+
+  .content-background {
+    width: 100%;
+    height: 350px;
+  }
+
+  .content {
+    @include zen-grid-item(12, 1);
+    @include zen-nested-container();
+
+    .page-title {
+      font-size: 3.8em;
+      line-height: 1em;
+      padding-bottom: 10px;
+      margin-bottom: 30px;
+    }
+
+    .profile {
+      @include zen-clear();
+      @include zen-grid-item(12, 1);
+      @include zen-nested-container();
+      font-size: 1.4em;
+
+      h3 {
+        margin-top: 0;
+      }
+    }
+
+    form {
+      @include zen-clear();
+      @include zen-grid-item(12, 1);
+      @include zen-nested-container();
+      font-size: 1.4em;
+
+      .form-item {
+        margin-top: 0;
+      }
+    }
+
+    .search-results-section {
+      @include zen-clear();
+      @include zen-grid-item(12, 1);
+      @include zen-nested-container();
+      font-size: 1.4em;
+
+      h2 {
+        margin-top: 0;
+      }
+    }
+
+    .node {
+      @include zen-grid-item(12, 1);
+      @include zen-nested-container();
+
+      .field-name-body {
+        @include zen-grid-item(12, 1);
+        @include zen-nested-container();
+        font-size: 1.4em;
+
+        h3 {
+          font-size: 1.2em;
+          margin-top: 0;
+          margin-bottom: 0;
+        }
+
+        table {
+          width: 100%;
+          margin-top: 0;
+          margin-bottom: 0;
+
+          th {
+            padding: 5px;
+          }
+
+          td {
+            padding: 5px;
+          }
+        }
+
+        .btn {
+          padding: 10px 15px;
+        }
+
+        ul {
+          margin-top: 0;
+          margin-bottom: 0;
+        }
+
+        p {
+          margin-top: 0;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  /**
+  * End of the layout for the content section
+  */
+
+  /**
+  * The layout for the subcontent section
+  */
+  .subcontent {
+    @include zen-clear();
+    @include zen-grid-item(12, 1);
+    @include zen-nested-container();
+    
+    .block {
+      margin-left: -15px;
+      margin-right: -15px;
+    }
+
+    .node:nth-child(3n + 1) {
+      @include zen-clear();
+      @include zen-grid-item(4, 1);
+    }
+
+    .node:nth-child(3n + 2) {
+      @include zen-grid-item(4, 5);
+    }
+
+    .node:nth-child(3n + 3) {
+      @include zen-grid-item(4, 9);
+    }
+
+    .node {
+      @include zen-nested-container();
+      padding-top: 30px;
+
+      .field-name-field-image {
+        @include zen-grid-item(12, 1);
+
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      .node-title {
+        @include zen-clear();
+        @include zen-grid-item(12, 1);
+        font-size: 1.6em;
+      }
+
+      .field-name-body {
+        @include zen-clear();
+        @include zen-grid-item(12, 1);
+        font-size: 1.2em;
+
+        p {
+          margin-top: 0;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  /**
+  * End of the layout for the subcontent section
+  */
+
+  /**
+   * The layout for the news section
+   */
+  .news-content {
+    @include zen-grid-item(12, 1);
+    @include zen-nested-container();
+
+    .page-title {
+      font-size: 3.8em;
+      line-height: 1em;
+      padding-bottom: 10px;
+    }
+
+    .view {
+      margin-left: -15px;
+      margin-right: -15px;
+    }
+
+    .views-row:nth-child(2n + 1) {
+      @include zen-clear();
+      @include zen-grid-item(6, 1);
+    }
+
+    .views-row:nth-child(2n + 2) {
+      @include zen-grid-item(6, 7);
+    }
+
+    .views-row {
+      padding-top: 30px;
+
+      .views-field-field-image {
+        @include zen-grid-item(12, 1);
+        @include zen-nested-container();
+
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      .views-field-title {
+        @include zen-clear();
+        @include zen-grid-item(12, 1);
+        @include zen-nested-container();
+        font-size: 1.8em;
+        padding-top: 15px;
+      }
+
+      .views-field-field-date {
+        @include zen-clear();
+        @include zen-grid-item(12, 1);
+        @include zen-nested-container();
+        font-size: 1.2em;
+      }
+
+      .views-field-body {
+        @include zen-clear();
+        @include zen-grid-item(12, 1);
+        @include zen-nested-container();
+        font-size: 1.2em;
+
+        p {
+          margin-top: 0;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  /**
+   * End of the layout for the news section
+   */
+
+  /**
+   * End of the layout for the news section
+   */
+  .news-page {
+    @include zen-grid-item(12, 1);
+    @include zen-nested-container();
+
+    .page-title {
+      font-size: 3.8em;
+      line-height: 1em;
+      padding-bottom: 15px;
+    }
+
+    .node {
+      @include zen-grid-item(12, 1);
+      @include zen-nested-container();
+
+      .node-left-column {
+        @include zen-grid-item(12, 1);
+        @include zen-nested-container();
+        
+        .field-name-field-date { 
+          @include zen-grid-item(12, 1);
+          @include zen-nested-container();
+          font-size: 1.6em;
+        }
+
+        .field-name-body {
+          @include zen-clear();
+          @include zen-grid-item(12, 1);
+          @include zen-nested-container();
+          font-size: 1.4em;
+          padding-top: 30px;
+          padding-bottom: 30px;
+
+          h3 {
+            font-size: 1.2em;
+            margin-top: 0;
+            margin-bottom: 0;
+          }
+
+          table {
+            width: 100%;
+            margin-top: 0;
+            margin-bottom: 0;
+
+            th {
+              padding: 5px;
+            }
+
+            td {
+              padding: 5px;
+            }
+          }
+
+          .btn {
+            padding: 10px 15px;
+          }
+
+          ul {
+            margin-top: 0;
+            margin-bottom: 0;
+          }
+
+          p {
+            margin-top: 0;
+            margin-bottom: 0;
+          }
+        }
+      }
+
+      .node-right-column {
+        display: none;
+      }
+    }
+
+    .share-buttons {
+      @include zen-clear();
+      @include zen-grid-item(12, 1);
+      @include zen-nested-container();
+
+      a {
+        font-size: 3.2em;
+      }
+    }
+  }
+  /**
+   * End of the layout for the news section
+   */
+
+  /**
+   * The layout for the events section
+   */
+  .events-content {
+    @include zen-grid-item(12, 1);
+    @include zen-nested-container();
+
+    .page-title {
+      font-size: 3.8em;
+      line-height: 1em;
+      padding-bottom: 10px;
+    }
+
+    .view {
+      margin-left: -15px;
+      margin-right: -15px;
+    }
+
+    .views-row:nth-child(2n + 1) {
+      @include zen-clear();
+      @include zen-grid-item(6, 1);
+    }
+
+    .views-row:nth-child(2n + 2) {
+      @include zen-grid-item(6, 7);
+    }
+
+    .views-row {
+      padding-top: 30px;
+
+      .views-field-field-image {
+        @include zen-grid-item(12, 1);
+        @include zen-nested-container();
+
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      .views-field-field-date {
+        @include zen-grid-item(12, 1);
+        @include zen-nested-container();
+        font-size: 1.6em;
+        padding: 15px 10px 15px 10px;
+      }
+
+      .views-field-title {
+        @include zen-clear();
+        @include zen-grid-item(12, 1);
+        font-size: 1.8em;
+        padding-top: 15px;
+      }
+
+      .views-field-nothing {
+        @include zen-clear();
+        @include zen-grid-item(12, 1);
+        font-size: 2.4em;
+        padding-top: 10px;
+      }
+
+      .views-field-field-link {
+        @include zen-clear();
+        @include zen-grid-item(12, 1);
+        font-size: 1.4em;
+        padding-bottom: 15px;
+      }
+
+      .views-field-body {
+        @include zen-clear();
+        @include zen-grid-item(12, 1);
+        font-size: 1.2em;
+
+        p {
+          margin-top: 0;
+          margin-bottom: 0;
+          padding-top: 15px;
+          padding-bottom: 15px;
+          border-top: 1px solid #cccccc;
+        }
+      }
+    }
+  }
+  /**
+   * End of the layout for the events section
+   */
+
+  /**
+   * The layout for the events section
+   */
+  .events-page {
+    @include zen-grid-item(12, 1);
+    @include zen-nested-container();
+
+    .page-title {
+      font-size: 3.8em;
+      line-height: 1em;
+      padding-bottom: 30px;
+    }
+
+    .node {
+      @include zen-grid-item(12, 1);
+      @include zen-nested-container();
+
+      .node-left-column {
+        @include zen-grid-item(12, 1);
+        @include zen-nested-container();
+
+        .info-wrapper {
+          @include zen-grid-item(12, 1);
+          @include zen-nested-container();
+          padding-top: 15px;
+          padding-bottom: 15px;
+
+          .date-wrapper {
+            @include zen-grid-item(4, 1);
+            @include zen-nested-container();
+
+            .icon-calendar {
+              font-size: 2.4em;
+            }
+
+            .field-name-field-date {
+              font-size: 1.6em;
+            }
+          }
+
+          .time-wrapper {
+            @include zen-grid-item(4, 5);
+            @include zen-nested-container();
+
+            .icon-clock {
+              font-size: 2.4em;
+            }
+
+            .field-name-field-time {
+              font-size: 1.6em;
+            }
+          }
+
+          .location-wrapper {
+            @include zen-grid-item(4, 9);
+            @include zen-nested-container();
+
+            .icon-location {
+              font-size: 2.4em;
+            }
+
+            .field-name-field-link {
+              font-size: 1.6em;
+            }
+          }
+        }
+
+        .field-name-body {
+          @include zen-clear();
+          @include zen-grid-item(12, 1);
+          @include zen-nested-container();
+          padding-top: 30px;
+          padding-bottom: 30px;
+          font-size: 1.4em;
+
+          h3 {
+            font-size: 1.2em;
+            margin-top: 0;
+            margin-bottom: 0;
+          }
+
+          table {
+            width: 100%;
+            margin-top: 0;
+            margin-bottom: 0;
+
+            th {
+              padding: 5px;
+            }
+
+            td {
+              padding: 5px;
+            }
+          }
+
+          .btn {
+            padding: 10px 15px;
+          }
+
+          ul {
+            margin-top: 0;
+            margin-bottom: 0;
+          }
+
+          p {
+            margin-top: 0;
+            margin-bottom: 0;
+          }
+        }
+      }
+
+      .node-right-column {
+        display: none;
+      }     
+    }
+
+    .share-buttons {
+      @include zen-clear();
+      @include zen-grid-item(12, 1);
+      @include zen-nested-container();
+
+      a {
+        font-size: 3.2em;
+      }
+    }
+  }
+  /**
+   * End of the layout for the events section
+   */
+
+  /**
+   * The layout for the notices section
+   */
+  .notices-content {
+    @include zen-grid-item(12, 1);
+    @include zen-nested-container();
+
+    .page-title {
+      font-size: 3.8em;
+      line-height: 1em;
+      padding-bottom: 10px;
+      margin-bottom: 30px;
+    }
+
+    .views-row {
+      @include zen-clear();
+      @include zen-grid-item(12, 1);
+      @include zen-nested-container();
+      padding-top: 15px;
+      padding-bottom: 15px;
+
+      .views-field-title {
+        @include zen-grid-item(12, 1);
+        @include zen-nested-container();
+        font-size: 1.6em;
+      }
+
+      .views-field-field-date {
+        @include zen-clear();
+        @include zen-grid-item(12, 1);
+        @include zen-nested-container();
+        font-size: 1.2em;
+      }
+    }
+
+    .views-row-first {
+      padding-top: 0;
+    }
+
+    .views-row-last {
+      padding-bottom: 0;
+    }
+  }
+  /**
+   * The layout for the notices section
+   */
+
+  /**
+   * End of the layout for the notices section
+   */
+  .notices-page {
+    @include zen-grid-item(12, 1);
+    @include zen-nested-container();
+
+    .page-title {
+      font-size: 3.8em;
+      line-height: 1em;
+      padding-bottom: 15px;
+    }
+
+    .node {
+      @include zen-grid-item(12, 1);
+      @include zen-nested-container();
+
+      .field-name-field-date { 
+        @include zen-clear();
+        @include zen-grid-item(12, 1);
+        @include zen-nested-container();
+        font-size: 1.6em;
+      }
+
+      .field-name-body {
+        @include zen-clear();
+        @include zen-grid-item(12, 1);
+        @include zen-nested-container();
+        font-size: 1.4em;
+        padding-top: 30px;
+        padding-bottom: 30px;
+
+        h3 {
+          font-size: 1.2em;
+          margin-top: 0;
+          margin-bottom: 0;
+        }
+
+        table {
+          width: 100%;
+          margin-top: 0;
+          margin-bottom: 0;
+
+          th {
+            padding: 5px;
+          }
+
+          td {
+            padding: 5px;
+          }
+        }
+
+        .btn {
+          padding: 10px 15px;
+        }
+
+        ul {
+          margin-top: 0;
+          margin-bottom: 0;
+        }
+
+        p {
+          margin-top: 0;
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .share-buttons {
+      @include zen-clear();
+      @include zen-grid-item(12, 1);
+      @include zen-nested-container();
+
+      a {
+        font-size: 3.2em;
+      }
+    }
+  }
+  /**
+   * End of the layout for the notices section
+   */
+  
+  /**
+   * The layout for the footer section
+   */
+  .footer-top-outter {
+    width: 100%;
+  }
+
+  .footer-middle-outter {
+    width: 100%;
+  }
+
+  .footer-bottom-outter {
+    width: 100%;
+  }
+
+  .footer-top-inner {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .footer-middle-inner {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .footer-bottom-inner {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .footer-top {
+    @include zen-grid-item(12, 1);
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    ul {
+      font-size: 1.2em;
+      margin: 0;
+      padding: 0;
+
+      a {
+        line-height: 3.2em;
+        padding: 0 10px;
+      }
+    }
+  }
+
+  .footer-middle {
+    @include zen-clear();
+    @include zen-grid-item(12, 1);
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    ul {
+      font-size: 1.4em;
+      margin: 0;
+      padding: 0;
+
+      a {
+        padding: 20px 30px;
+
+        span {
+          font-size: 2.4em;
+          padding-bottom: 10px;
+        }
+      }
+    }
+  }
+
+  .footer-bottom {
+    @include zen-clear();
+    @include zen-grid-item(12, 1);
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    p {
+      line-height: 3.2em;
+      font-size: 1em;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+  /**
+   * End of the layout for the footer section
+   */
+}
+
+/**
+ * Use 12 grid columns for larger screens.
+ */
+@media all and (min-width: 1024px) {
+
+  $zen-column-count: 12;
+
+  /**
+   * The layout for the header section
+   */
+  .header-section {
+    width: 100%;
+  }
+
+  .header-section-inner {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .logo {
+    padding: 10px 30px 10px 15px;
+    float: left;
+    max-width: 75px;
+
+    img {
+      max-width: 75px;
+      height: auto;
+    }
+  }
+
+  .main-nav {
+
+    .menu {
+
+      li {
+        line-height: 59px;
+          
+        a {
+          font-size: 1.4em;
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+      }
+
+      .menu {
+        display: none;
+      }
+    }
+  }
+
+  .tablet-btn {
+    display: none;
+  }
+
+  .search-btn {
+
+    span {
+      float: right;
+      padding: 23px;
+      margin-right: 15px;
+      font-size: 1.9em;
+    }
+  }
+
+  .search-section {
+    display: none;
+    width: 100%;
+  }
+
+  .search-section-inner {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .search {
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    .form-item label {
+      display: none;
+    }
+
+    .form-item input {
+      width: 80%;
+      height: 45px;
+      font-size: 2.4em;
+    }
+
+    .form-actions input {
+      width: 15%;
+      height: 45px;
+      font-size: 1.2em;
+      float: right;
+    }
+  }
+
+  .mobile-btn {
+    display: none;
+  }
+
+  .tablet-nav {
+    display: none !important;
+  }
+
+  .mobile-nav {
+    display: none !important;
+  }
+
+  .weather-btn {
+    float: right;
+
+    a {
+      padding: 0 23px;
+      line-height: 65px;
+      font-size: 1.9em;
+    }
+  }
+  /**
+   * End of the layout for the header section
+   */
+
+  /**
+   * The layout for the top section
+   */
+  .council {
+    @include zen-clear();
+    @include zen-grid-item(12, 1);
+    @include zen-nested-container();
+    margin-bottom: 60px;
+
+    .block-title {
+      @include zen-grid-item(12, 1);
+      @include zen-nested-container();
+      font-size: 2em;
+      line-height: 2em;
+      margin-bottom: 30px;
+    }
+
+    #video_wrapper {
+      @include zen-clear();
+      @include zen-grid-item(12, 1);
+      @include zen-nested-container();
+    }
+  }
+
+  .connect {
+    @include zen-clear();
+    @include zen-grid-item(12, 1);
+    @include zen-nested-container();
+
+    .block-title {
+      @include zen-grid-item(12, 1);
+      @include zen-nested-container();
+      font-size: 2em;
+      line-height: 2em;
+      margin-bottom: 30px;
+    }
+
+    #twitter-widget-0 {
+      @include zen-clear();
+      @include zen-grid-item(12, 1);
+      @include zen-nested-container();
+      min-width: 100% !important;
+    }
+  }
+
+  .gallery {
+    position: relative;
+
+    .views-slideshow-cycle-main-frame {
+      width: 100% !important;
+      height: 400px !important;
+    }
+
+    .views-slideshow-cycle-main-frame-row {
+      width: 100% !important;
+      height: 400px !important;
+    }
+
+    .views-field-uri {
+
+      .gallery-background {
+        width: 100%;
+        height: 400px;
+      }
+    }
+
+    .views-field-body {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+
+      .field-content {
+        padding-left: 60px;
+        padding-right: 60px;
+        
+        a {
+          font-size: 3.2em;
+        }
+
+        p {
+          width: 45%;
+          font-size: 1.8em;
+          margin: 20px auto 0 auto;
+        }
+
+        .dots {
+          margin: 5px auto 0 auto;
+          font-size: 3.2em;
+        }
+      }
+    }
+
+    .views-slideshow-controls-bottom {
+
+      .views-slideshow-controls-text-previous {
+        position: absolute;
+        top: 45%;
+        left: 1%;
+        font-size: 3.2em;
+      }
+
+      .views-slideshow-controls-text-pause {
+        display: none;
+      }
+
+      .views-slideshow-controls-text-next {
+        position: absolute;
+        top: 45%;
+        right: 1%;
+        font-size: 3.2em;
+      }
+    }
+  }
+  /**
+   * End of the layout for the top section
+   */
+  
+  /**
+   * The layout for the path section
+   */
+  .path-section {
+    width: 100%;
+  }
+
+  .path-section-inner {
+    padding: 10px 15px 10px 15px;
+  }
+
+  .path {
+    @include zen-grid-item(12, 1);
+    font-size: 1.2em;
+    line-height: 2em;
+
+    li {
+      padding: 0 10px 0 0;
+    }
+
+    a {
+      padding-right: 10px;
+    }
+  }
+  /**
+   * End of the layout for the path section
+   */
+  
+  /**
+   * The layout for the main content section
+   */
+  .main-content {
+    width: 100%;
+  }
+
+  .main-content-inner {
+    padding: 0 15px 60px 15px;
+  }
+
+  .main-content-padding {
+    padding-bottom: 0;
+  }
+  /**
+   * End of the layout for the main content section
+   */
+
+  /**
+   * The layout for the main top section
+   */
+  .main-top-column {
+    @include zen-clear();
+    @include zen-grid-item(12, 1);
+    margin-top: 30px;
+    margin-bottom: 60px;
+  }
+  /**
+   * End of the layout for the main top section
+   */
+
+  /**
+   * The layout for the popular section
+   */
+  .popular {
+    @include zen-grid-item(12, 1);
+    @include zen-nested-container();
+
+    .block-title {
+      @include zen-grid-item(12, 1);
+      font-size: 2em;
+      line-height: 2em;
+      margin-bottom: 30px;
+    }
+
+    .views-row-1 {
+      @include zen-clear();
+      @include zen-grid-item(3, 1);
+    }
+
+    .views-row-2 {
+      @include zen-grid-item(3, 4);
+    }
+
+    .views-row-3 {
+      @include zen-grid-item(3, 7);
+    }
+
+    .views-row-4 {
+      @include zen-grid-item(3, 10);
+    }
+
+    .views-row-5 {
+      @include zen-clear();
+      @include zen-grid-item(3, 1);
+    }
+
+    .views-row-6 {
+      @include zen-grid-item(3, 4);
+    }
+
+    .views-row-7 {
+      @include zen-grid-item(3, 7);
+    }
+
+    .views-row-8 {
+      @include zen-grid-item(3, 10);
+    }
+
+    .views-row {
+      @include zen-nested-container();
+      position: relative;
+
+      .views-field-field-image {
+        @include zen-grid-item(12, 1);
+        @include zen-nested-container();
+
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      .views-field-title {
+        font-size: 1.8em;
+        line-height: 1.2em;
+
+        a {
+          position: absolute;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          padding: 10px;
+        }
+      }
+    }
+  }
+  /**
+   * End of the layout for the popular section
+   */
+
+  /**
+   * The layout for the main nav column section
+   */
+  .main-nav-column {
+    display: none;
+  }
+  /**
+   * End of the layout for the main nav column section
+   */
+
+  /**
+   * The layout for the main left section
+   */
+  .main-left-column {
+    display: initial !important;
+    @include zen-clear();
+    @include zen-grid-item(8, 1);
+  }
+  /**
+   * End of the layout for the main left section
+   */
+
+  /**
+   * The layout for the events section
+   */
+  .events {
+    @include zen-grid-item(12, 1);
+    @include zen-nested-container();
+
+    .block-title {
+      @include zen-grid-item(12, 1);
+      @include zen-nested-container();
+      font-size: 2em;
+      line-height: 2em;
+    }
+
+    .view {
+      margin-left: -15px;
+      margin-right: -15px;
+    }
+
+    .views-row-1 {
+      @include zen-clear();
+      @include zen-grid-item(4, 1);
+    }
+
+    .views-row-2 {
+      @include zen-grid-item(4, 5);
+    }
+
+    .views-row-3 {
+      @include zen-grid-item(4, 9);
+    }
+
+    .views-row-4 {
+      display: none;
+    }
+
+    .views-row {
+      padding-top: 30px;
+
+      .views-field-field-image {
+        @include zen-grid-item(12, 1);
+        @include zen-nested-container();
+
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      .views-field-field-date {
+        @include zen-grid-item(12, 1);
+        @include zen-nested-container();
+        font-size: 1.6em;
+        padding: 15px 10px 15px 10px;
+      }
+
+      .views-field-title {
+        @include zen-clear();
+        @include zen-grid-item(12, 1);
+        font-size: 1.8em;
+        padding-top: 15px;
+      }
+
+      .views-field-nothing {
+        @include zen-clear();
+        @include zen-grid-item(12, 1);
+        font-size: 2.4em;
+        padding-top: 10px;
+      }
+
+      .views-field-field-link {
+        @include zen-clear();
+        @include zen-grid-item(12, 1);
+        font-size: 1.4em;
+        padding-bottom: 15px;
+      }
+
+      .views-field-body {
+        @include zen-clear();
+        @include zen-grid-item(12, 1);
+        font-size: 1.2em;
+
+        p {
+          margin-top: 0;
+          margin-bottom: 0;
+          padding-top: 15px;
+          padding-bottom: 15px;
+          border-top: 1px solid #cccccc;
+        }
+      }
+    }
+  }
+  /**
+   * The layout for the events section
+   */
+
+  /**
+  * The layout for the programs section
+  */
+  .programs {
+    @include zen-clear();
+    @include zen-grid-item(12, 1);
+    @include zen-nested-container();
+
+    .block-title {
+      @include zen-grid-item(12, 1);
+      @include zen-nested-container();
+      font-size: 2em;
+      line-height: 2em;
+      margin-bottom: 15px;
+    }
+
+    .views-row {
+      @include zen-clear();
+      @include zen-grid-item(12, 1);
+      @include zen-nested-container();
+
+      .views-field-field-image {
+        @include zen-grid-item(12, 1);
+        @include zen-nested-container();
+
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      .views-field-title {
+        @include zen-clear();
+        @include zen-grid-item(12, 1);
+        padding-top: 10px;
+        font-size: 1.6em;
+      }
+
+      .views-field-body {
+        @include zen-clear();
+        @include zen-grid-item(12, 1);
+        font-size: 1.2em;
+        padding-bottom: 10px;
+
+        p {
+          margin-top: 0;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  /**
+  * End of the layout for the programs section
+  */
+
+  /**
+  * The layout for the content left section
+  */
+  .content-left-column {
+    @include zen-grid-item(9, 1);
+    padding-top: 30px;
+  }
+  /**
+   * End of the layout for the content left section
+   */
+
+  /**
+  * The layout for the subnav section
+  */
+  .sub-nav {
+    @include zen-grid-item(12, 1);
+    @include zen-nested-container();
+    padding-top: 30px;
+
+    .block-title {
+      font-size: 2.2em;
+      line-height: 1em;
+      padding: 15px 10px;
+    }
+
+    .menu {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+
+      li {
+        list-style-type: none;
+        list-style-image: none;
+      }
+
+      a {
+        padding: 10px;
+        font-size: 1.4em;
+        line-height: 1.4em;
+      }
+
+      .menu {
+
+        a {
+          padding: 10px 10px 10px 20px;
+        }
+      }
+    }
+  }
+  /**
+  * End of the layout for the subnav section
+  */
+
+  /**
+   * The layout for the news section
+   */
+  .news {
+    @include zen-grid-item(12, 1);
+    @include zen-nested-container();
+
+    .block-title {
+      @include zen-grid-item(12, 1);
+      @include zen-nested-container();
+      font-size: 2em;
+      line-height: 2em;
+      margin-bottom: 30px;
+    }
+
+    .page-title {
+      font-size: 3.8em;
+      line-height: 1em;
+      padding-bottom: 15px;
+    }
+
+    .views-row {
+      @include zen-clear();
+      @include zen-grid-item(12, 1);
+      @include zen-nested-container();
+      padding-top: 15px;
+      padding-bottom: 15px;
+      border-bottom: 1px dotted #cccccc;
+
+      .views-field-field-image {
+        @include zen-grid-item(5, 1);
+        @include zen-nested-container();
+
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      .views-field-title {
+        @include zen-grid-item(7, 6);
+        float: none;
+        font-size: 1.8em;
+      }
+
+      .views-field-field-date {
+        @include zen-grid-item(7, 6);
+        float: none;
+        font-size: 1.2em;
+      }
+
+      .views-field-body {
+        @include zen-grid-item(7, 6);
+        float: none;
+        font-size: 1.2em;
+
+        p {
+          margin-top: 0;
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .views-row-first {
+      padding-top: 0;
+    }
+
+    .views-row-last {
+      padding-bottom: 0;
+    }
+
+    .views-row-last {
+      border-bottom: none;
+    }
+  }
+  /**
+   * The layout for the news section
+   */
+
+  /**
+  * The layout for the main right section
+  */
+  .main-right-column {
+    display: initial !important;
+    @include zen-grid-item(4, 9);
+  }
+  /**
+   * End of the layout for the main right section
+   */
+
+  /**
+  * The layout for the main bottom section
+  */
+  .main-bottom-column {
+    @include zen-clear();
+    @include zen-grid-item(12, 1);
+    margin-top: 60px;
+  }
+  /**
+   * End of the layout for the main bottom section
+   */
+
+  /**
+  * The layout for the notices section
+  */
+  .notices {
+    @include zen-clear();
+    @include zen-grid-item(12, 1);
+    @include zen-nested-container();
+    margin-bottom: 60px;
+
+    .block-title {
+      @include zen-grid-item(12, 1);
+      @include zen-nested-container();
+      font-size: 2em;
+      line-height: 2em;
+      margin-bottom: 30px;
+    }
+
+    .views-row {
+      @include zen-clear();
+      @include zen-grid-item(12, 1);
+      @include zen-nested-container();
+      padding-top: 10px;
+      padding-bottom: 10px;
+
+      .views-field-title {
+        @include zen-grid-item(12, 1);
+        font-size: 1.6em;
+      }
+
+      .views-field-field-date {
+        @include zen-clear();
+        @include zen-grid-item(12, 1);
+        font-size: 1.2em;
+      }
+    }
+  }
+  /**
+  * End of the layout for the notices section
+  */
+
+  /**
+  * The layout for the content middle section
+  */
+  .content-middle-column {
+    @include zen-grid-item(10, 2);
+    padding-top: 30px;
+  }
+  /**
+   * End of the layout for the content middle section
+   */
+
+  /**
+  * The layout for the content right section
+  */
+  .content-right-column {
+    @include zen-grid-item(3, 10);
+  }
+  /**
+   * End of the layout for the content right section
+   */
+
+  /**
+  * The layout for the content section
+  */
+  .section-background {
+    width: 100%;
+    height: 300px;
+    position: relative;
+
+    .page-title {
+      position: absolute;
+      top: 40%;
+      width: 100%;
+      font-size: 3.8em;
+    }
+  }
+
+  .error-background {
+    width: 100%;
+    height: 400px;
+    position: relative;
+
+    .page-title {
+      position: absolute;
+      top: 40%;
+      width: 100%;
+      font-size: 3.8em;
+    }
+  }
+
+  .content-background {
+    width: 100%;
+    height: 400px;
+  }
+
+  .content {
+    @include zen-grid-item(12, 1);
+    @include zen-nested-container();
+
+    .page-title {
+      font-size: 3.8em;
+      line-height: 1em;
+      padding-bottom: 10px;
+      margin-bottom: 30px;
+    }
+
+    .profile {
+      @include zen-clear();
+      @include zen-grid-item(12, 1);
+      @include zen-nested-container();
+      font-size: 1.4em;
+
+      h3 {
+        margin-top: 0;
+      }
+    }
+
+    form {
+      @include zen-clear();
+      @include zen-grid-item(12, 1);
+      @include zen-nested-container();
+      font-size: 1.4em;
+
+      .form-item {
+        margin-top: 0;
+      }
+    }
+
+    .search-results-section {
+      @include zen-clear();
+      @include zen-grid-item(12, 1);
+      @include zen-nested-container();
+      font-size: 1.4em;
+
+      h2 {
+        margin-top: 0;
+      }
+
+      ul {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+
+      ol {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+    }
+
+    .node {
+      @include zen-grid-item(12, 1);
+      @include zen-nested-container();
+
+      .field-name-body {
+        @include zen-grid-item(12, 1);
+        @include zen-nested-container();
+        font-size: 1.4em;
+
+        h3 {
+          font-size: 1.2em;
+          margin-top: 0;
+          margin-bottom: 0;
+        }
+
+        table {
+          width: 100%;
+          margin-top: 0;
+          margin-bottom: 0;
+
+          th {
+            padding: 5px;
+          }
+
+          td {
+            padding: 5px;
+          }
+        }
+
+        .btn {
+          padding: 10px 15px;
+        }
+
+        ul {
+          margin-top: 0;
+          margin-bottom: 0;
+        }
+
+        p {
+          margin-top: 0;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  /**
+  * End of the layout for the content section
+  */
+
+  /**
+  * The layout for the subcontent section
+  */
+  .subcontent {
+    @include zen-clear();
+    @include zen-grid-item(12, 1);
+    @include zen-nested-container();
+    
+    .block {
+      margin-left: -15px;
+      margin-right: -15px;
+    }
+
+    .node:nth-child(3n + 1) {
+      @include zen-clear();
+      @include zen-grid-item(4, 1);
+    }
+
+    .node:nth-child(3n + 2) {
+      @include zen-grid-item(4, 5);
+    }
+
+    .node:nth-child(3n + 3) {
+      @include zen-grid-item(4, 9);
+    }
+
+    .node {
+      @include zen-nested-container();
+      padding-top: 30px;
+
+      .field-name-field-image {
+        @include zen-grid-item(12, 1);
+
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      .node-title {
+        @include zen-clear();
+        @include zen-grid-item(12, 1);
+        font-size: 1.6em;
+      }
+
+      .field-name-body {
+        @include zen-clear();
+        @include zen-grid-item(12, 1);
+        font-size: 1.2em;
+
+        p {
+          margin-top: 0;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  /**
+  * End of the layout for the subcontent section
+  */
+
+  /**
+   * The layout for the news section
+   */
+  .news-content {
+    @include zen-grid-item(12, 1);
+    @include zen-nested-container();
+
+    .page-title {
+      font-size: 3.8em;
+      line-height: 1em;
+      padding-bottom: 10px;
+    }
+
+    .view {
+      margin-left: -15px;
+      margin-right: -15px;
+    }
+
+    .views-row:nth-child(3n + 1) {
+      @include zen-clear();
+      @include zen-grid-item(4, 1);
+    }
+
+    .views-row:nth-child(3n + 2) {
+      @include zen-grid-item(4, 5);
+    }
+
+    .views-row:nth-child(3n + 3) {
+      @include zen-grid-item(4, 9);
+    }
+
+    .views-row {
+      padding-top: 30px;
+
+      .views-field-field-image {
+        @include zen-grid-item(12, 1);
+        @include zen-nested-container();
+
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      .views-field-title {
+        @include zen-clear();
+        @include zen-grid-item(12, 1);
+        @include zen-nested-container();
+        font-size: 1.8em;
+        padding-top: 15px;
+      }
+
+      .views-field-field-date {
+        @include zen-clear();
+        @include zen-grid-item(12, 1);
+        @include zen-nested-container();
+        font-size: 1.2em;
+      }
+
+      .views-field-body {
+        @include zen-clear();
+        @include zen-grid-item(12, 1);
+        @include zen-nested-container();
+        font-size: 1.2em;
+
+        p {
+          margin-top: 0;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  /**
+   * End of the layout for the news section
+   */
+
+  /**
+   * End of the layout for the news section
+   */
+  .news-page {
+    @include zen-grid-item(12, 1);
+    @include zen-nested-container();
+
+    .page-title {
+      font-size: 3.8em;
+      line-height: 1em;
+      padding-bottom: 15px;
+    }
+
+    .node {
+      @include zen-grid-item(12, 1);
+      @include zen-nested-container();
+
+      .node-left-column {
+        @include zen-grid-item(12, 1);
+        @include zen-nested-container();
+        
+        .field-name-field-date { 
+          @include zen-grid-item(12, 1);
+          @include zen-nested-container();
+          font-size: 1.6em;
+        }
+
+        .field-name-body {
+          @include zen-clear();
+          @include zen-grid-item(12, 1);
+          @include zen-nested-container();
+          font-size: 1.4em;
+          padding-top: 30px;
+          padding-bottom: 30px;
+
+          h3 {
+            font-size: 1.2em;
+            margin-top: 0;
+            margin-bottom: 0;
+          }
+
+          table {
+            width: 100%;
+            margin-top: 0;
+            margin-bottom: 0;
+
+            th {
+              padding: 5px;
+            }
+
+            td {
+              padding: 5px;
+            }
+          }
+
+          .btn {
+            padding: 10px 15px;
+          }
+
+          ul {
+            margin-top: 0;
+            margin-bottom: 0;
+          }
+
+          p {
+            margin-top: 0;
+            margin-bottom: 0;
+          }
+        }
+      }
+
+      .node-right-column {
+        display: none;
+      }
+    }
+
+    .share-buttons {
+      @include zen-clear();
+      @include zen-grid-item(12, 1);
+      @include zen-nested-container();
+
+      a {
+        font-size: 3.2em;
+      }
+    }
+  }
+  /**
+   * End of the layout for the news section
+   */
+
+  /**
+   * The layout for the events section
+   */
+  .events-content {
+    @include zen-grid-item(12, 1);
+    @include zen-nested-container();
+
+    .page-title {
+      font-size: 3.8em;
+      line-height: 1em;
+      padding-bottom: 10px;
+    }
+
+    .view {
+      margin-left: -15px;
+      margin-right: -15px;
+    }
+
+    .views-row:nth-child(3n + 1) {
+      @include zen-clear();
+      @include zen-grid-item(4, 1);
+    }
+
+    .views-row:nth-child(3n + 2) {
+      @include zen-grid-item(4, 5);
+    }
+
+    .views-row:nth-child(3n + 3) {
+      @include zen-grid-item(4, 9);
+    }
+
+    .views-row {
+      padding-top: 30px;
+
+      .views-field-field-image {
+        @include zen-grid-item(12, 1);
+        @include zen-nested-container();
+
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      .views-field-field-date {
+        @include zen-grid-item(12, 1);
+        @include zen-nested-container();
+        font-size: 1.6em;
+        padding: 15px 10px 15px 10px;
+      }
+
+      .views-field-title {
+        @include zen-clear();
+        @include zen-grid-item(12, 1);
+        font-size: 1.8em;
+        padding-top: 15px;
+      }
+
+      .views-field-nothing {
+        @include zen-clear();
+        @include zen-grid-item(12, 1);
+        font-size: 2.4em;
+        padding-top: 10px;
+      }
+
+      .views-field-field-link {
+        @include zen-clear();
+        @include zen-grid-item(12, 1);
+        font-size: 1.4em;
+        padding-bottom: 15px;
+      }
+
+      .views-field-body {
+        @include zen-clear();
+        @include zen-grid-item(12, 1);
+        font-size: 1.2em;
+
+        p {
+          margin-top: 0;
+          margin-bottom: 0;
+          padding-top: 15px;
+          padding-bottom: 15px;
+          border-top: 1px solid #cccccc;
+        }
+      }
+    }
+  }
+  /**
+   * End of the layout for the events section
+   */
+
+  /**
+   * The layout for the events section
+   */
+  .events-page {
+    @include zen-grid-item(12, 1);
+    @include zen-nested-container();
+
+    .page-title {
+      font-size: 3.8em;
+      line-height: 1em;
+      padding-bottom: 30px;
+    }
+
+    .node {
+      @include zen-grid-item(12, 1);
+      @include zen-nested-container();
+
+      .node-left-column {
+        @include zen-grid-item(12, 1);
+        @include zen-nested-container();
+
+        .info-wrapper {
+          @include zen-grid-item(12, 1);
+          @include zen-nested-container();
+          padding-top: 15px;
+          padding-bottom: 15px;
+
+          .date-wrapper {
+            @include zen-grid-item(4, 1);
+            @include zen-nested-container();
+
+            .icon-calendar {
+              font-size: 2.4em;
+            }
+
+            .field-name-field-date {
+              font-size: 1.6em;
+            }
+          }
+
+          .time-wrapper {
+            @include zen-grid-item(4, 5);
+            @include zen-nested-container();
+
+            .icon-clock {
+              font-size: 2.4em;
+            }
+
+            .field-name-field-time {
+              font-size: 1.6em;
+            }
+          }
+
+          .location-wrapper {
+            @include zen-grid-item(4, 9);
+            @include zen-nested-container();
+
+            .icon-location {
+              font-size: 2.4em;
+            }
+
+            .field-name-field-link {
+              font-size: 1.6em;
+            }
+          }
+        }
+
+        .field-name-body {
+          @include zen-clear();
+          @include zen-grid-item(12, 1);
+          @include zen-nested-container();
+          padding-top: 30px;
+          padding-bottom: 30px;
+          font-size: 1.4em;
+
+          h3 {
+            font-size: 1.2em;
+            margin-top: 0;
+            margin-bottom: 0;
+          }
+
+          table {
+            width: 100%;
+            margin-top: 0;
+            margin-bottom: 0;
+
+            th {
+              padding: 5px;
+            }
+
+            td {
+              padding: 5px;
+            }
+          }
+
+          .btn {
+            padding: 10px 15px;
+          }
+
+          ul {
+            margin-top: 0;
+            margin-bottom: 0;
+          }
+
+          p {
+            margin-top: 0;
+            margin-bottom: 0;
+          }
+        }
+      }
+
+      .node-right-column {
+        display: none;
+      }    
+    }
+
+    .share-buttons {
+      @include zen-clear();
+      @include zen-grid-item(12, 1);
+      @include zen-nested-container();
+
+      a {
+        font-size: 3.2em;
+      }
+    }
+  }
+  /**
+   * End of the layout for the events section
+   */
+
+  /**
+   * The layout for the notices section
+   */
+  .notices-content {
+    @include zen-grid-item(12, 1);
+    @include zen-nested-container();
+
+    .page-title {
+      font-size: 3.8em;
+      line-height: 1em;
+      padding-bottom: 10px;
+      margin-bottom: 30px;
+    }
+
+    .views-row {
+      @include zen-clear();
+      @include zen-grid-item(12, 1);
+      @include zen-nested-container();
+      padding-top: 15px;
+      padding-bottom: 15px;
+
+      .views-field-title {
+        @include zen-grid-item(12, 1);
+        @include zen-nested-container();
+        font-size: 1.6em;
+      }
+
+      .views-field-field-date {
+        @include zen-clear();
+        @include zen-grid-item(12, 1);
+        @include zen-nested-container();
+        font-size: 1.2em;
+      }
+    }
+
+    .views-row-first {
+      padding-top: 0;
+    }
+
+    .views-row-last {
+      padding-bottom: 0;
+    }
+  }
+  /**
+   * The layout for the notices section
+   */
+
+  /**
+   * End of the layout for the notices section
+   */
+  .notices-page {
+    @include zen-grid-item(12, 1);
+    @include zen-nested-container();
+
+    .page-title {
+      font-size: 3.8em;
+      line-height: 1em;
+      padding-bottom: 15px;
+    }
+
+    .node {
+      @include zen-grid-item(12, 1);
+      @include zen-nested-container();
+
+      .field-name-field-date { 
+        @include zen-clear();
+        @include zen-grid-item(12, 1);
+        @include zen-nested-container();
+        font-size: 1.6em;
+      }
+
+      .field-name-body {
+        @include zen-clear();
+        @include zen-grid-item(12, 1);
+        @include zen-nested-container();
+        font-size: 1.4em;
+        padding-top: 30px;
+        padding-bottom: 30px;
+
+        h3 {
+          font-size: 1.2em;
+          margin-top: 0;
+          margin-bottom: 0;
+        }
+
+        table {
+          width: 100%;
+          margin-top: 0;
+          margin-bottom: 0;
+
+          th {
+            padding: 5px;
+          }
+
+          td {
+            padding: 5px;
+          }
+        }
+
+        .btn {
+          padding: 10px 15px;
+        }
+
+        ul {
+          margin-top: 0;
+          margin-bottom: 0;
+        }
+
+        p {
+          margin-top: 0;
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .share-buttons {
+      @include zen-clear();
+      @include zen-grid-item(12, 1);
+      @include zen-nested-container();
+
+      a {
+        font-size: 3.2em;
+      }
+    }
+  }
+  /**
+   * End of the layout for the notices section
+   */
+  
+  /**
+   * The layout for the footer section
+   */
+  .footer-top-outter {
+    width: 100%;
+  }
+
+  .footer-middle-outter {
+    width: 100%;
+  }
+
+  .footer-bottom-outter {
+    width: 100%;
+  }
+
+  .footer-top-inner {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .footer-middle-inner {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .footer-bottom-inner {
+    padding-left: 15px;
+    padding-right: 15px;
+  }  
+
+  .footer-top {
+    @include zen-grid-item(12, 1);
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    ul {
+      font-size: 1.2em;
+      margin: 0;
+      padding: 0;
+
+      a {
+        line-height: 3.2em;
+        padding: 0 10px;
+      }
+    }
+  }
+
+  .footer-middle {
+    @include zen-clear();
+    @include zen-grid-item(12, 1);
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    ul {
+      font-size: 1.4em;
+      margin: 0;
+      padding: 0;
+
+      a {
+        padding: 20px 30px;
+
+        span {
+          font-size: 2.4em;
+          padding-bottom: 10px;
+        }
+      }
+    }
+  }
+
+  .footer-bottom {
+    @include zen-clear();
+    @include zen-grid-item(12, 1);
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    p {
+      line-height: 3.2em;
+      font-size: 1em;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+  /**
+   * End of the layout for the footer section
+   */
+}

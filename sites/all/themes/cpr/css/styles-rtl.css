@@ -1,0 +1,7496 @@
+/**
+ * @file
+ * RTL companion for the styles.scss file.
+ */
+/* Import Sass mixins, variables, Compass modules, etc. */
+/* HTML element (SMACSS base) rules */
+/**
+ * @file
+ * Normalize-rtl.scss is the RTL language extension of normalize.scss
+ */
+/**
+ * Lists
+ */
+/* line 9, ../sass/_normalize-rtl.scss */
+dd {
+  margin: 0 30px 0 0;
+}
+
+/* Address paddings set differently in IE 6/7. */
+/* line 16, ../sass/_normalize-rtl.scss */
+menu,
+ol,
+ul {
+  padding: 0 30px 0 0;
+}
+
+/* Layout rules */
+/**
+ * @file
+ * RTL companion for the layout-responsive.css file.
+ */
+/**
+ * @file
+ * Positioning for a responsive layout.
+ *
+ * Define CSS classes to create a fluid grid layout with optional sidebars
+ * depending on whether blocks are placed in the left or right sidebars.
+ *
+ * This layout uses the Zen Grids plugin for Compass: http://zengrids.com
+ */
+/**
+ * Use 12 grid columns for smaller screens.
+ */
+@media all and (max-width: 479px) {
+  /**
+   * The layout for the header section
+   */
+  /* line 215, ../sass/layouts/_responsive.scss */
+  .header-section {
+    width: 100%;
+  }
+
+  /* line 219, ../sass/layouts/_responsive.scss */
+  .header-section-inner {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  /* line 224, ../sass/layouts/_responsive.scss */
+  .logo {
+    padding: 10px 15px 10px 15px;
+    float: left;
+    max-width: 75px;
+  }
+  /* line 229, ../sass/layouts/_responsive.scss */
+  .logo img {
+    max-width: 75px;
+    height: auto;
+  }
+
+  /* line 235, ../sass/layouts/_responsive.scss */
+  .main-nav {
+    display: none;
+  }
+
+  /* line 239, ../sass/layouts/_responsive.scss */
+  .tablet-btn {
+    display: none;
+  }
+
+  /* line 245, ../sass/layouts/_responsive.scss */
+  .mobile-btn span {
+    float: right;
+    padding: 23px;
+    font-size: 1.9em;
+    margin-right: 15px;
+  }
+
+  /* line 253, ../sass/layouts/_responsive.scss */
+  .search-btn {
+    display: none;
+  }
+
+  /* line 257, ../sass/layouts/_responsive.scss */
+  .search-section {
+    display: none !important;
+  }
+
+  /* line 261, ../sass/layouts/_responsive.scss */
+  .tablet-nav {
+    display: none !important;
+  }
+
+  /* line 265, ../sass/layouts/_responsive.scss */
+  .mobile-nav {
+    display: none;
+    width: 100%;
+  }
+  /* line 269, ../sass/layouts/_responsive.scss */
+  .mobile-nav .mobile-search {
+    padding: 10px 30px 10px 30px;
+  }
+  /* line 272, ../sass/layouts/_responsive.scss */
+  .mobile-nav .mobile-search .form-item label {
+    display: none;
+  }
+  /* line 276, ../sass/layouts/_responsive.scss */
+  .mobile-nav .mobile-search .form-item input {
+    width: 75%;
+    height: 35px;
+    font-size: 1.8em;
+  }
+  /* line 282, ../sass/layouts/_responsive.scss */
+  .mobile-nav .mobile-search .form-actions input {
+    width: 20%;
+    height: 35px;
+    font-size: 1em;
+    float: right;
+  }
+  /* line 296, ../sass/layouts/_responsive.scss */
+  .mobile-nav .mobile-mainnav .menu li a {
+    padding: 15px 30px 15px 30px;
+    font-size: 1.4em;
+    line-height: 1.2em;
+  }
+  /* line 303, ../sass/layouts/_responsive.scss */
+  .mobile-nav .mobile-mainnav .menu .menu {
+    display: none;
+  }
+
+  /* line 310, ../sass/layouts/_responsive.scss */
+  .weather-btn {
+    display: none;
+  }
+
+  /**
+   * End of the layout for the header section
+   */
+  /**
+   * The layout for the top section
+   */
+  /* line 320, ../sass/layouts/_responsive.scss */
+  .council {
+    display: none;
+  }
+
+  /* line 324, ../sass/layouts/_responsive.scss */
+  .connect {
+    display: none;
+  }
+
+  /* line 328, ../sass/layouts/_responsive.scss */
+  .gallery {
+    position: relative;
+  }
+  /* line 331, ../sass/layouts/_responsive.scss */
+  .gallery .views-slideshow-cycle-main-frame {
+    width: 100% !important;
+    height: 250px !important;
+  }
+  /* line 336, ../sass/layouts/_responsive.scss */
+  .gallery .views-slideshow-cycle-main-frame-row {
+    width: 100% !important;
+    height: 250px !important;
+  }
+  /* line 343, ../sass/layouts/_responsive.scss */
+  .gallery .views-field-uri .gallery-background {
+    width: 100%;
+    height: 250px;
+  }
+  /* line 349, ../sass/layouts/_responsive.scss */
+  .gallery .views-field-body {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+  }
+  /* line 355, ../sass/layouts/_responsive.scss */
+  .gallery .views-field-body .field-content {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+  /* line 359, ../sass/layouts/_responsive.scss */
+  .gallery .views-field-body .field-content a {
+    font-size: 2.4em;
+  }
+  /* line 363, ../sass/layouts/_responsive.scss */
+  .gallery .views-field-body .field-content p {
+    display: none;
+  }
+  /* line 367, ../sass/layouts/_responsive.scss */
+  .gallery .views-field-body .field-content .dots {
+    display: none;
+  }
+  /* line 373, ../sass/layouts/_responsive.scss */
+  .gallery .views-slideshow-controls-bottom {
+    display: none;
+  }
+
+  /**
+   * End of the layout for the top section
+   */
+  /**
+   * The layout for the path section
+   */
+  /* line 384, ../sass/layouts/_responsive.scss */
+  .path-section {
+    width: 100%;
+  }
+
+  /* line 388, ../sass/layouts/_responsive.scss */
+  .path-section-inner {
+    padding: 10px 15px 10px 15px;
+  }
+
+  /* line 392, ../sass/layouts/_responsive.scss */
+  .path {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    font-size: 1.2em;
+    line-height: 2em;
+  }
+  /* line 397, ../sass/layouts/_responsive.scss */
+  .path li {
+    padding: 0 10px 0 0;
+  }
+  /* line 401, ../sass/layouts/_responsive.scss */
+  .path a {
+    padding-right: 10px;
+  }
+
+  /**
+   * End of the layout for the path section
+   */
+  /**
+   * The layout for the main content section
+   */
+  /* line 412, ../sass/layouts/_responsive.scss */
+  .main-content {
+    width: 100%;
+  }
+
+  /* line 416, ../sass/layouts/_responsive.scss */
+  .main-content-inner {
+    padding: 0 15px 60px 15px;
+  }
+
+  /* line 420, ../sass/layouts/_responsive.scss */
+  .main-content-padding {
+    padding-bottom: 0;
+  }
+
+  /**
+   * End of the layout for the main content section
+   */
+  /**
+   * The layout for the main top section
+   */
+  /* line 430, ../sass/layouts/_responsive.scss */
+  .main-top-column {
+    display: none;
+  }
+
+  /**
+   * End of the layout for the main top section
+   */
+  /**
+   * The layout for the main nav column section
+   */
+  /* line 440, ../sass/layouts/_responsive.scss */
+  .main-nav-column {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    margin-top: 30px;
+  }
+
+  /* line 446, ../sass/layouts/_responsive.scss */
+  .content-nav {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 30px;
+  }
+  /* line 455, ../sass/layouts/_responsive.scss */
+  .content-nav .menu li span {
+    width: 50%;
+    padding-left: 5px;
+    padding-right: 5px;
+    float: left;
+  }
+  /* line 461, ../sass/layouts/_responsive.scss */
+  .content-nav .menu li span .block-title {
+    font-size: 2em;
+    line-height: 2em;
+  }
+  /* line 467, ../sass/layouts/_responsive.scss */
+  .content-nav .menu li #firstTab {
+    color: #0094BF;
+    border-top: 1px solid #0094BF;
+  }
+
+  /**
+   * End of the layout for the main nav column section
+   */
+  /**
+   * The layout for the main left section
+   */
+  /* line 481, ../sass/layouts/_responsive.scss */
+  .main-left-column {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+  }
+
+  /**
+   * End of the layout for the main left section
+   */
+  /**
+   * The layout for the events section
+   */
+  /* line 492, ../sass/layouts/_responsive.scss */
+  .events {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 496, ../sass/layouts/_responsive.scss */
+  .events .block-title {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 2em;
+    line-height: 2em;
+  }
+  /* line 503, ../sass/layouts/_responsive.scss */
+  .events .views-row {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 30px;
+  }
+  /* line 509, ../sass/layouts/_responsive.scss */
+  .events .views-row .views-field-field-image {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 513, ../sass/layouts/_responsive.scss */
+  .events .views-row .views-field-field-image img {
+    width: 100%;
+    height: auto;
+  }
+  /* line 519, ../sass/layouts/_responsive.scss */
+  .events .views-row .views-field-field-date {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 1.6em;
+    padding: 15px 10px 15px 10px;
+  }
+  /* line 526, ../sass/layouts/_responsive.scss */
+  .events .views-row .views-field-title {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    font-size: 1.6em;
+    padding-top: 15px;
+  }
+  /* line 533, ../sass/layouts/_responsive.scss */
+  .events .views-row .views-field-nothing {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    font-size: 2.4em;
+    padding-top: 10px;
+  }
+  /* line 540, ../sass/layouts/_responsive.scss */
+  .events .views-row .views-field-field-link {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    font-size: 1.4em;
+    padding-bottom: 15px;
+    border-bottom: 3px solid #cccccc;
+  }
+  /* line 548, ../sass/layouts/_responsive.scss */
+  .events .views-row .views-field-body {
+    display: none;
+  }
+
+  /**
+   * The layout for the events section
+   */
+  /**
+  * The layout for the content left section
+  */
+  /* line 560, ../sass/layouts/_responsive.scss */
+  .content-left-column {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-top: 30px;
+  }
+
+  /**
+   * End of the layout for the content left section
+   */
+  /**
+   * The layout for the news section
+   */
+  /* line 571, ../sass/layouts/_responsive.scss */
+  .news {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 575, ../sass/layouts/_responsive.scss */
+  .news .block-title {
+    display: none;
+  }
+  /* line 579, ../sass/layouts/_responsive.scss */
+  .news .page-title {
+    font-size: 3.2em;
+    line-height: 1em;
+    padding-bottom: 15px;
+  }
+  /* line 588, ../sass/layouts/_responsive.scss */
+  .news .block-title {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 2em;
+    line-height: 2em;
+    margin-bottom: 30px;
+  }
+  /* line 596, ../sass/layouts/_responsive.scss */
+  .news .page-title {
+    font-size: 3.8em;
+    line-height: 1em;
+    padding-bottom: 15px;
+  }
+  /* line 602, ../sass/layouts/_responsive.scss */
+  .news .views-row {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px dotted #cccccc;
+  }
+  /* line 610, ../sass/layouts/_responsive.scss */
+  .news .views-row .views-field-field-image {
+    float: right;
+    width: 41.66667%;
+    margin-right: 0%;
+    margin-left: -41.66667%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 614, ../sass/layouts/_responsive.scss */
+  .news .views-row .views-field-field-image img {
+    width: 100%;
+    height: auto;
+  }
+  /* line 620, ../sass/layouts/_responsive.scss */
+  .news .views-row .views-field-title {
+    float: right;
+    width: 58.33333%;
+    margin-right: 41.66667%;
+    margin-left: -100%;
+    float: none;
+    font-size: 1.6em;
+  }
+  /* line 626, ../sass/layouts/_responsive.scss */
+  .news .views-row .views-field-field-date {
+    float: right;
+    width: 58.33333%;
+    margin-right: 41.66667%;
+    margin-left: -100%;
+    float: none;
+    font-size: 1.2em;
+  }
+  /* line 632, ../sass/layouts/_responsive.scss */
+  .news .views-row .views-field-body {
+    display: none;
+  }
+  /* line 637, ../sass/layouts/_responsive.scss */
+  .news .views-row-first {
+    padding-top: 0;
+  }
+  /* line 641, ../sass/layouts/_responsive.scss */
+  .news .views-row-last {
+    padding-bottom: 0;
+  }
+  /* line 645, ../sass/layouts/_responsive.scss */
+  .news .views-row-last {
+    border-bottom: none;
+  }
+
+  /**
+   * The layout for the news section
+   */
+  /**
+  * The layout for the main right section
+  */
+  /* line 656, ../sass/layouts/_responsive.scss */
+  .main-right-column {
+    display: none;
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+  }
+
+  /**
+   * End of the layout for the main right section
+   */
+  /**
+  * The layout for the main bottom section
+  */
+  /* line 668, ../sass/layouts/_responsive.scss */
+  .main-bottom-column {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    margin-top: 60px;
+  }
+
+  /**
+   * End of the layout for the main bottom section
+   */
+  /**
+  * The layout for the notices section
+  */
+  /* line 680, ../sass/layouts/_responsive.scss */
+  .notices {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 685, ../sass/layouts/_responsive.scss */
+  .notices .block-title {
+    display: none;
+  }
+  /* line 689, ../sass/layouts/_responsive.scss */
+  .notices .views-row {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  /* line 696, ../sass/layouts/_responsive.scss */
+  .notices .views-row .views-field-title {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    font-size: 1.6em;
+  }
+  /* line 701, ../sass/layouts/_responsive.scss */
+  .notices .views-row .views-field-field-date {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    font-size: 1.2em;
+  }
+
+  /**
+  * End of the layout for the notices section
+  */
+  /**
+  * The layout for the content middle section
+  */
+  /* line 715, ../sass/layouts/_responsive.scss */
+  .content-middle-column {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-top: 30px;
+  }
+
+  /**
+   * End of the layout for the content middle section
+   */
+  /**
+  * The layout for the content right section
+  */
+  /* line 726, ../sass/layouts/_responsive.scss */
+  .content-right-column {
+    display: none;
+  }
+
+  /**
+   * End of the layout for the content right section
+   */
+  /**
+  * The layout for the content section
+  */
+  /* line 736, ../sass/layouts/_responsive.scss */
+  .section-background {
+    display: none;
+  }
+
+  /* line 740, ../sass/layouts/_responsive.scss */
+  .error-background {
+    width: 100%;
+    height: 250px;
+    position: relative;
+  }
+  /* line 745, ../sass/layouts/_responsive.scss */
+  .error-background .page-title {
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    font-size: 3.2em;
+  }
+
+  /* line 753, ../sass/layouts/_responsive.scss */
+  .content-background {
+    width: 100%;
+    height: 250px;
+  }
+
+  /* line 758, ../sass/layouts/_responsive.scss */
+  .content {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 762, ../sass/layouts/_responsive.scss */
+  .content .page-title {
+    font-size: 3.2em;
+    line-height: 1em;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+  }
+  /* line 769, ../sass/layouts/_responsive.scss */
+  .content .profile {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 1.4em;
+  }
+  /* line 775, ../sass/layouts/_responsive.scss */
+  .content .profile h3 {
+    margin-top: 0;
+  }
+  /* line 780, ../sass/layouts/_responsive.scss */
+  .content form {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 1.4em;
+  }
+  /* line 786, ../sass/layouts/_responsive.scss */
+  .content form .form-item {
+    margin-top: 0;
+  }
+  /* line 791, ../sass/layouts/_responsive.scss */
+  .content .search-results-section {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 1.4em;
+  }
+  /* line 797, ../sass/layouts/_responsive.scss */
+  .content .search-results-section h2 {
+    margin-top: 0;
+  }
+  /* line 802, ../sass/layouts/_responsive.scss */
+  .content .node {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 806, ../sass/layouts/_responsive.scss */
+  .content .node .field-name-body {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 1.4em;
+  }
+  /* line 811, ../sass/layouts/_responsive.scss */
+  .content .node .field-name-body h3 {
+    font-size: 1.2em;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  /* line 817, ../sass/layouts/_responsive.scss */
+  .content .node .field-name-body table {
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  /* line 822, ../sass/layouts/_responsive.scss */
+  .content .node .field-name-body table th {
+    padding: 5px;
+  }
+  /* line 826, ../sass/layouts/_responsive.scss */
+  .content .node .field-name-body table td {
+    padding: 5px;
+  }
+  /* line 831, ../sass/layouts/_responsive.scss */
+  .content .node .field-name-body .btn {
+    padding: 10px 15px;
+  }
+  /* line 835, ../sass/layouts/_responsive.scss */
+  .content .node .field-name-body ul {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  /* line 840, ../sass/layouts/_responsive.scss */
+  .content .node .field-name-body p {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  /**
+  * End of the layout for the content section
+  */
+  /**
+  * The layout for the subcontent section
+  */
+  /* line 854, ../sass/layouts/_responsive.scss */
+  .subcontent {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 859, ../sass/layouts/_responsive.scss */
+  .subcontent .block {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+  /* line 864, ../sass/layouts/_responsive.scss */
+  .subcontent .node:nth-child(2n + 1) {
+    clear: right;
+    float: right;
+    width: 50%;
+    margin-right: 0%;
+    margin-left: -50%;
+  }
+  /* line 869, ../sass/layouts/_responsive.scss */
+  .subcontent .node:nth-child(2n + 2) {
+    float: right;
+    width: 50%;
+    margin-right: 50%;
+    margin-left: -100%;
+  }
+  /* line 873, ../sass/layouts/_responsive.scss */
+  .subcontent .node {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 30px;
+  }
+  /* line 877, ../sass/layouts/_responsive.scss */
+  .subcontent .node .field-name-field-image {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+  }
+  /* line 880, ../sass/layouts/_responsive.scss */
+  .subcontent .node .field-name-field-image img {
+    width: 100%;
+    height: auto;
+  }
+  /* line 886, ../sass/layouts/_responsive.scss */
+  .subcontent .node .node-title {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    font-size: 1.6em;
+  }
+  /* line 892, ../sass/layouts/_responsive.scss */
+  .subcontent .node .field-name-body {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    font-size: 1.2em;
+  }
+  /* line 897, ../sass/layouts/_responsive.scss */
+  .subcontent .node .field-name-body p {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  /**
+  * End of the layout for the subcontent section
+  */
+  /**
+   * The layout for the news section
+   */
+  /* line 911, ../sass/layouts/_responsive.scss */
+  .news-content {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 915, ../sass/layouts/_responsive.scss */
+  .news-content .page-title {
+    font-size: 3.2em;
+    line-height: 1em;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+  }
+  /* line 922, ../sass/layouts/_responsive.scss */
+  .news-content .views-row {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px dotted #cccccc;
+  }
+  /* line 930, ../sass/layouts/_responsive.scss */
+  .news-content .views-row .views-field-field-image {
+    float: right;
+    width: 41.66667%;
+    margin-right: 0%;
+    margin-left: -41.66667%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 934, ../sass/layouts/_responsive.scss */
+  .news-content .views-row .views-field-field-image img {
+    width: 100%;
+    height: auto;
+  }
+  /* line 940, ../sass/layouts/_responsive.scss */
+  .news-content .views-row .views-field-title {
+    float: right;
+    width: 58.33333%;
+    margin-right: 41.66667%;
+    margin-left: -100%;
+    float: none;
+    font-size: 1.6em;
+  }
+  /* line 946, ../sass/layouts/_responsive.scss */
+  .news-content .views-row .views-field-field-date {
+    float: right;
+    width: 58.33333%;
+    margin-right: 41.66667%;
+    margin-left: -100%;
+    float: none;
+    font-size: 1.2em;
+  }
+  /* line 952, ../sass/layouts/_responsive.scss */
+  .news-content .views-row .views-field-body {
+    display: none;
+  }
+  /* line 957, ../sass/layouts/_responsive.scss */
+  .news-content .views-row-first {
+    padding-top: 0;
+  }
+  /* line 961, ../sass/layouts/_responsive.scss */
+  .news-content .views-row-last {
+    padding-bottom: 0;
+  }
+  /* line 965, ../sass/layouts/_responsive.scss */
+  .news-content .views-row-last {
+    border-bottom: none;
+  }
+
+  /**
+   * End of the layout for the news section
+   */
+  /**
+   * End of the layout for the news section
+   */
+  /* line 976, ../sass/layouts/_responsive.scss */
+  .news-page {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 980, ../sass/layouts/_responsive.scss */
+  .news-page .page-title {
+    font-size: 3.2em;
+    line-height: 1em;
+    padding-bottom: 15px;
+  }
+  /* line 986, ../sass/layouts/_responsive.scss */
+  .news-page .node {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 990, ../sass/layouts/_responsive.scss */
+  .news-page .node .node-left-column {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 994, ../sass/layouts/_responsive.scss */
+  .news-page .node .node-left-column .field-name-field-date {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 1.6em;
+  }
+  /* line 1000, ../sass/layouts/_responsive.scss */
+  .news-page .node .node-left-column .field-name-body {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 1.4em;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  /* line 1008, ../sass/layouts/_responsive.scss */
+  .news-page .node .node-left-column .field-name-body h3 {
+    font-size: 1.2em;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  /* line 1014, ../sass/layouts/_responsive.scss */
+  .news-page .node .node-left-column .field-name-body table {
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  /* line 1019, ../sass/layouts/_responsive.scss */
+  .news-page .node .node-left-column .field-name-body table th {
+    padding: 5px;
+  }
+  /* line 1023, ../sass/layouts/_responsive.scss */
+  .news-page .node .node-left-column .field-name-body table td {
+    padding: 5px;
+  }
+  /* line 1028, ../sass/layouts/_responsive.scss */
+  .news-page .node .node-left-column .field-name-body .btn {
+    padding: 10px 15px;
+  }
+  /* line 1032, ../sass/layouts/_responsive.scss */
+  .news-page .node .node-left-column .field-name-body ul {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  /* line 1037, ../sass/layouts/_responsive.scss */
+  .news-page .node .node-left-column .field-name-body p {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  /* line 1044, ../sass/layouts/_responsive.scss */
+  .news-page .node .node-right-column {
+    display: none;
+  }
+  /* line 1049, ../sass/layouts/_responsive.scss */
+  .news-page .share-buttons {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 1054, ../sass/layouts/_responsive.scss */
+  .news-page .share-buttons a {
+    font-size: 3.2em;
+  }
+
+  /**
+   * End of the layout for the news section
+   */
+  /**
+   * The layout for the events section
+   */
+  /* line 1066, ../sass/layouts/_responsive.scss */
+  .events-content {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 1070, ../sass/layouts/_responsive.scss */
+  .events-content .page-title {
+    font-size: 3.2em;
+    line-height: 1em;
+    padding-bottom: 10px;
+  }
+  /* line 1076, ../sass/layouts/_responsive.scss */
+  .events-content .views-row {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 30px;
+  }
+  /* line 1082, ../sass/layouts/_responsive.scss */
+  .events-content .views-row .views-field-field-image {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 1086, ../sass/layouts/_responsive.scss */
+  .events-content .views-row .views-field-field-image img {
+    width: 100%;
+    height: auto;
+  }
+  /* line 1092, ../sass/layouts/_responsive.scss */
+  .events-content .views-row .views-field-field-date {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 1.6em;
+    padding: 15px 10px 15px 10px;
+  }
+  /* line 1099, ../sass/layouts/_responsive.scss */
+  .events-content .views-row .views-field-title {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    font-size: 1.6em;
+    padding-top: 15px;
+  }
+  /* line 1106, ../sass/layouts/_responsive.scss */
+  .events-content .views-row .views-field-nothing {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    font-size: 2.4em;
+    padding-top: 10px;
+  }
+  /* line 1113, ../sass/layouts/_responsive.scss */
+  .events-content .views-row .views-field-field-link {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    font-size: 1.4em;
+    padding-bottom: 15px;
+    border-bottom: 3px solid #cccccc;
+  }
+  /* line 1121, ../sass/layouts/_responsive.scss */
+  .events-content .views-row .views-field-body {
+    display: none;
+  }
+
+  /**
+   * End of the layout for the events section
+   */
+  /**
+   * The layout for the events section
+   */
+  /* line 1133, ../sass/layouts/_responsive.scss */
+  .events-page {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 1137, ../sass/layouts/_responsive.scss */
+  .events-page .page-title {
+    font-size: 3.2em;
+    line-height: 1em;
+    padding-bottom: 30px;
+  }
+  /* line 1143, ../sass/layouts/_responsive.scss */
+  .events-page .node {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 1148, ../sass/layouts/_responsive.scss */
+  .events-page .node .node-left-column {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 1152, ../sass/layouts/_responsive.scss */
+  .events-page .node .node-left-column .info-wrapper {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  /* line 1158, ../sass/layouts/_responsive.scss */
+  .events-page .node .node-left-column .info-wrapper .date-wrapper {
+    float: right;
+    width: 33.33333%;
+    margin-right: 0%;
+    margin-left: -33.33333%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 1162, ../sass/layouts/_responsive.scss */
+  .events-page .node .node-left-column .info-wrapper .date-wrapper .icon-calendar {
+    font-size: 2.4em;
+  }
+  /* line 1166, ../sass/layouts/_responsive.scss */
+  .events-page .node .node-left-column .info-wrapper .date-wrapper .field-name-field-date {
+    font-size: 1.6em;
+  }
+  /* line 1171, ../sass/layouts/_responsive.scss */
+  .events-page .node .node-left-column .info-wrapper .time-wrapper {
+    float: right;
+    width: 33.33333%;
+    margin-right: 33.33333%;
+    margin-left: -66.66667%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 1175, ../sass/layouts/_responsive.scss */
+  .events-page .node .node-left-column .info-wrapper .time-wrapper .icon-clock {
+    font-size: 2.4em;
+  }
+  /* line 1179, ../sass/layouts/_responsive.scss */
+  .events-page .node .node-left-column .info-wrapper .time-wrapper .field-name-field-time {
+    font-size: 1.6em;
+  }
+  /* line 1184, ../sass/layouts/_responsive.scss */
+  .events-page .node .node-left-column .info-wrapper .location-wrapper {
+    float: right;
+    width: 33.33333%;
+    margin-right: 66.66667%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 1188, ../sass/layouts/_responsive.scss */
+  .events-page .node .node-left-column .info-wrapper .location-wrapper .icon-location {
+    font-size: 2.4em;
+  }
+  /* line 1192, ../sass/layouts/_responsive.scss */
+  .events-page .node .node-left-column .info-wrapper .location-wrapper .field-name-field-link {
+    font-size: 1.6em;
+  }
+  /* line 1198, ../sass/layouts/_responsive.scss */
+  .events-page .node .node-left-column .field-name-body {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-size: 1.4em;
+  }
+  /* line 1206, ../sass/layouts/_responsive.scss */
+  .events-page .node .node-left-column .field-name-body h3 {
+    font-size: 1.2em;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  /* line 1212, ../sass/layouts/_responsive.scss */
+  .events-page .node .node-left-column .field-name-body table {
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  /* line 1217, ../sass/layouts/_responsive.scss */
+  .events-page .node .node-left-column .field-name-body table th {
+    padding: 5px;
+  }
+  /* line 1221, ../sass/layouts/_responsive.scss */
+  .events-page .node .node-left-column .field-name-body table td {
+    padding: 5px;
+  }
+  /* line 1226, ../sass/layouts/_responsive.scss */
+  .events-page .node .node-left-column .field-name-body .btn {
+    padding: 10px 15px;
+  }
+  /* line 1230, ../sass/layouts/_responsive.scss */
+  .events-page .node .node-left-column .field-name-body ul {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  /* line 1235, ../sass/layouts/_responsive.scss */
+  .events-page .node .node-left-column .field-name-body p {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  /* line 1242, ../sass/layouts/_responsive.scss */
+  .events-page .node .node-right-column {
+    display: none;
+  }
+  /* line 1247, ../sass/layouts/_responsive.scss */
+  .events-page .share-buttons {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 1252, ../sass/layouts/_responsive.scss */
+  .events-page .share-buttons a {
+    font-size: 3.2em;
+  }
+
+  /**
+   * End of the layout for the events section
+   */
+  /**
+   * The layout for the notices section
+   */
+  /* line 1264, ../sass/layouts/_responsive.scss */
+  .notices-content {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 1268, ../sass/layouts/_responsive.scss */
+  .notices-content .page-title {
+    font-size: 3.2em;
+    line-height: 1em;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+  }
+  /* line 1275, ../sass/layouts/_responsive.scss */
+  .notices-content .views-row {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  /* line 1282, ../sass/layouts/_responsive.scss */
+  .notices-content .views-row .views-field-title {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 1.6em;
+  }
+  /* line 1288, ../sass/layouts/_responsive.scss */
+  .notices-content .views-row .views-field-field-date {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 1.2em;
+  }
+  /* line 1296, ../sass/layouts/_responsive.scss */
+  .notices-content .views-row-first {
+    padding-top: 0;
+  }
+  /* line 1300, ../sass/layouts/_responsive.scss */
+  .notices-content .views-row-last {
+    padding-bottom: 0;
+  }
+
+  /**
+   * The layout for the notices section
+   */
+  /**
+   * End of the layout for the notices section
+   */
+  /* line 1311, ../sass/layouts/_responsive.scss */
+  .notices-page {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 1315, ../sass/layouts/_responsive.scss */
+  .notices-page .page-title {
+    font-size: 3.2em;
+    line-height: 1em;
+    padding-bottom: 15px;
+  }
+  /* line 1321, ../sass/layouts/_responsive.scss */
+  .notices-page .node {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 1325, ../sass/layouts/_responsive.scss */
+  .notices-page .node .field-name-field-date {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 1.6em;
+  }
+  /* line 1332, ../sass/layouts/_responsive.scss */
+  .notices-page .node .field-name-body {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 1.4em;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  /* line 1340, ../sass/layouts/_responsive.scss */
+  .notices-page .node .field-name-body h3 {
+    font-size: 1.2em;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  /* line 1346, ../sass/layouts/_responsive.scss */
+  .notices-page .node .field-name-body table {
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  /* line 1351, ../sass/layouts/_responsive.scss */
+  .notices-page .node .field-name-body table th {
+    padding: 5px;
+  }
+  /* line 1355, ../sass/layouts/_responsive.scss */
+  .notices-page .node .field-name-body table td {
+    padding: 5px;
+  }
+  /* line 1360, ../sass/layouts/_responsive.scss */
+  .notices-page .node .field-name-body .btn {
+    padding: 10px 15px;
+  }
+  /* line 1364, ../sass/layouts/_responsive.scss */
+  .notices-page .node .field-name-body ul {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  /* line 1369, ../sass/layouts/_responsive.scss */
+  .notices-page .node .field-name-body p {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  /* line 1376, ../sass/layouts/_responsive.scss */
+  .notices-page .share-buttons {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 1381, ../sass/layouts/_responsive.scss */
+  .notices-page .share-buttons a {
+    font-size: 3.2em;
+  }
+
+  /**
+   * End of the layout for the notices section
+   */
+  /**
+   * The layout for the footer section
+   */
+  /* line 1393, ../sass/layouts/_responsive.scss */
+  .footer-top-outter {
+    width: 100%;
+  }
+
+  /* line 1397, ../sass/layouts/_responsive.scss */
+  .footer-middle-outter {
+    width: 100%;
+  }
+
+  /* line 1401, ../sass/layouts/_responsive.scss */
+  .footer-bottom-outter {
+    width: 100%;
+  }
+
+  /* line 1405, ../sass/layouts/_responsive.scss */
+  .footer-top-inner {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  /* line 1410, ../sass/layouts/_responsive.scss */
+  .footer-middle-inner {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  /* line 1415, ../sass/layouts/_responsive.scss */
+  .footer-bottom-inner {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  /* line 1420, ../sass/layouts/_responsive.scss */
+  .footer-top {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  /* line 1425, ../sass/layouts/_responsive.scss */
+  .footer-top ul {
+    font-size: 1.2em;
+    margin: 0;
+    padding: 0;
+  }
+  /* line 1430, ../sass/layouts/_responsive.scss */
+  .footer-top ul a {
+    line-height: 3.2em;
+    padding: 0 10px;
+  }
+
+  /* line 1437, ../sass/layouts/_responsive.scss */
+  .footer-middle {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  /* line 1443, ../sass/layouts/_responsive.scss */
+  .footer-middle ul {
+    font-size: 1.4em;
+    margin: 0;
+    padding: 0;
+  }
+  /* line 1448, ../sass/layouts/_responsive.scss */
+  .footer-middle ul a {
+    padding: 20px 30px;
+  }
+  /* line 1451, ../sass/layouts/_responsive.scss */
+  .footer-middle ul a span {
+    font-size: 2.4em;
+    padding-bottom: 10px;
+  }
+
+  /* line 1459, ../sass/layouts/_responsive.scss */
+  .footer-bottom {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  /* line 1465, ../sass/layouts/_responsive.scss */
+  .footer-bottom p {
+    line-height: 3.2em;
+    font-size: 1em;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  /**
+   * End of the layout for the footer section
+   */
+}
+/**
+ * Use 12 grid columns for smaller screens.
+ */
+@media all and (min-width: 480px) and (max-width: 767px) {
+  /**
+   * The layout for the header section
+   */
+  /* line 1487, ../sass/layouts/_responsive.scss */
+  .header-section {
+    width: 100%;
+  }
+
+  /* line 1491, ../sass/layouts/_responsive.scss */
+  .header-section-inner {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  /* line 1496, ../sass/layouts/_responsive.scss */
+  .logo {
+    padding: 10px 15px 10px 15px;
+    float: left;
+    max-width: 75px;
+  }
+  /* line 1501, ../sass/layouts/_responsive.scss */
+  .logo img {
+    max-width: 75px;
+    height: auto;
+  }
+
+  /* line 1507, ../sass/layouts/_responsive.scss */
+  .main-nav {
+    display: none;
+  }
+
+  /* line 1511, ../sass/layouts/_responsive.scss */
+  .tablet-btn {
+    display: none;
+  }
+
+  /* line 1517, ../sass/layouts/_responsive.scss */
+  .mobile-btn span {
+    float: right;
+    padding: 23px;
+    font-size: 1.9em;
+    margin-right: 15px;
+  }
+
+  /* line 1525, ../sass/layouts/_responsive.scss */
+  .search-btn {
+    display: none;
+  }
+
+  /* line 1529, ../sass/layouts/_responsive.scss */
+  .search-section {
+    display: none !important;
+  }
+
+  /* line 1533, ../sass/layouts/_responsive.scss */
+  .tablet-nav {
+    display: none !important;
+  }
+
+  /* line 1537, ../sass/layouts/_responsive.scss */
+  .mobile-nav {
+    display: none;
+    width: 100%;
+  }
+  /* line 1541, ../sass/layouts/_responsive.scss */
+  .mobile-nav .mobile-search {
+    padding: 10px 30px 10px 30px;
+  }
+  /* line 1544, ../sass/layouts/_responsive.scss */
+  .mobile-nav .mobile-search .form-item label {
+    display: none;
+  }
+  /* line 1548, ../sass/layouts/_responsive.scss */
+  .mobile-nav .mobile-search .form-item input {
+    width: 80%;
+    height: 35px;
+    font-size: 1.8em;
+  }
+  /* line 1554, ../sass/layouts/_responsive.scss */
+  .mobile-nav .mobile-search .form-actions input {
+    width: 15%;
+    height: 35px;
+    font-size: 1em;
+    float: right;
+  }
+  /* line 1568, ../sass/layouts/_responsive.scss */
+  .mobile-nav .mobile-mainnav .menu li a {
+    padding: 15px 30px 15px 30px;
+    font-size: 1.4em;
+    line-height: 1.2em;
+  }
+  /* line 1575, ../sass/layouts/_responsive.scss */
+  .mobile-nav .mobile-mainnav .menu .menu {
+    display: none;
+  }
+
+  /* line 1582, ../sass/layouts/_responsive.scss */
+  .weather-btn {
+    float: right;
+  }
+  /* line 1585, ../sass/layouts/_responsive.scss */
+  .weather-btn a {
+    padding: 0 23px;
+    line-height: 65px;
+    font-size: 1.9em;
+  }
+
+  /**
+   * End of the layout for the header section
+   */
+  /**
+   * The layout for the top section
+   */
+  /* line 1598, ../sass/layouts/_responsive.scss */
+  .council {
+    display: none;
+  }
+
+  /* line 1602, ../sass/layouts/_responsive.scss */
+  .connect {
+    display: none;
+  }
+
+  /* line 1606, ../sass/layouts/_responsive.scss */
+  .gallery {
+    position: relative;
+  }
+  /* line 1609, ../sass/layouts/_responsive.scss */
+  .gallery .views-slideshow-cycle-main-frame {
+    width: 100% !important;
+    height: 300px !important;
+  }
+  /* line 1614, ../sass/layouts/_responsive.scss */
+  .gallery .views-slideshow-cycle-main-frame-row {
+    width: 100% !important;
+    height: 300px !important;
+  }
+  /* line 1621, ../sass/layouts/_responsive.scss */
+  .gallery .views-field-uri .gallery-background {
+    width: 100%;
+    height: 300px;
+  }
+  /* line 1627, ../sass/layouts/_responsive.scss */
+  .gallery .views-field-body {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+  }
+  /* line 1633, ../sass/layouts/_responsive.scss */
+  .gallery .views-field-body .field-content {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+  /* line 1637, ../sass/layouts/_responsive.scss */
+  .gallery .views-field-body .field-content a {
+    font-size: 2.8em;
+  }
+  /* line 1641, ../sass/layouts/_responsive.scss */
+  .gallery .views-field-body .field-content p {
+    display: none;
+  }
+  /* line 1645, ../sass/layouts/_responsive.scss */
+  .gallery .views-field-body .field-content .dots {
+    display: none;
+  }
+  /* line 1651, ../sass/layouts/_responsive.scss */
+  .gallery .views-slideshow-controls-bottom {
+    display: none;
+  }
+
+  /**
+   * End of the layout for the top section
+   */
+  /**
+   * The layout for the path section
+   */
+  /* line 1662, ../sass/layouts/_responsive.scss */
+  .path-section {
+    width: 100%;
+  }
+
+  /* line 1666, ../sass/layouts/_responsive.scss */
+  .path-section-inner {
+    padding: 10px 15px 10px 15px;
+  }
+
+  /* line 1670, ../sass/layouts/_responsive.scss */
+  .path {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    font-size: 1.2em;
+    line-height: 2em;
+  }
+  /* line 1675, ../sass/layouts/_responsive.scss */
+  .path li {
+    padding: 0 10px 0 0;
+  }
+  /* line 1679, ../sass/layouts/_responsive.scss */
+  .path a {
+    padding-right: 10px;
+  }
+
+  /**
+   * End of the layout for the path section
+   */
+  /**
+   * The layout for the main content section
+   */
+  /* line 1690, ../sass/layouts/_responsive.scss */
+  .main-content {
+    width: 100%;
+  }
+
+  /* line 1694, ../sass/layouts/_responsive.scss */
+  .main-content-inner {
+    padding: 0 15px 60px 15px;
+  }
+
+  /* line 1698, ../sass/layouts/_responsive.scss */
+  .main-content-padding {
+    padding-bottom: 0;
+  }
+
+  /**
+   * End of the layout for the main content section
+   */
+  /**
+   * The layout for the main top section
+   */
+  /* line 1708, ../sass/layouts/_responsive.scss */
+  .main-top-column {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    margin-top: 30px;
+    margin-bottom: 60px;
+  }
+
+  /**
+   * End of the layout for the main top section
+   */
+  /**
+   * The layout for the popular section
+   */
+  /* line 1721, ../sass/layouts/_responsive.scss */
+  .popular {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 1725, ../sass/layouts/_responsive.scss */
+  .popular .block-title {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    font-size: 2em;
+    line-height: 2em;
+    margin-bottom: 30px;
+  }
+  /* line 1732, ../sass/layouts/_responsive.scss */
+  .popular .views-row-1 {
+    clear: right;
+    float: right;
+    width: 33.33333%;
+    margin-right: 0%;
+    margin-left: -33.33333%;
+  }
+  /* line 1737, ../sass/layouts/_responsive.scss */
+  .popular .views-row-2 {
+    float: right;
+    width: 33.33333%;
+    margin-right: 33.33333%;
+    margin-left: -66.66667%;
+  }
+  /* line 1741, ../sass/layouts/_responsive.scss */
+  .popular .views-row-3 {
+    float: right;
+    width: 33.33333%;
+    margin-right: 66.66667%;
+    margin-left: -100%;
+  }
+  /* line 1745, ../sass/layouts/_responsive.scss */
+  .popular .views-row-4 {
+    clear: right;
+    float: right;
+    width: 33.33333%;
+    margin-right: 0%;
+    margin-left: -33.33333%;
+  }
+  /* line 1750, ../sass/layouts/_responsive.scss */
+  .popular .views-row-5 {
+    float: right;
+    width: 33.33333%;
+    margin-right: 33.33333%;
+    margin-left: -66.66667%;
+  }
+  /* line 1754, ../sass/layouts/_responsive.scss */
+  .popular .views-row-6 {
+    float: right;
+    width: 33.33333%;
+    margin-right: 66.66667%;
+    margin-left: -100%;
+  }
+  /* line 1758, ../sass/layouts/_responsive.scss */
+  .popular .views-row-7 {
+    display: none;
+  }
+  /* line 1762, ../sass/layouts/_responsive.scss */
+  .popular .views-row-8 {
+    display: none;
+  }
+  /* line 1766, ../sass/layouts/_responsive.scss */
+  .popular .views-row {
+    padding-left: 0;
+    padding-right: 0;
+    position: relative;
+  }
+  /* line 1770, ../sass/layouts/_responsive.scss */
+  .popular .views-row .views-field-field-image {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 1774, ../sass/layouts/_responsive.scss */
+  .popular .views-row .views-field-field-image img {
+    width: 100%;
+    height: auto;
+  }
+  /* line 1780, ../sass/layouts/_responsive.scss */
+  .popular .views-row .views-field-title {
+    font-size: 1.4em;
+    line-height: 1.2em;
+  }
+  /* line 1784, ../sass/layouts/_responsive.scss */
+  .popular .views-row .views-field-title a {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+  }
+
+  /**
+   * End of the layout for the popular section
+   */
+  /**
+   * The layout for the main nav column section
+   */
+  /* line 1801, ../sass/layouts/_responsive.scss */
+  .main-nav-column {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+  }
+
+  /* line 1806, ../sass/layouts/_responsive.scss */
+  .content-nav {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 1814, ../sass/layouts/_responsive.scss */
+  .content-nav .menu li span {
+    width: 50%;
+    padding-left: 5px;
+    padding-right: 5px;
+    float: left;
+  }
+  /* line 1820, ../sass/layouts/_responsive.scss */
+  .content-nav .menu li span .block-title {
+    font-size: 2em;
+    line-height: 2em;
+  }
+  /* line 1826, ../sass/layouts/_responsive.scss */
+  .content-nav .menu li #firstTab {
+    color: #0094BF;
+    border-top: 1px solid #0094BF;
+  }
+
+  /**
+   * End of the layout for the main nav column section
+   */
+  /**
+   * The layout for the main left section
+   */
+  /* line 1840, ../sass/layouts/_responsive.scss */
+  .main-left-column {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+  }
+
+  /**
+   * End of the layout for the main left section
+   */
+  /**
+   * The layout for the events section
+   */
+  /* line 1851, ../sass/layouts/_responsive.scss */
+  .events {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 1855, ../sass/layouts/_responsive.scss */
+  .events .block-title {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 2em;
+    line-height: 2em;
+  }
+  /* line 1862, ../sass/layouts/_responsive.scss */
+  .events .view {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+  /* line 1867, ../sass/layouts/_responsive.scss */
+  .events .views-row-1 {
+    clear: right;
+    float: right;
+    width: 50%;
+    margin-right: 0%;
+    margin-left: -50%;
+  }
+  /* line 1872, ../sass/layouts/_responsive.scss */
+  .events .views-row-2 {
+    float: right;
+    width: 50%;
+    margin-right: 50%;
+    margin-left: -100%;
+  }
+  /* line 1876, ../sass/layouts/_responsive.scss */
+  .events .views-row-3 {
+    clear: right;
+    float: right;
+    width: 50%;
+    margin-right: 0%;
+    margin-left: -50%;
+  }
+  /* line 1881, ../sass/layouts/_responsive.scss */
+  .events .views-row-4 {
+    float: right;
+    width: 50%;
+    margin-right: 50%;
+    margin-left: -100%;
+  }
+  /* line 1885, ../sass/layouts/_responsive.scss */
+  .events .views-row {
+    padding-top: 30px;
+  }
+  /* line 1888, ../sass/layouts/_responsive.scss */
+  .events .views-row .views-field-field-image {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 1892, ../sass/layouts/_responsive.scss */
+  .events .views-row .views-field-field-image img {
+    width: 100%;
+    height: auto;
+  }
+  /* line 1898, ../sass/layouts/_responsive.scss */
+  .events .views-row .views-field-field-date {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 1.6em;
+    padding: 15px 10px 15px 10px;
+  }
+  /* line 1905, ../sass/layouts/_responsive.scss */
+  .events .views-row .views-field-title {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    font-size: 1.6em;
+    padding-top: 15px;
+  }
+  /* line 1912, ../sass/layouts/_responsive.scss */
+  .events .views-row .views-field-nothing {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    font-size: 2.4em;
+    padding-top: 10px;
+  }
+  /* line 1919, ../sass/layouts/_responsive.scss */
+  .events .views-row .views-field-field-link {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    font-size: 1.4em;
+    padding-bottom: 15px;
+  }
+  /* line 1926, ../sass/layouts/_responsive.scss */
+  .events .views-row .views-field-body {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    font-size: 1.2em;
+  }
+  /* line 1931, ../sass/layouts/_responsive.scss */
+  .events .views-row .views-field-body p {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-top: 1px solid #cccccc;
+  }
+
+  /**
+   * The layout for the events section
+   */
+  /**
+  * The layout for the content left section
+  */
+  /* line 1948, ../sass/layouts/_responsive.scss */
+  .content-left-column {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-top: 30px;
+  }
+
+  /**
+   * End of the layout for the content left section
+   */
+  /**
+   * The layout for the news section
+   */
+  /* line 1959, ../sass/layouts/_responsive.scss */
+  .news {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 1963, ../sass/layouts/_responsive.scss */
+  .news .block-title {
+    display: none;
+  }
+  /* line 1967, ../sass/layouts/_responsive.scss */
+  .news .page-title {
+    font-size: 3.2em;
+    line-height: 1em;
+    padding-bottom: 15px;
+  }
+  /* line 1973, ../sass/layouts/_responsive.scss */
+  .news .view {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+  /* line 1978, ../sass/layouts/_responsive.scss */
+  .news .views-row-1 {
+    clear: right;
+    float: right;
+    width: 50%;
+    margin-right: 0%;
+    margin-left: -50%;
+  }
+  /* line 1983, ../sass/layouts/_responsive.scss */
+  .news .views-row-2 {
+    float: right;
+    width: 50%;
+    margin-right: 50%;
+    margin-left: -100%;
+  }
+  /* line 1987, ../sass/layouts/_responsive.scss */
+  .news .views-row-3 {
+    clear: right;
+    float: right;
+    width: 50%;
+    margin-right: 0%;
+    margin-left: -50%;
+  }
+  /* line 1992, ../sass/layouts/_responsive.scss */
+  .news .views-row-4 {
+    float: right;
+    width: 50%;
+    margin-right: 50%;
+    margin-left: -100%;
+  }
+  /* line 1996, ../sass/layouts/_responsive.scss */
+  .news .views-row-5 {
+    display: none;
+  }
+  /* line 2000, ../sass/layouts/_responsive.scss */
+  .news .views-row {
+    padding-top: 30px;
+  }
+  /* line 2003, ../sass/layouts/_responsive.scss */
+  .news .views-row .views-field-field-image {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 2007, ../sass/layouts/_responsive.scss */
+  .news .views-row .views-field-field-image img {
+    width: 100%;
+    height: auto;
+  }
+  /* line 2013, ../sass/layouts/_responsive.scss */
+  .news .views-row .views-field-title {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 1.6em;
+    padding-top: 10px;
+  }
+  /* line 2021, ../sass/layouts/_responsive.scss */
+  .news .views-row .views-field-field-date {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 1.2em;
+  }
+  /* line 2028, ../sass/layouts/_responsive.scss */
+  .news .views-row .views-field-body {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 1.2em;
+  }
+  /* line 2034, ../sass/layouts/_responsive.scss */
+  .news .views-row .views-field-body p {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  /**
+   * The layout for the news section
+   */
+  /**
+  * The layout for the main right section
+  */
+  /* line 2048, ../sass/layouts/_responsive.scss */
+  .main-right-column {
+    display: none;
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+  }
+
+  /**
+   * End of the layout for the main right section
+   */
+  /**
+  * The layout for the main bottom section
+  */
+  /* line 2060, ../sass/layouts/_responsive.scss */
+  .main-bottom-column {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    margin-top: 60px;
+  }
+
+  /**
+   * End of the layout for the main bottom section
+   */
+  /**
+  * The layout for the notices section
+  */
+  /* line 2072, ../sass/layouts/_responsive.scss */
+  .notices {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    margin-top: 30px;
+  }
+  /* line 2077, ../sass/layouts/_responsive.scss */
+  .notices .block-title {
+    display: none;
+  }
+  /* line 2081, ../sass/layouts/_responsive.scss */
+  .notices .views-row {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  /* line 2088, ../sass/layouts/_responsive.scss */
+  .notices .views-row .views-field-title {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    font-size: 1.6em;
+  }
+  /* line 2093, ../sass/layouts/_responsive.scss */
+  .notices .views-row .views-field-field-date {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    font-size: 1.2em;
+  }
+
+  /**
+  * End of the layout for the notices section
+  */
+  /**
+  * The layout for the content middle section
+  */
+  /* line 2107, ../sass/layouts/_responsive.scss */
+  .content-middle-column {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-top: 30px;
+  }
+
+  /**
+   * End of the layout for the content middle section
+   */
+  /**
+  * The layout for the content right section
+  */
+  /* line 2118, ../sass/layouts/_responsive.scss */
+  .content-right-column {
+    display: none;
+  }
+
+  /**
+   * End of the layout for the content right section
+   */
+  /**
+  * The layout for the content section
+  */
+  /* line 2128, ../sass/layouts/_responsive.scss */
+  .section-background {
+    width: 100%;
+    height: 200px;
+    position: relative;
+  }
+  /* line 2133, ../sass/layouts/_responsive.scss */
+  .section-background .page-title {
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    font-size: 3.2em;
+  }
+
+  /* line 2141, ../sass/layouts/_responsive.scss */
+  .error-background {
+    width: 100%;
+    height: 300px;
+    position: relative;
+  }
+  /* line 2146, ../sass/layouts/_responsive.scss */
+  .error-background .page-title {
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    font-size: 3.2em;
+  }
+
+  /* line 2154, ../sass/layouts/_responsive.scss */
+  .content-background {
+    width: 100%;
+    height: 300px;
+  }
+
+  /* line 2159, ../sass/layouts/_responsive.scss */
+  .content {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 2163, ../sass/layouts/_responsive.scss */
+  .content .page-title {
+    font-size: 3.2em;
+    line-height: 1em;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+  }
+  /* line 2170, ../sass/layouts/_responsive.scss */
+  .content .profile {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 1.4em;
+  }
+  /* line 2176, ../sass/layouts/_responsive.scss */
+  .content .profile h3 {
+    margin-top: 0;
+  }
+  /* line 2181, ../sass/layouts/_responsive.scss */
+  .content form {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 1.4em;
+  }
+  /* line 2187, ../sass/layouts/_responsive.scss */
+  .content form .form-item {
+    margin-top: 0;
+  }
+  /* line 2192, ../sass/layouts/_responsive.scss */
+  .content .search-results-section {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 1.4em;
+  }
+  /* line 2198, ../sass/layouts/_responsive.scss */
+  .content .search-results-section h2 {
+    margin-top: 0;
+  }
+  /* line 2203, ../sass/layouts/_responsive.scss */
+  .content .node {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 2207, ../sass/layouts/_responsive.scss */
+  .content .node .field-name-body {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 1.4em;
+  }
+  /* line 2212, ../sass/layouts/_responsive.scss */
+  .content .node .field-name-body h3 {
+    font-size: 1.2em;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  /* line 2218, ../sass/layouts/_responsive.scss */
+  .content .node .field-name-body table {
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  /* line 2223, ../sass/layouts/_responsive.scss */
+  .content .node .field-name-body table th {
+    padding: 5px;
+  }
+  /* line 2227, ../sass/layouts/_responsive.scss */
+  .content .node .field-name-body table td {
+    padding: 5px;
+  }
+  /* line 2232, ../sass/layouts/_responsive.scss */
+  .content .node .field-name-body .btn {
+    padding: 10px 15px;
+  }
+  /* line 2236, ../sass/layouts/_responsive.scss */
+  .content .node .field-name-body ul {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  /* line 2241, ../sass/layouts/_responsive.scss */
+  .content .node .field-name-body p {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  /**
+  * End of the layout for the content section
+  */
+  /**
+  * The layout for the subcontent section
+  */
+  /* line 2255, ../sass/layouts/_responsive.scss */
+  .subcontent {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 2260, ../sass/layouts/_responsive.scss */
+  .subcontent .block {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+  /* line 2265, ../sass/layouts/_responsive.scss */
+  .subcontent .node:nth-child(2n + 1) {
+    clear: right;
+    float: right;
+    width: 50%;
+    margin-right: 0%;
+    margin-left: -50%;
+  }
+  /* line 2270, ../sass/layouts/_responsive.scss */
+  .subcontent .node:nth-child(2n + 2) {
+    float: right;
+    width: 50%;
+    margin-right: 50%;
+    margin-left: -100%;
+  }
+  /* line 2274, ../sass/layouts/_responsive.scss */
+  .subcontent .node {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 30px;
+  }
+  /* line 2278, ../sass/layouts/_responsive.scss */
+  .subcontent .node .field-name-field-image {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+  }
+  /* line 2281, ../sass/layouts/_responsive.scss */
+  .subcontent .node .field-name-field-image img {
+    width: 100%;
+    height: auto;
+  }
+  /* line 2287, ../sass/layouts/_responsive.scss */
+  .subcontent .node .node-title {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    font-size: 1.6em;
+  }
+  /* line 2293, ../sass/layouts/_responsive.scss */
+  .subcontent .node .field-name-body {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    font-size: 1.2em;
+  }
+  /* line 2298, ../sass/layouts/_responsive.scss */
+  .subcontent .node .field-name-body p {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  /**
+  * End of the layout for the subcontent section
+  */
+  /**
+   * The layout for the news section
+   */
+  /* line 2312, ../sass/layouts/_responsive.scss */
+  .news-content {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 2316, ../sass/layouts/_responsive.scss */
+  .news-content .page-title {
+    font-size: 3.2em;
+    line-height: 1em;
+    padding-bottom: 10px;
+  }
+  /* line 2322, ../sass/layouts/_responsive.scss */
+  .news-content .view {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+  /* line 2327, ../sass/layouts/_responsive.scss */
+  .news-content .views-row:nth-child(2n + 1) {
+    clear: right;
+    float: right;
+    width: 50%;
+    margin-right: 0%;
+    margin-left: -50%;
+  }
+  /* line 2332, ../sass/layouts/_responsive.scss */
+  .news-content .views-row:nth-child(2n + 2) {
+    float: right;
+    width: 50%;
+    margin-right: 50%;
+    margin-left: -100%;
+  }
+  /* line 2336, ../sass/layouts/_responsive.scss */
+  .news-content .views-row {
+    padding-top: 30px;
+  }
+  /* line 2339, ../sass/layouts/_responsive.scss */
+  .news-content .views-row .views-field-field-image {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 2343, ../sass/layouts/_responsive.scss */
+  .news-content .views-row .views-field-field-image img {
+    width: 100%;
+    height: auto;
+  }
+  /* line 2349, ../sass/layouts/_responsive.scss */
+  .news-content .views-row .views-field-title {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 1.8em;
+    padding-top: 15px;
+  }
+  /* line 2357, ../sass/layouts/_responsive.scss */
+  .news-content .views-row .views-field-field-date {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 1.2em;
+  }
+  /* line 2364, ../sass/layouts/_responsive.scss */
+  .news-content .views-row .views-field-body {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 1.2em;
+  }
+  /* line 2370, ../sass/layouts/_responsive.scss */
+  .news-content .views-row .views-field-body p {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  /**
+   * End of the layout for the news section
+   */
+  /**
+   * End of the layout for the news section
+   */
+  /* line 2384, ../sass/layouts/_responsive.scss */
+  .news-page {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 2388, ../sass/layouts/_responsive.scss */
+  .news-page .page-title {
+    font-size: 3.2em;
+    line-height: 1em;
+    padding-bottom: 15px;
+  }
+  /* line 2394, ../sass/layouts/_responsive.scss */
+  .news-page .node {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 2398, ../sass/layouts/_responsive.scss */
+  .news-page .node .node-left-column {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 2402, ../sass/layouts/_responsive.scss */
+  .news-page .node .node-left-column .field-name-field-date {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 1.6em;
+  }
+  /* line 2408, ../sass/layouts/_responsive.scss */
+  .news-page .node .node-left-column .field-name-body {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 1.4em;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  /* line 2416, ../sass/layouts/_responsive.scss */
+  .news-page .node .node-left-column .field-name-body h3 {
+    font-size: 1.2em;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  /* line 2422, ../sass/layouts/_responsive.scss */
+  .news-page .node .node-left-column .field-name-body table {
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  /* line 2427, ../sass/layouts/_responsive.scss */
+  .news-page .node .node-left-column .field-name-body table th {
+    padding: 5px;
+  }
+  /* line 2431, ../sass/layouts/_responsive.scss */
+  .news-page .node .node-left-column .field-name-body table td {
+    padding: 5px;
+  }
+  /* line 2436, ../sass/layouts/_responsive.scss */
+  .news-page .node .node-left-column .field-name-body .btn {
+    padding: 10px 15px;
+  }
+  /* line 2440, ../sass/layouts/_responsive.scss */
+  .news-page .node .node-left-column .field-name-body ul {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  /* line 2445, ../sass/layouts/_responsive.scss */
+  .news-page .node .node-left-column .field-name-body p {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  /* line 2452, ../sass/layouts/_responsive.scss */
+  .news-page .node .node-right-column {
+    display: none;
+  }
+  /* line 2457, ../sass/layouts/_responsive.scss */
+  .news-page .share-buttons {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 2462, ../sass/layouts/_responsive.scss */
+  .news-page .share-buttons a {
+    font-size: 3.2em;
+  }
+
+  /**
+   * End of the layout for the news section
+   */
+  /**
+   * The layout for the events section
+   */
+  /* line 2474, ../sass/layouts/_responsive.scss */
+  .events-content {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 2478, ../sass/layouts/_responsive.scss */
+  .events-content .page-title {
+    font-size: 3.2em;
+    line-height: 1em;
+    padding-bottom: 10px;
+  }
+  /* line 2484, ../sass/layouts/_responsive.scss */
+  .events-content .view {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+  /* line 2489, ../sass/layouts/_responsive.scss */
+  .events-content .views-row:nth-child(2n + 1) {
+    clear: right;
+    float: right;
+    width: 50%;
+    margin-right: 0%;
+    margin-left: -50%;
+  }
+  /* line 2494, ../sass/layouts/_responsive.scss */
+  .events-content .views-row:nth-child(2n + 2) {
+    float: right;
+    width: 50%;
+    margin-right: 50%;
+    margin-left: -100%;
+  }
+  /* line 2498, ../sass/layouts/_responsive.scss */
+  .events-content .views-row {
+    padding-top: 30px;
+  }
+  /* line 2501, ../sass/layouts/_responsive.scss */
+  .events-content .views-row .views-field-field-image {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 2505, ../sass/layouts/_responsive.scss */
+  .events-content .views-row .views-field-field-image img {
+    width: 100%;
+    height: auto;
+  }
+  /* line 2511, ../sass/layouts/_responsive.scss */
+  .events-content .views-row .views-field-field-date {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 1.6em;
+    padding: 15px 10px 15px 10px;
+  }
+  /* line 2518, ../sass/layouts/_responsive.scss */
+  .events-content .views-row .views-field-title {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    font-size: 1.8em;
+    padding-top: 15px;
+  }
+  /* line 2525, ../sass/layouts/_responsive.scss */
+  .events-content .views-row .views-field-nothing {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    font-size: 2.4em;
+    padding-top: 10px;
+  }
+  /* line 2532, ../sass/layouts/_responsive.scss */
+  .events-content .views-row .views-field-field-link {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    font-size: 1.4em;
+    padding-bottom: 15px;
+  }
+  /* line 2539, ../sass/layouts/_responsive.scss */
+  .events-content .views-row .views-field-body {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    font-size: 1.2em;
+  }
+  /* line 2544, ../sass/layouts/_responsive.scss */
+  .events-content .views-row .views-field-body p {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-top: 1px solid #cccccc;
+  }
+
+  /**
+   * End of the layout for the events section
+   */
+  /**
+   * The layout for the events section
+   */
+  /* line 2561, ../sass/layouts/_responsive.scss */
+  .events-page {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 2565, ../sass/layouts/_responsive.scss */
+  .events-page .page-title {
+    font-size: 3.2em;
+    line-height: 1em;
+    padding-bottom: 30px;
+  }
+  /* line 2571, ../sass/layouts/_responsive.scss */
+  .events-page .node {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 2575, ../sass/layouts/_responsive.scss */
+  .events-page .node .node-left-column {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 2579, ../sass/layouts/_responsive.scss */
+  .events-page .node .node-left-column .info-wrapper {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  /* line 2585, ../sass/layouts/_responsive.scss */
+  .events-page .node .node-left-column .info-wrapper .date-wrapper {
+    float: right;
+    width: 33.33333%;
+    margin-right: 0%;
+    margin-left: -33.33333%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 2589, ../sass/layouts/_responsive.scss */
+  .events-page .node .node-left-column .info-wrapper .date-wrapper .icon-calendar {
+    font-size: 2.4em;
+  }
+  /* line 2593, ../sass/layouts/_responsive.scss */
+  .events-page .node .node-left-column .info-wrapper .date-wrapper .field-name-field-date {
+    font-size: 1.6em;
+  }
+  /* line 2598, ../sass/layouts/_responsive.scss */
+  .events-page .node .node-left-column .info-wrapper .time-wrapper {
+    float: right;
+    width: 33.33333%;
+    margin-right: 33.33333%;
+    margin-left: -66.66667%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 2602, ../sass/layouts/_responsive.scss */
+  .events-page .node .node-left-column .info-wrapper .time-wrapper .icon-clock {
+    font-size: 2.4em;
+  }
+  /* line 2606, ../sass/layouts/_responsive.scss */
+  .events-page .node .node-left-column .info-wrapper .time-wrapper .field-name-field-time {
+    font-size: 1.6em;
+  }
+  /* line 2611, ../sass/layouts/_responsive.scss */
+  .events-page .node .node-left-column .info-wrapper .location-wrapper {
+    float: right;
+    width: 33.33333%;
+    margin-right: 66.66667%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 2615, ../sass/layouts/_responsive.scss */
+  .events-page .node .node-left-column .info-wrapper .location-wrapper .icon-location {
+    font-size: 2.4em;
+  }
+  /* line 2619, ../sass/layouts/_responsive.scss */
+  .events-page .node .node-left-column .info-wrapper .location-wrapper .field-name-field-link {
+    font-size: 1.6em;
+  }
+  /* line 2625, ../sass/layouts/_responsive.scss */
+  .events-page .node .node-left-column .field-name-body {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-size: 1.4em;
+  }
+  /* line 2633, ../sass/layouts/_responsive.scss */
+  .events-page .node .node-left-column .field-name-body h3 {
+    font-size: 1.2em;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  /* line 2639, ../sass/layouts/_responsive.scss */
+  .events-page .node .node-left-column .field-name-body table {
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  /* line 2644, ../sass/layouts/_responsive.scss */
+  .events-page .node .node-left-column .field-name-body table th {
+    padding: 5px;
+  }
+  /* line 2648, ../sass/layouts/_responsive.scss */
+  .events-page .node .node-left-column .field-name-body table td {
+    padding: 5px;
+  }
+  /* line 2653, ../sass/layouts/_responsive.scss */
+  .events-page .node .node-left-column .field-name-body .btn {
+    padding: 10px 15px;
+  }
+  /* line 2657, ../sass/layouts/_responsive.scss */
+  .events-page .node .node-left-column .field-name-body ul {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  /* line 2662, ../sass/layouts/_responsive.scss */
+  .events-page .node .node-left-column .field-name-body p {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  /* line 2669, ../sass/layouts/_responsive.scss */
+  .events-page .node .node-right-column {
+    display: none;
+  }
+  /* line 2674, ../sass/layouts/_responsive.scss */
+  .events-page .share-buttons {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 2679, ../sass/layouts/_responsive.scss */
+  .events-page .share-buttons a {
+    font-size: 3.2em;
+  }
+
+  /**
+   * End of the layout for the events section
+   */
+  /**
+   * The layout for the notices section
+   */
+  /* line 2691, ../sass/layouts/_responsive.scss */
+  .notices-content {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 2695, ../sass/layouts/_responsive.scss */
+  .notices-content .page-title {
+    font-size: 3.2em;
+    line-height: 1em;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+  }
+  /* line 2702, ../sass/layouts/_responsive.scss */
+  .notices-content .views-row {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  /* line 2709, ../sass/layouts/_responsive.scss */
+  .notices-content .views-row .views-field-title {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 1.6em;
+  }
+  /* line 2715, ../sass/layouts/_responsive.scss */
+  .notices-content .views-row .views-field-field-date {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 1.2em;
+  }
+  /* line 2723, ../sass/layouts/_responsive.scss */
+  .notices-content .views-row-first {
+    padding-top: 0;
+  }
+  /* line 2727, ../sass/layouts/_responsive.scss */
+  .notices-content .views-row-last {
+    padding-bottom: 0;
+  }
+
+  /**
+   * The layout for the notices section
+   */
+  /**
+   * End of the layout for the notices section
+   */
+  /* line 2738, ../sass/layouts/_responsive.scss */
+  .notices-page {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 2742, ../sass/layouts/_responsive.scss */
+  .notices-page .page-title {
+    font-size: 3.2em;
+    line-height: 1em;
+    padding-bottom: 15px;
+  }
+  /* line 2748, ../sass/layouts/_responsive.scss */
+  .notices-page .node {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 2752, ../sass/layouts/_responsive.scss */
+  .notices-page .node .field-name-field-date {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 1.6em;
+  }
+  /* line 2759, ../sass/layouts/_responsive.scss */
+  .notices-page .node .field-name-body {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 1.4em;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  /* line 2767, ../sass/layouts/_responsive.scss */
+  .notices-page .node .field-name-body h3 {
+    font-size: 1.2em;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  /* line 2773, ../sass/layouts/_responsive.scss */
+  .notices-page .node .field-name-body table {
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  /* line 2778, ../sass/layouts/_responsive.scss */
+  .notices-page .node .field-name-body table th {
+    padding: 5px;
+  }
+  /* line 2782, ../sass/layouts/_responsive.scss */
+  .notices-page .node .field-name-body table td {
+    padding: 5px;
+  }
+  /* line 2787, ../sass/layouts/_responsive.scss */
+  .notices-page .node .field-name-body .btn {
+    padding: 10px 15px;
+  }
+  /* line 2791, ../sass/layouts/_responsive.scss */
+  .notices-page .node .field-name-body ul {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  /* line 2796, ../sass/layouts/_responsive.scss */
+  .notices-page .node .field-name-body p {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  /* line 2803, ../sass/layouts/_responsive.scss */
+  .notices-page .share-buttons {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 2808, ../sass/layouts/_responsive.scss */
+  .notices-page .share-buttons a {
+    font-size: 3.2em;
+  }
+
+  /**
+   * End of the layout for the notices section
+   */
+  /**
+   * The layout for the footer section
+   */
+  /* line 2820, ../sass/layouts/_responsive.scss */
+  .footer-top-outter {
+    width: 100%;
+  }
+
+  /* line 2824, ../sass/layouts/_responsive.scss */
+  .footer-middle-outter {
+    width: 100%;
+  }
+
+  /* line 2828, ../sass/layouts/_responsive.scss */
+  .footer-bottom-outter {
+    width: 100%;
+  }
+
+  /* line 2832, ../sass/layouts/_responsive.scss */
+  .footer-top-inner {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  /* line 2837, ../sass/layouts/_responsive.scss */
+  .footer-middle-inner {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  /* line 2842, ../sass/layouts/_responsive.scss */
+  .footer-bottom-inner {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  /* line 2847, ../sass/layouts/_responsive.scss */
+  .footer-top {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  /* line 2852, ../sass/layouts/_responsive.scss */
+  .footer-top ul {
+    font-size: 1.2em;
+    margin: 0;
+    padding: 0;
+  }
+  /* line 2857, ../sass/layouts/_responsive.scss */
+  .footer-top ul a {
+    line-height: 3.2em;
+    padding: 0 10px;
+  }
+
+  /* line 2864, ../sass/layouts/_responsive.scss */
+  .footer-middle {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  /* line 2870, ../sass/layouts/_responsive.scss */
+  .footer-middle ul {
+    font-size: 1.4em;
+    margin: 0;
+    padding: 0;
+  }
+  /* line 2875, ../sass/layouts/_responsive.scss */
+  .footer-middle ul a {
+    padding: 20px 30px;
+  }
+  /* line 2878, ../sass/layouts/_responsive.scss */
+  .footer-middle ul a span {
+    font-size: 2.4em;
+    padding-bottom: 10px;
+  }
+
+  /* line 2886, ../sass/layouts/_responsive.scss */
+  .footer-bottom {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  /* line 2892, ../sass/layouts/_responsive.scss */
+  .footer-bottom p {
+    line-height: 3.2em;
+    font-size: 1em;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  /**
+   * End of the layout for the footer section
+   */
+}
+/**
+ * Use 12 grid columns for smaller screens.
+ */
+@media all and (min-width: 768px) and (max-width: 1023px) {
+  /**
+   * The layout for the header section
+   */
+  /* line 2914, ../sass/layouts/_responsive.scss */
+  .header-section {
+    width: 100%;
+  }
+
+  /* line 2918, ../sass/layouts/_responsive.scss */
+  .header-section-inner {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  /* line 2923, ../sass/layouts/_responsive.scss */
+  .logo {
+    padding: 10px 30px 10px 15px;
+    float: left;
+    max-width: 75px;
+  }
+  /* line 2928, ../sass/layouts/_responsive.scss */
+  .logo img {
+    max-width: 75px;
+    height: auto;
+  }
+
+  /* line 2934, ../sass/layouts/_responsive.scss */
+  .main-nav {
+    display: none;
+  }
+
+  /* line 2938, ../sass/layouts/_responsive.scss */
+  .tablet-btn {
+    float: left;
+  }
+  /* line 2941, ../sass/layouts/_responsive.scss */
+  .tablet-btn a {
+    font-size: 1.4em;
+    padding-left: 20px;
+    padding-right: 20px;
+    line-height: 65px;
+  }
+
+  /* line 2949, ../sass/layouts/_responsive.scss */
+  .mobile-btn {
+    display: none;
+  }
+
+  /* line 2955, ../sass/layouts/_responsive.scss */
+  .search-btn span {
+    float: right;
+    padding: 23px;
+    margin-right: 15px;
+    font-size: 1.9em;
+  }
+
+  /* line 2963, ../sass/layouts/_responsive.scss */
+  .search-section {
+    display: none;
+    width: 100%;
+  }
+
+  /* line 2968, ../sass/layouts/_responsive.scss */
+  .search-section-inner {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  /* line 2973, ../sass/layouts/_responsive.scss */
+  .search {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  /* line 2977, ../sass/layouts/_responsive.scss */
+  .search .form-item label {
+    display: none;
+  }
+  /* line 2981, ../sass/layouts/_responsive.scss */
+  .search .form-item input {
+    width: 80%;
+    height: 45px;
+    font-size: 2.4em;
+  }
+  /* line 2987, ../sass/layouts/_responsive.scss */
+  .search .form-actions input {
+    width: 15%;
+    height: 45px;
+    font-size: 1.2em;
+    float: right;
+  }
+
+  /* line 2995, ../sass/layouts/_responsive.scss */
+  .tablet-nav {
+    display: none;
+    width: 100%;
+  }
+  /* line 3003, ../sass/layouts/_responsive.scss */
+  .tablet-nav .menu li a {
+    padding: 15px 30px 15px 30px;
+    font-size: 1.4em;
+    line-height: 1.2em;
+  }
+  /* line 3010, ../sass/layouts/_responsive.scss */
+  .tablet-nav .menu .menu {
+    display: none;
+  }
+
+  /* line 3016, ../sass/layouts/_responsive.scss */
+  .mobile-nav {
+    display: none !important;
+  }
+
+  /* line 3020, ../sass/layouts/_responsive.scss */
+  .weather-btn {
+    float: right;
+  }
+  /* line 3023, ../sass/layouts/_responsive.scss */
+  .weather-btn a {
+    padding: 0 23px;
+    line-height: 65px;
+    font-size: 1.9em;
+  }
+
+  /**
+   * End of the layout for the header section
+   */
+  /**
+   * The layout for the top section
+   */
+  /* line 3036, ../sass/layouts/_responsive.scss */
+  .council {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 60px;
+  }
+  /* line 3042, ../sass/layouts/_responsive.scss */
+  .council .block-title {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 2em;
+    line-height: 2em;
+    margin-bottom: 30px;
+  }
+  /* line 3050, ../sass/layouts/_responsive.scss */
+  .council #video_wrapper {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  /* line 3057, ../sass/layouts/_responsive.scss */
+  .connect {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 3062, ../sass/layouts/_responsive.scss */
+  .connect .block-title {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 2em;
+    line-height: 2em;
+    margin-bottom: 30px;
+  }
+  /* line 3070, ../sass/layouts/_responsive.scss */
+  .connect #twitter-widget-0 {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    min-width: 100% !important;
+  }
+
+  /* line 3078, ../sass/layouts/_responsive.scss */
+  .gallery {
+    position: relative;
+  }
+  /* line 3081, ../sass/layouts/_responsive.scss */
+  .gallery .views-slideshow-cycle-main-frame {
+    width: 100% !important;
+    height: 350px !important;
+  }
+  /* line 3086, ../sass/layouts/_responsive.scss */
+  .gallery .views-slideshow-cycle-main-frame-row {
+    width: 100% !important;
+    height: 350px !important;
+  }
+  /* line 3093, ../sass/layouts/_responsive.scss */
+  .gallery .views-field-uri .gallery-background {
+    width: 100%;
+    height: 350px;
+  }
+  /* line 3099, ../sass/layouts/_responsive.scss */
+  .gallery .views-field-body {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+  }
+  /* line 3105, ../sass/layouts/_responsive.scss */
+  .gallery .views-field-body .field-content {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+  /* line 3109, ../sass/layouts/_responsive.scss */
+  .gallery .views-field-body .field-content a {
+    font-size: 2.8em;
+  }
+  /* line 3113, ../sass/layouts/_responsive.scss */
+  .gallery .views-field-body .field-content p {
+    width: 45%;
+    font-size: 1.8em;
+    margin: 20px auto 0 auto;
+  }
+  /* line 3119, ../sass/layouts/_responsive.scss */
+  .gallery .views-field-body .field-content .dots {
+    margin: 5px auto 0 auto;
+    font-size: 2.8em;
+  }
+  /* line 3128, ../sass/layouts/_responsive.scss */
+  .gallery .views-slideshow-controls-bottom .views-slideshow-controls-text-previous {
+    position: absolute;
+    top: 45%;
+    left: 1%;
+    font-size: 3.2em;
+  }
+  /* line 3135, ../sass/layouts/_responsive.scss */
+  .gallery .views-slideshow-controls-bottom .views-slideshow-controls-text-pause {
+    display: none;
+  }
+  /* line 3139, ../sass/layouts/_responsive.scss */
+  .gallery .views-slideshow-controls-bottom .views-slideshow-controls-text-next {
+    position: absolute;
+    top: 45%;
+    right: 1%;
+    font-size: 3.2em;
+  }
+
+  /**
+   * End of the layout for the top section
+   */
+  /**
+   * The layout for the path section
+   */
+  /* line 3154, ../sass/layouts/_responsive.scss */
+  .path-section {
+    width: 100%;
+  }
+
+  /* line 3158, ../sass/layouts/_responsive.scss */
+  .path-section-inner {
+    padding: 10px 15px 10px 15px;
+  }
+
+  /* line 3162, ../sass/layouts/_responsive.scss */
+  .path {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    font-size: 1.2em;
+    line-height: 2em;
+  }
+  /* line 3167, ../sass/layouts/_responsive.scss */
+  .path li {
+    padding: 0 10px 0 0;
+  }
+  /* line 3171, ../sass/layouts/_responsive.scss */
+  .path a {
+    padding-right: 10px;
+  }
+
+  /**
+   * End of the layout for the path section
+   */
+  /**
+   * The layout for the main content section
+   */
+  /* line 3182, ../sass/layouts/_responsive.scss */
+  .main-content {
+    width: 100%;
+  }
+
+  /* line 3186, ../sass/layouts/_responsive.scss */
+  .main-content-inner {
+    padding: 0 15px 60px 15px;
+  }
+
+  /* line 3190, ../sass/layouts/_responsive.scss */
+  .main-content-padding {
+    padding-bottom: 0;
+  }
+
+  /**
+   * End of the layout for the main content section
+   */
+  /**
+   * The layout for the main top section
+   */
+  /* line 3200, ../sass/layouts/_responsive.scss */
+  .main-top-column {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    margin-top: 30px;
+    margin-bottom: 60px;
+  }
+
+  /**
+   * End of the layout for the main top section
+   */
+  /**
+   * The layout for the popular section
+   */
+  /* line 3213, ../sass/layouts/_responsive.scss */
+  .popular {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 3217, ../sass/layouts/_responsive.scss */
+  .popular .block-title {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    font-size: 2em;
+    line-height: 2em;
+    margin-bottom: 30px;
+  }
+  /* line 3224, ../sass/layouts/_responsive.scss */
+  .popular .views-row-1 {
+    clear: right;
+    float: right;
+    width: 25%;
+    margin-right: 0%;
+    margin-left: -25%;
+  }
+  /* line 3229, ../sass/layouts/_responsive.scss */
+  .popular .views-row-2 {
+    float: right;
+    width: 25%;
+    margin-right: 25%;
+    margin-left: -50%;
+  }
+  /* line 3233, ../sass/layouts/_responsive.scss */
+  .popular .views-row-3 {
+    float: right;
+    width: 25%;
+    margin-right: 50%;
+    margin-left: -75%;
+  }
+  /* line 3237, ../sass/layouts/_responsive.scss */
+  .popular .views-row-4 {
+    float: right;
+    width: 25%;
+    margin-right: 75%;
+    margin-left: -100%;
+  }
+  /* line 3241, ../sass/layouts/_responsive.scss */
+  .popular .views-row-5 {
+    clear: right;
+    float: right;
+    width: 25%;
+    margin-right: 0%;
+    margin-left: -25%;
+  }
+  /* line 3246, ../sass/layouts/_responsive.scss */
+  .popular .views-row-6 {
+    float: right;
+    width: 25%;
+    margin-right: 25%;
+    margin-left: -50%;
+  }
+  /* line 3250, ../sass/layouts/_responsive.scss */
+  .popular .views-row-7 {
+    float: right;
+    width: 25%;
+    margin-right: 50%;
+    margin-left: -75%;
+  }
+  /* line 3254, ../sass/layouts/_responsive.scss */
+  .popular .views-row-8 {
+    float: right;
+    width: 25%;
+    margin-right: 75%;
+    margin-left: -100%;
+  }
+  /* line 3258, ../sass/layouts/_responsive.scss */
+  .popular .views-row {
+    padding-left: 0;
+    padding-right: 0;
+    position: relative;
+  }
+  /* line 3262, ../sass/layouts/_responsive.scss */
+  .popular .views-row .views-field-field-image {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 3266, ../sass/layouts/_responsive.scss */
+  .popular .views-row .views-field-field-image img {
+    width: 100%;
+    height: auto;
+  }
+  /* line 3272, ../sass/layouts/_responsive.scss */
+  .popular .views-row .views-field-title {
+    font-size: 1.6em;
+    line-height: 1.2em;
+  }
+  /* line 3276, ../sass/layouts/_responsive.scss */
+  .popular .views-row .views-field-title a {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+  }
+
+  /**
+   * End of the layout for the popular section
+   */
+  /**
+   * The layout for the main nav column section
+   */
+  /* line 3293, ../sass/layouts/_responsive.scss */
+  .main-nav-column {
+    display: none;
+  }
+
+  /**
+   * End of the layout for the main nav column section
+   */
+  /**
+   * The layout for the main left section
+   */
+  /* line 3303, ../sass/layouts/_responsive.scss */
+  .main-left-column {
+    display: initial !important;
+    clear: right;
+    float: right;
+    width: 66.66667%;
+    margin-right: 0%;
+    margin-left: -66.66667%;
+  }
+
+  /**
+   * End of the layout for the main left section
+   */
+  /**
+   * The layout for the events section
+   */
+  /* line 3315, ../sass/layouts/_responsive.scss */
+  .events {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 3319, ../sass/layouts/_responsive.scss */
+  .events .block-title {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 2em;
+    line-height: 2em;
+  }
+  /* line 3326, ../sass/layouts/_responsive.scss */
+  .events .view {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+  /* line 3331, ../sass/layouts/_responsive.scss */
+  .events .views-row-1 {
+    clear: right;
+    float: right;
+    width: 33.33333%;
+    margin-right: 0%;
+    margin-left: -33.33333%;
+  }
+  /* line 3336, ../sass/layouts/_responsive.scss */
+  .events .views-row-2 {
+    float: right;
+    width: 33.33333%;
+    margin-right: 33.33333%;
+    margin-left: -66.66667%;
+  }
+  /* line 3340, ../sass/layouts/_responsive.scss */
+  .events .views-row-3 {
+    float: right;
+    width: 33.33333%;
+    margin-right: 66.66667%;
+    margin-left: -100%;
+  }
+  /* line 3344, ../sass/layouts/_responsive.scss */
+  .events .views-row-4 {
+    display: none;
+  }
+  /* line 3348, ../sass/layouts/_responsive.scss */
+  .events .views-row {
+    padding-top: 30px;
+  }
+  /* line 3351, ../sass/layouts/_responsive.scss */
+  .events .views-row .views-field-field-image {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 3355, ../sass/layouts/_responsive.scss */
+  .events .views-row .views-field-field-image img {
+    width: 100%;
+    height: auto;
+  }
+  /* line 3361, ../sass/layouts/_responsive.scss */
+  .events .views-row .views-field-field-date {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 1.6em;
+    padding: 15px 10px 15px 10px;
+  }
+  /* line 3368, ../sass/layouts/_responsive.scss */
+  .events .views-row .views-field-title {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    font-size: 1.8em;
+    padding-top: 15px;
+  }
+  /* line 3375, ../sass/layouts/_responsive.scss */
+  .events .views-row .views-field-nothing {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    font-size: 2.4em;
+    padding-top: 10px;
+  }
+  /* line 3382, ../sass/layouts/_responsive.scss */
+  .events .views-row .views-field-field-link {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    font-size: 1.4em;
+    padding-bottom: 15px;
+  }
+  /* line 3389, ../sass/layouts/_responsive.scss */
+  .events .views-row .views-field-body {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    font-size: 1.2em;
+  }
+  /* line 3394, ../sass/layouts/_responsive.scss */
+  .events .views-row .views-field-body p {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-top: 1px solid #cccccc;
+  }
+
+  /**
+   * The layout for the events section
+   */
+  /**
+  * The layout for the content left section
+  */
+  /* line 3411, ../sass/layouts/_responsive.scss */
+  .content-left-column {
+    float: right;
+    width: 66.66667%;
+    margin-right: 0%;
+    margin-left: -66.66667%;
+    padding-top: 30px;
+  }
+
+  /**
+   * End of the layout for the content left section
+   */
+  /**
+  * The layout for the subnav section
+  */
+  /* line 3422, ../sass/layouts/_responsive.scss */
+  .sub-nav {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 30px;
+  }
+  /* line 3427, ../sass/layouts/_responsive.scss */
+  .sub-nav .block-title {
+    font-size: 2.2em;
+    line-height: 1em;
+    padding: 15px 10px;
+  }
+  /* line 3433, ../sass/layouts/_responsive.scss */
+  .sub-nav .menu {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+  /* line 3438, ../sass/layouts/_responsive.scss */
+  .sub-nav .menu li {
+    list-style-type: none;
+    list-style-image: none;
+  }
+  /* line 3443, ../sass/layouts/_responsive.scss */
+  .sub-nav .menu a {
+    padding: 10px;
+    font-size: 1.4em;
+    line-height: 1.4em;
+  }
+  /* line 3451, ../sass/layouts/_responsive.scss */
+  .sub-nav .menu .menu a {
+    padding: 10px 10px 10px 20px;
+  }
+
+  /**
+  * End of the layout for the subnav section
+  */
+  /**
+   * The layout for the news section
+   */
+  /* line 3464, ../sass/layouts/_responsive.scss */
+  .news {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 3468, ../sass/layouts/_responsive.scss */
+  .news .block-title {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 2em;
+    line-height: 2em;
+    margin-bottom: 30px;
+  }
+  /* line 3476, ../sass/layouts/_responsive.scss */
+  .news .page-title {
+    font-size: 3.8em;
+    line-height: 1em;
+    padding-bottom: 15px;
+  }
+  /* line 3482, ../sass/layouts/_responsive.scss */
+  .news .views-row {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px dotted #cccccc;
+  }
+  /* line 3490, ../sass/layouts/_responsive.scss */
+  .news .views-row .views-field-field-image {
+    float: right;
+    width: 41.66667%;
+    margin-right: 0%;
+    margin-left: -41.66667%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 3494, ../sass/layouts/_responsive.scss */
+  .news .views-row .views-field-field-image img {
+    width: 100%;
+    height: auto;
+  }
+  /* line 3500, ../sass/layouts/_responsive.scss */
+  .news .views-row .views-field-title {
+    float: right;
+    width: 58.33333%;
+    margin-right: 41.66667%;
+    margin-left: -100%;
+    float: none;
+    font-size: 1.8em;
+  }
+  /* line 3506, ../sass/layouts/_responsive.scss */
+  .news .views-row .views-field-field-date {
+    float: right;
+    width: 58.33333%;
+    margin-right: 41.66667%;
+    margin-left: -100%;
+    float: none;
+    font-size: 1.2em;
+  }
+  /* line 3512, ../sass/layouts/_responsive.scss */
+  .news .views-row .views-field-body {
+    float: right;
+    width: 58.33333%;
+    margin-right: 41.66667%;
+    margin-left: -100%;
+    float: none;
+    font-size: 1.2em;
+  }
+  /* line 3517, ../sass/layouts/_responsive.scss */
+  .news .views-row .views-field-body p {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  /* line 3524, ../sass/layouts/_responsive.scss */
+  .news .views-row-first {
+    padding-top: 0;
+  }
+  /* line 3528, ../sass/layouts/_responsive.scss */
+  .news .views-row-last {
+    padding-bottom: 0;
+  }
+  /* line 3532, ../sass/layouts/_responsive.scss */
+  .news .views-row-last {
+    border-bottom: none;
+  }
+
+  /**
+   * The layout for the news section
+   */
+  /**
+  * The layout for the main right section
+  */
+  /* line 3543, ../sass/layouts/_responsive.scss */
+  .main-right-column {
+    display: initial !important;
+    float: right;
+    width: 33.33333%;
+    margin-right: 66.66667%;
+    margin-left: -100%;
+  }
+
+  /**
+   * End of the layout for the main right section
+   */
+  /**
+  * The layout for the main bottom section
+  */
+  /* line 3554, ../sass/layouts/_responsive.scss */
+  .main-bottom-column {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    margin-top: 60px;
+  }
+
+  /**
+   * End of the layout for the main bottom section
+   */
+  /**
+  * The layout for the notices section
+  */
+  /* line 3566, ../sass/layouts/_responsive.scss */
+  .notices {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 60px;
+  }
+  /* line 3572, ../sass/layouts/_responsive.scss */
+  .notices .block-title {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 2em;
+    line-height: 2em;
+    margin-bottom: 30px;
+  }
+  /* line 3580, ../sass/layouts/_responsive.scss */
+  .notices .views-row {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  /* line 3587, ../sass/layouts/_responsive.scss */
+  .notices .views-row .views-field-title {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    font-size: 1.6em;
+  }
+  /* line 3592, ../sass/layouts/_responsive.scss */
+  .notices .views-row .views-field-field-date {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    font-size: 1.2em;
+  }
+
+  /**
+  * End of the layout for the notices section
+  */
+  /**
+  * The layout for the content middle section
+  */
+  /* line 3606, ../sass/layouts/_responsive.scss */
+  .content-middle-column {
+    float: right;
+    width: 83.33333%;
+    margin-right: 8.33333%;
+    margin-left: -91.66667%;
+    padding-top: 30px;
+  }
+
+  /**
+   * End of the layout for the content middle section
+   */
+  /**
+  * The layout for the content right section
+  */
+  /* line 3617, ../sass/layouts/_responsive.scss */
+  .content-right-column {
+    float: right;
+    width: 33.33333%;
+    margin-right: 66.66667%;
+    margin-left: -100%;
+  }
+
+  /**
+   * End of the layout for the content right section
+   */
+  /**
+  * The layout for the content section
+  */
+  /* line 3627, ../sass/layouts/_responsive.scss */
+  .section-background {
+    width: 100%;
+    height: 250px;
+    position: relative;
+  }
+  /* line 3632, ../sass/layouts/_responsive.scss */
+  .section-background .page-title {
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    font-size: 3.8em;
+  }
+
+  /* line 3640, ../sass/layouts/_responsive.scss */
+  .error-background {
+    width: 100%;
+    height: 350px;
+    position: relative;
+  }
+  /* line 3645, ../sass/layouts/_responsive.scss */
+  .error-background .page-title {
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    font-size: 3.8em;
+  }
+
+  /* line 3653, ../sass/layouts/_responsive.scss */
+  .content-background {
+    width: 100%;
+    height: 350px;
+  }
+
+  /* line 3658, ../sass/layouts/_responsive.scss */
+  .content {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 3662, ../sass/layouts/_responsive.scss */
+  .content .page-title {
+    font-size: 3.8em;
+    line-height: 1em;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+  }
+  /* line 3669, ../sass/layouts/_responsive.scss */
+  .content .profile {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 1.4em;
+  }
+  /* line 3675, ../sass/layouts/_responsive.scss */
+  .content .profile h3 {
+    margin-top: 0;
+  }
+  /* line 3680, ../sass/layouts/_responsive.scss */
+  .content form {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 1.4em;
+  }
+  /* line 3686, ../sass/layouts/_responsive.scss */
+  .content form .form-item {
+    margin-top: 0;
+  }
+  /* line 3691, ../sass/layouts/_responsive.scss */
+  .content .search-results-section {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 1.4em;
+  }
+  /* line 3697, ../sass/layouts/_responsive.scss */
+  .content .search-results-section h2 {
+    margin-top: 0;
+  }
+  /* line 3702, ../sass/layouts/_responsive.scss */
+  .content .node {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 3706, ../sass/layouts/_responsive.scss */
+  .content .node .field-name-body {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 1.4em;
+  }
+  /* line 3711, ../sass/layouts/_responsive.scss */
+  .content .node .field-name-body h3 {
+    font-size: 1.2em;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  /* line 3717, ../sass/layouts/_responsive.scss */
+  .content .node .field-name-body table {
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  /* line 3722, ../sass/layouts/_responsive.scss */
+  .content .node .field-name-body table th {
+    padding: 5px;
+  }
+  /* line 3726, ../sass/layouts/_responsive.scss */
+  .content .node .field-name-body table td {
+    padding: 5px;
+  }
+  /* line 3731, ../sass/layouts/_responsive.scss */
+  .content .node .field-name-body .btn {
+    padding: 10px 15px;
+  }
+  /* line 3735, ../sass/layouts/_responsive.scss */
+  .content .node .field-name-body ul {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  /* line 3740, ../sass/layouts/_responsive.scss */
+  .content .node .field-name-body p {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  /**
+  * End of the layout for the content section
+  */
+  /**
+  * The layout for the subcontent section
+  */
+  /* line 3754, ../sass/layouts/_responsive.scss */
+  .subcontent {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 3759, ../sass/layouts/_responsive.scss */
+  .subcontent .block {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+  /* line 3764, ../sass/layouts/_responsive.scss */
+  .subcontent .node:nth-child(3n + 1) {
+    clear: right;
+    float: right;
+    width: 33.33333%;
+    margin-right: 0%;
+    margin-left: -33.33333%;
+  }
+  /* line 3769, ../sass/layouts/_responsive.scss */
+  .subcontent .node:nth-child(3n + 2) {
+    float: right;
+    width: 33.33333%;
+    margin-right: 33.33333%;
+    margin-left: -66.66667%;
+  }
+  /* line 3773, ../sass/layouts/_responsive.scss */
+  .subcontent .node:nth-child(3n + 3) {
+    float: right;
+    width: 33.33333%;
+    margin-right: 66.66667%;
+    margin-left: -100%;
+  }
+  /* line 3777, ../sass/layouts/_responsive.scss */
+  .subcontent .node {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 30px;
+  }
+  /* line 3781, ../sass/layouts/_responsive.scss */
+  .subcontent .node .field-name-field-image {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+  }
+  /* line 3784, ../sass/layouts/_responsive.scss */
+  .subcontent .node .field-name-field-image img {
+    width: 100%;
+    height: auto;
+  }
+  /* line 3790, ../sass/layouts/_responsive.scss */
+  .subcontent .node .node-title {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    font-size: 1.6em;
+  }
+  /* line 3796, ../sass/layouts/_responsive.scss */
+  .subcontent .node .field-name-body {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    font-size: 1.2em;
+  }
+  /* line 3801, ../sass/layouts/_responsive.scss */
+  .subcontent .node .field-name-body p {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  /**
+  * End of the layout for the subcontent section
+  */
+  /**
+   * The layout for the news section
+   */
+  /* line 3815, ../sass/layouts/_responsive.scss */
+  .news-content {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 3819, ../sass/layouts/_responsive.scss */
+  .news-content .page-title {
+    font-size: 3.8em;
+    line-height: 1em;
+    padding-bottom: 10px;
+  }
+  /* line 3825, ../sass/layouts/_responsive.scss */
+  .news-content .view {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+  /* line 3830, ../sass/layouts/_responsive.scss */
+  .news-content .views-row:nth-child(2n + 1) {
+    clear: right;
+    float: right;
+    width: 50%;
+    margin-right: 0%;
+    margin-left: -50%;
+  }
+  /* line 3835, ../sass/layouts/_responsive.scss */
+  .news-content .views-row:nth-child(2n + 2) {
+    float: right;
+    width: 50%;
+    margin-right: 50%;
+    margin-left: -100%;
+  }
+  /* line 3839, ../sass/layouts/_responsive.scss */
+  .news-content .views-row {
+    padding-top: 30px;
+  }
+  /* line 3842, ../sass/layouts/_responsive.scss */
+  .news-content .views-row .views-field-field-image {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 3846, ../sass/layouts/_responsive.scss */
+  .news-content .views-row .views-field-field-image img {
+    width: 100%;
+    height: auto;
+  }
+  /* line 3852, ../sass/layouts/_responsive.scss */
+  .news-content .views-row .views-field-title {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 1.8em;
+    padding-top: 15px;
+  }
+  /* line 3860, ../sass/layouts/_responsive.scss */
+  .news-content .views-row .views-field-field-date {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 1.2em;
+  }
+  /* line 3867, ../sass/layouts/_responsive.scss */
+  .news-content .views-row .views-field-body {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 1.2em;
+  }
+  /* line 3873, ../sass/layouts/_responsive.scss */
+  .news-content .views-row .views-field-body p {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  /**
+   * End of the layout for the news section
+   */
+  /**
+   * End of the layout for the news section
+   */
+  /* line 3887, ../sass/layouts/_responsive.scss */
+  .news-page {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 3891, ../sass/layouts/_responsive.scss */
+  .news-page .page-title {
+    font-size: 3.8em;
+    line-height: 1em;
+    padding-bottom: 15px;
+  }
+  /* line 3897, ../sass/layouts/_responsive.scss */
+  .news-page .node {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 3901, ../sass/layouts/_responsive.scss */
+  .news-page .node .node-left-column {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 3905, ../sass/layouts/_responsive.scss */
+  .news-page .node .node-left-column .field-name-field-date {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 1.6em;
+  }
+  /* line 3911, ../sass/layouts/_responsive.scss */
+  .news-page .node .node-left-column .field-name-body {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 1.4em;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  /* line 3919, ../sass/layouts/_responsive.scss */
+  .news-page .node .node-left-column .field-name-body h3 {
+    font-size: 1.2em;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  /* line 3925, ../sass/layouts/_responsive.scss */
+  .news-page .node .node-left-column .field-name-body table {
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  /* line 3930, ../sass/layouts/_responsive.scss */
+  .news-page .node .node-left-column .field-name-body table th {
+    padding: 5px;
+  }
+  /* line 3934, ../sass/layouts/_responsive.scss */
+  .news-page .node .node-left-column .field-name-body table td {
+    padding: 5px;
+  }
+  /* line 3939, ../sass/layouts/_responsive.scss */
+  .news-page .node .node-left-column .field-name-body .btn {
+    padding: 10px 15px;
+  }
+  /* line 3943, ../sass/layouts/_responsive.scss */
+  .news-page .node .node-left-column .field-name-body ul {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  /* line 3948, ../sass/layouts/_responsive.scss */
+  .news-page .node .node-left-column .field-name-body p {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  /* line 3955, ../sass/layouts/_responsive.scss */
+  .news-page .node .node-right-column {
+    display: none;
+  }
+  /* line 3960, ../sass/layouts/_responsive.scss */
+  .news-page .share-buttons {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 3965, ../sass/layouts/_responsive.scss */
+  .news-page .share-buttons a {
+    font-size: 3.2em;
+  }
+
+  /**
+   * End of the layout for the news section
+   */
+  /**
+   * The layout for the events section
+   */
+  /* line 3977, ../sass/layouts/_responsive.scss */
+  .events-content {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 3981, ../sass/layouts/_responsive.scss */
+  .events-content .page-title {
+    font-size: 3.8em;
+    line-height: 1em;
+    padding-bottom: 10px;
+  }
+  /* line 3987, ../sass/layouts/_responsive.scss */
+  .events-content .view {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+  /* line 3992, ../sass/layouts/_responsive.scss */
+  .events-content .views-row:nth-child(2n + 1) {
+    clear: right;
+    float: right;
+    width: 50%;
+    margin-right: 0%;
+    margin-left: -50%;
+  }
+  /* line 3997, ../sass/layouts/_responsive.scss */
+  .events-content .views-row:nth-child(2n + 2) {
+    float: right;
+    width: 50%;
+    margin-right: 50%;
+    margin-left: -100%;
+  }
+  /* line 4001, ../sass/layouts/_responsive.scss */
+  .events-content .views-row {
+    padding-top: 30px;
+  }
+  /* line 4004, ../sass/layouts/_responsive.scss */
+  .events-content .views-row .views-field-field-image {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 4008, ../sass/layouts/_responsive.scss */
+  .events-content .views-row .views-field-field-image img {
+    width: 100%;
+    height: auto;
+  }
+  /* line 4014, ../sass/layouts/_responsive.scss */
+  .events-content .views-row .views-field-field-date {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 1.6em;
+    padding: 15px 10px 15px 10px;
+  }
+  /* line 4021, ../sass/layouts/_responsive.scss */
+  .events-content .views-row .views-field-title {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    font-size: 1.8em;
+    padding-top: 15px;
+  }
+  /* line 4028, ../sass/layouts/_responsive.scss */
+  .events-content .views-row .views-field-nothing {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    font-size: 2.4em;
+    padding-top: 10px;
+  }
+  /* line 4035, ../sass/layouts/_responsive.scss */
+  .events-content .views-row .views-field-field-link {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    font-size: 1.4em;
+    padding-bottom: 15px;
+  }
+  /* line 4042, ../sass/layouts/_responsive.scss */
+  .events-content .views-row .views-field-body {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    font-size: 1.2em;
+  }
+  /* line 4047, ../sass/layouts/_responsive.scss */
+  .events-content .views-row .views-field-body p {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-top: 1px solid #cccccc;
+  }
+
+  /**
+   * End of the layout for the events section
+   */
+  /**
+   * The layout for the events section
+   */
+  /* line 4064, ../sass/layouts/_responsive.scss */
+  .events-page {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 4068, ../sass/layouts/_responsive.scss */
+  .events-page .page-title {
+    font-size: 3.8em;
+    line-height: 1em;
+    padding-bottom: 30px;
+  }
+  /* line 4074, ../sass/layouts/_responsive.scss */
+  .events-page .node {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 4078, ../sass/layouts/_responsive.scss */
+  .events-page .node .node-left-column {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 4082, ../sass/layouts/_responsive.scss */
+  .events-page .node .node-left-column .info-wrapper {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  /* line 4088, ../sass/layouts/_responsive.scss */
+  .events-page .node .node-left-column .info-wrapper .date-wrapper {
+    float: right;
+    width: 33.33333%;
+    margin-right: 0%;
+    margin-left: -33.33333%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 4092, ../sass/layouts/_responsive.scss */
+  .events-page .node .node-left-column .info-wrapper .date-wrapper .icon-calendar {
+    font-size: 2.4em;
+  }
+  /* line 4096, ../sass/layouts/_responsive.scss */
+  .events-page .node .node-left-column .info-wrapper .date-wrapper .field-name-field-date {
+    font-size: 1.6em;
+  }
+  /* line 4101, ../sass/layouts/_responsive.scss */
+  .events-page .node .node-left-column .info-wrapper .time-wrapper {
+    float: right;
+    width: 33.33333%;
+    margin-right: 33.33333%;
+    margin-left: -66.66667%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 4105, ../sass/layouts/_responsive.scss */
+  .events-page .node .node-left-column .info-wrapper .time-wrapper .icon-clock {
+    font-size: 2.4em;
+  }
+  /* line 4109, ../sass/layouts/_responsive.scss */
+  .events-page .node .node-left-column .info-wrapper .time-wrapper .field-name-field-time {
+    font-size: 1.6em;
+  }
+  /* line 4114, ../sass/layouts/_responsive.scss */
+  .events-page .node .node-left-column .info-wrapper .location-wrapper {
+    float: right;
+    width: 33.33333%;
+    margin-right: 66.66667%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 4118, ../sass/layouts/_responsive.scss */
+  .events-page .node .node-left-column .info-wrapper .location-wrapper .icon-location {
+    font-size: 2.4em;
+  }
+  /* line 4122, ../sass/layouts/_responsive.scss */
+  .events-page .node .node-left-column .info-wrapper .location-wrapper .field-name-field-link {
+    font-size: 1.6em;
+  }
+  /* line 4128, ../sass/layouts/_responsive.scss */
+  .events-page .node .node-left-column .field-name-body {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-size: 1.4em;
+  }
+  /* line 4136, ../sass/layouts/_responsive.scss */
+  .events-page .node .node-left-column .field-name-body h3 {
+    font-size: 1.2em;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  /* line 4142, ../sass/layouts/_responsive.scss */
+  .events-page .node .node-left-column .field-name-body table {
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  /* line 4147, ../sass/layouts/_responsive.scss */
+  .events-page .node .node-left-column .field-name-body table th {
+    padding: 5px;
+  }
+  /* line 4151, ../sass/layouts/_responsive.scss */
+  .events-page .node .node-left-column .field-name-body table td {
+    padding: 5px;
+  }
+  /* line 4156, ../sass/layouts/_responsive.scss */
+  .events-page .node .node-left-column .field-name-body .btn {
+    padding: 10px 15px;
+  }
+  /* line 4160, ../sass/layouts/_responsive.scss */
+  .events-page .node .node-left-column .field-name-body ul {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  /* line 4165, ../sass/layouts/_responsive.scss */
+  .events-page .node .node-left-column .field-name-body p {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  /* line 4172, ../sass/layouts/_responsive.scss */
+  .events-page .node .node-right-column {
+    display: none;
+  }
+  /* line 4177, ../sass/layouts/_responsive.scss */
+  .events-page .share-buttons {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 4182, ../sass/layouts/_responsive.scss */
+  .events-page .share-buttons a {
+    font-size: 3.2em;
+  }
+
+  /**
+   * End of the layout for the events section
+   */
+  /**
+   * The layout for the notices section
+   */
+  /* line 4194, ../sass/layouts/_responsive.scss */
+  .notices-content {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 4198, ../sass/layouts/_responsive.scss */
+  .notices-content .page-title {
+    font-size: 3.8em;
+    line-height: 1em;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+  }
+  /* line 4205, ../sass/layouts/_responsive.scss */
+  .notices-content .views-row {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  /* line 4212, ../sass/layouts/_responsive.scss */
+  .notices-content .views-row .views-field-title {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 1.6em;
+  }
+  /* line 4218, ../sass/layouts/_responsive.scss */
+  .notices-content .views-row .views-field-field-date {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 1.2em;
+  }
+  /* line 4226, ../sass/layouts/_responsive.scss */
+  .notices-content .views-row-first {
+    padding-top: 0;
+  }
+  /* line 4230, ../sass/layouts/_responsive.scss */
+  .notices-content .views-row-last {
+    padding-bottom: 0;
+  }
+
+  /**
+   * The layout for the notices section
+   */
+  /**
+   * End of the layout for the notices section
+   */
+  /* line 4241, ../sass/layouts/_responsive.scss */
+  .notices-page {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 4245, ../sass/layouts/_responsive.scss */
+  .notices-page .page-title {
+    font-size: 3.8em;
+    line-height: 1em;
+    padding-bottom: 15px;
+  }
+  /* line 4251, ../sass/layouts/_responsive.scss */
+  .notices-page .node {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 4255, ../sass/layouts/_responsive.scss */
+  .notices-page .node .field-name-field-date {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 1.6em;
+  }
+  /* line 4262, ../sass/layouts/_responsive.scss */
+  .notices-page .node .field-name-body {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 1.4em;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  /* line 4270, ../sass/layouts/_responsive.scss */
+  .notices-page .node .field-name-body h3 {
+    font-size: 1.2em;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  /* line 4276, ../sass/layouts/_responsive.scss */
+  .notices-page .node .field-name-body table {
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  /* line 4281, ../sass/layouts/_responsive.scss */
+  .notices-page .node .field-name-body table th {
+    padding: 5px;
+  }
+  /* line 4285, ../sass/layouts/_responsive.scss */
+  .notices-page .node .field-name-body table td {
+    padding: 5px;
+  }
+  /* line 4290, ../sass/layouts/_responsive.scss */
+  .notices-page .node .field-name-body .btn {
+    padding: 10px 15px;
+  }
+  /* line 4294, ../sass/layouts/_responsive.scss */
+  .notices-page .node .field-name-body ul {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  /* line 4299, ../sass/layouts/_responsive.scss */
+  .notices-page .node .field-name-body p {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  /* line 4306, ../sass/layouts/_responsive.scss */
+  .notices-page .share-buttons {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 4311, ../sass/layouts/_responsive.scss */
+  .notices-page .share-buttons a {
+    font-size: 3.2em;
+  }
+
+  /**
+   * End of the layout for the notices section
+   */
+  /**
+   * The layout for the footer section
+   */
+  /* line 4323, ../sass/layouts/_responsive.scss */
+  .footer-top-outter {
+    width: 100%;
+  }
+
+  /* line 4327, ../sass/layouts/_responsive.scss */
+  .footer-middle-outter {
+    width: 100%;
+  }
+
+  /* line 4331, ../sass/layouts/_responsive.scss */
+  .footer-bottom-outter {
+    width: 100%;
+  }
+
+  /* line 4335, ../sass/layouts/_responsive.scss */
+  .footer-top-inner {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  /* line 4340, ../sass/layouts/_responsive.scss */
+  .footer-middle-inner {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  /* line 4345, ../sass/layouts/_responsive.scss */
+  .footer-bottom-inner {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  /* line 4350, ../sass/layouts/_responsive.scss */
+  .footer-top {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  /* line 4355, ../sass/layouts/_responsive.scss */
+  .footer-top ul {
+    font-size: 1.2em;
+    margin: 0;
+    padding: 0;
+  }
+  /* line 4360, ../sass/layouts/_responsive.scss */
+  .footer-top ul a {
+    line-height: 3.2em;
+    padding: 0 10px;
+  }
+
+  /* line 4367, ../sass/layouts/_responsive.scss */
+  .footer-middle {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  /* line 4373, ../sass/layouts/_responsive.scss */
+  .footer-middle ul {
+    font-size: 1.4em;
+    margin: 0;
+    padding: 0;
+  }
+  /* line 4378, ../sass/layouts/_responsive.scss */
+  .footer-middle ul a {
+    padding: 20px 30px;
+  }
+  /* line 4381, ../sass/layouts/_responsive.scss */
+  .footer-middle ul a span {
+    font-size: 2.4em;
+    padding-bottom: 10px;
+  }
+
+  /* line 4389, ../sass/layouts/_responsive.scss */
+  .footer-bottom {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  /* line 4395, ../sass/layouts/_responsive.scss */
+  .footer-bottom p {
+    line-height: 3.2em;
+    font-size: 1em;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  /**
+   * End of the layout for the footer section
+   */
+}
+/**
+ * Use 12 grid columns for larger screens.
+ */
+@media all and (min-width: 1024px) {
+  /**
+   * The layout for the header section
+   */
+  /* line 4417, ../sass/layouts/_responsive.scss */
+  .header-section {
+    width: 100%;
+  }
+
+  /* line 4421, ../sass/layouts/_responsive.scss */
+  .header-section-inner {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  /* line 4426, ../sass/layouts/_responsive.scss */
+  .logo {
+    padding: 10px 30px 10px 15px;
+    float: left;
+    max-width: 75px;
+  }
+  /* line 4431, ../sass/layouts/_responsive.scss */
+  .logo img {
+    max-width: 75px;
+    height: auto;
+  }
+
+  /* line 4441, ../sass/layouts/_responsive.scss */
+  .main-nav .menu li {
+    line-height: 59px;
+  }
+  /* line 4444, ../sass/layouts/_responsive.scss */
+  .main-nav .menu li a {
+    font-size: 1.4em;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  /* line 4451, ../sass/layouts/_responsive.scss */
+  .main-nav .menu .menu {
+    display: none;
+  }
+
+  /* line 4457, ../sass/layouts/_responsive.scss */
+  .tablet-btn {
+    display: none;
+  }
+
+  /* line 4463, ../sass/layouts/_responsive.scss */
+  .search-btn span {
+    float: right;
+    padding: 23px;
+    margin-right: 15px;
+    font-size: 1.9em;
+  }
+
+  /* line 4471, ../sass/layouts/_responsive.scss */
+  .search-section {
+    display: none;
+    width: 100%;
+  }
+
+  /* line 4476, ../sass/layouts/_responsive.scss */
+  .search-section-inner {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  /* line 4481, ../sass/layouts/_responsive.scss */
+  .search {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  /* line 4485, ../sass/layouts/_responsive.scss */
+  .search .form-item label {
+    display: none;
+  }
+  /* line 4489, ../sass/layouts/_responsive.scss */
+  .search .form-item input {
+    width: 80%;
+    height: 45px;
+    font-size: 2.4em;
+  }
+  /* line 4495, ../sass/layouts/_responsive.scss */
+  .search .form-actions input {
+    width: 15%;
+    height: 45px;
+    font-size: 1.2em;
+    float: right;
+  }
+
+  /* line 4503, ../sass/layouts/_responsive.scss */
+  .mobile-btn {
+    display: none;
+  }
+
+  /* line 4507, ../sass/layouts/_responsive.scss */
+  .tablet-nav {
+    display: none !important;
+  }
+
+  /* line 4511, ../sass/layouts/_responsive.scss */
+  .mobile-nav {
+    display: none !important;
+  }
+
+  /* line 4515, ../sass/layouts/_responsive.scss */
+  .weather-btn {
+    float: right;
+  }
+  /* line 4518, ../sass/layouts/_responsive.scss */
+  .weather-btn a {
+    padding: 0 23px;
+    line-height: 65px;
+    font-size: 1.9em;
+  }
+
+  /**
+   * End of the layout for the header section
+   */
+  /**
+   * The layout for the top section
+   */
+  /* line 4531, ../sass/layouts/_responsive.scss */
+  .council {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 60px;
+  }
+  /* line 4537, ../sass/layouts/_responsive.scss */
+  .council .block-title {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 2em;
+    line-height: 2em;
+    margin-bottom: 30px;
+  }
+  /* line 4545, ../sass/layouts/_responsive.scss */
+  .council #video_wrapper {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  /* line 4552, ../sass/layouts/_responsive.scss */
+  .connect {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 4557, ../sass/layouts/_responsive.scss */
+  .connect .block-title {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 2em;
+    line-height: 2em;
+    margin-bottom: 30px;
+  }
+  /* line 4565, ../sass/layouts/_responsive.scss */
+  .connect #twitter-widget-0 {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    min-width: 100% !important;
+  }
+
+  /* line 4573, ../sass/layouts/_responsive.scss */
+  .gallery {
+    position: relative;
+  }
+  /* line 4576, ../sass/layouts/_responsive.scss */
+  .gallery .views-slideshow-cycle-main-frame {
+    width: 100% !important;
+    height: 400px !important;
+  }
+  /* line 4581, ../sass/layouts/_responsive.scss */
+  .gallery .views-slideshow-cycle-main-frame-row {
+    width: 100% !important;
+    height: 400px !important;
+  }
+  /* line 4588, ../sass/layouts/_responsive.scss */
+  .gallery .views-field-uri .gallery-background {
+    width: 100%;
+    height: 400px;
+  }
+  /* line 4594, ../sass/layouts/_responsive.scss */
+  .gallery .views-field-body {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+  }
+  /* line 4600, ../sass/layouts/_responsive.scss */
+  .gallery .views-field-body .field-content {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+  /* line 4604, ../sass/layouts/_responsive.scss */
+  .gallery .views-field-body .field-content a {
+    font-size: 3.2em;
+  }
+  /* line 4608, ../sass/layouts/_responsive.scss */
+  .gallery .views-field-body .field-content p {
+    width: 45%;
+    font-size: 1.8em;
+    margin: 20px auto 0 auto;
+  }
+  /* line 4614, ../sass/layouts/_responsive.scss */
+  .gallery .views-field-body .field-content .dots {
+    margin: 5px auto 0 auto;
+    font-size: 3.2em;
+  }
+  /* line 4623, ../sass/layouts/_responsive.scss */
+  .gallery .views-slideshow-controls-bottom .views-slideshow-controls-text-previous {
+    position: absolute;
+    top: 45%;
+    left: 1%;
+    font-size: 3.2em;
+  }
+  /* line 4630, ../sass/layouts/_responsive.scss */
+  .gallery .views-slideshow-controls-bottom .views-slideshow-controls-text-pause {
+    display: none;
+  }
+  /* line 4634, ../sass/layouts/_responsive.scss */
+  .gallery .views-slideshow-controls-bottom .views-slideshow-controls-text-next {
+    position: absolute;
+    top: 45%;
+    right: 1%;
+    font-size: 3.2em;
+  }
+
+  /**
+   * End of the layout for the top section
+   */
+  /**
+   * The layout for the path section
+   */
+  /* line 4649, ../sass/layouts/_responsive.scss */
+  .path-section {
+    width: 100%;
+  }
+
+  /* line 4653, ../sass/layouts/_responsive.scss */
+  .path-section-inner {
+    padding: 10px 15px 10px 15px;
+  }
+
+  /* line 4657, ../sass/layouts/_responsive.scss */
+  .path {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    font-size: 1.2em;
+    line-height: 2em;
+  }
+  /* line 4662, ../sass/layouts/_responsive.scss */
+  .path li {
+    padding: 0 10px 0 0;
+  }
+  /* line 4666, ../sass/layouts/_responsive.scss */
+  .path a {
+    padding-right: 10px;
+  }
+
+  /**
+   * End of the layout for the path section
+   */
+  /**
+   * The layout for the main content section
+   */
+  /* line 4677, ../sass/layouts/_responsive.scss */
+  .main-content {
+    width: 100%;
+  }
+
+  /* line 4681, ../sass/layouts/_responsive.scss */
+  .main-content-inner {
+    padding: 0 15px 60px 15px;
+  }
+
+  /* line 4685, ../sass/layouts/_responsive.scss */
+  .main-content-padding {
+    padding-bottom: 0;
+  }
+
+  /**
+   * End of the layout for the main content section
+   */
+  /**
+   * The layout for the main top section
+   */
+  /* line 4695, ../sass/layouts/_responsive.scss */
+  .main-top-column {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    margin-top: 30px;
+    margin-bottom: 60px;
+  }
+
+  /**
+   * End of the layout for the main top section
+   */
+  /**
+   * The layout for the popular section
+   */
+  /* line 4708, ../sass/layouts/_responsive.scss */
+  .popular {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 4712, ../sass/layouts/_responsive.scss */
+  .popular .block-title {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    font-size: 2em;
+    line-height: 2em;
+    margin-bottom: 30px;
+  }
+  /* line 4719, ../sass/layouts/_responsive.scss */
+  .popular .views-row-1 {
+    clear: right;
+    float: right;
+    width: 25%;
+    margin-right: 0%;
+    margin-left: -25%;
+  }
+  /* line 4724, ../sass/layouts/_responsive.scss */
+  .popular .views-row-2 {
+    float: right;
+    width: 25%;
+    margin-right: 25%;
+    margin-left: -50%;
+  }
+  /* line 4728, ../sass/layouts/_responsive.scss */
+  .popular .views-row-3 {
+    float: right;
+    width: 25%;
+    margin-right: 50%;
+    margin-left: -75%;
+  }
+  /* line 4732, ../sass/layouts/_responsive.scss */
+  .popular .views-row-4 {
+    float: right;
+    width: 25%;
+    margin-right: 75%;
+    margin-left: -100%;
+  }
+  /* line 4736, ../sass/layouts/_responsive.scss */
+  .popular .views-row-5 {
+    clear: right;
+    float: right;
+    width: 25%;
+    margin-right: 0%;
+    margin-left: -25%;
+  }
+  /* line 4741, ../sass/layouts/_responsive.scss */
+  .popular .views-row-6 {
+    float: right;
+    width: 25%;
+    margin-right: 25%;
+    margin-left: -50%;
+  }
+  /* line 4745, ../sass/layouts/_responsive.scss */
+  .popular .views-row-7 {
+    float: right;
+    width: 25%;
+    margin-right: 50%;
+    margin-left: -75%;
+  }
+  /* line 4749, ../sass/layouts/_responsive.scss */
+  .popular .views-row-8 {
+    float: right;
+    width: 25%;
+    margin-right: 75%;
+    margin-left: -100%;
+  }
+  /* line 4753, ../sass/layouts/_responsive.scss */
+  .popular .views-row {
+    padding-left: 0;
+    padding-right: 0;
+    position: relative;
+  }
+  /* line 4757, ../sass/layouts/_responsive.scss */
+  .popular .views-row .views-field-field-image {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 4761, ../sass/layouts/_responsive.scss */
+  .popular .views-row .views-field-field-image img {
+    width: 100%;
+    height: auto;
+  }
+  /* line 4767, ../sass/layouts/_responsive.scss */
+  .popular .views-row .views-field-title {
+    font-size: 1.8em;
+    line-height: 1.2em;
+  }
+  /* line 4771, ../sass/layouts/_responsive.scss */
+  .popular .views-row .views-field-title a {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+  }
+
+  /**
+   * End of the layout for the popular section
+   */
+  /**
+   * The layout for the main nav column section
+   */
+  /* line 4788, ../sass/layouts/_responsive.scss */
+  .main-nav-column {
+    display: none;
+  }
+
+  /**
+   * End of the layout for the main nav column section
+   */
+  /**
+   * The layout for the main left section
+   */
+  /* line 4798, ../sass/layouts/_responsive.scss */
+  .main-left-column {
+    display: initial !important;
+    clear: right;
+    float: right;
+    width: 66.66667%;
+    margin-right: 0%;
+    margin-left: -66.66667%;
+  }
+
+  /**
+   * End of the layout for the main left section
+   */
+  /**
+   * The layout for the events section
+   */
+  /* line 4810, ../sass/layouts/_responsive.scss */
+  .events {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 4814, ../sass/layouts/_responsive.scss */
+  .events .block-title {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 2em;
+    line-height: 2em;
+  }
+  /* line 4821, ../sass/layouts/_responsive.scss */
+  .events .view {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+  /* line 4826, ../sass/layouts/_responsive.scss */
+  .events .views-row-1 {
+    clear: right;
+    float: right;
+    width: 33.33333%;
+    margin-right: 0%;
+    margin-left: -33.33333%;
+  }
+  /* line 4831, ../sass/layouts/_responsive.scss */
+  .events .views-row-2 {
+    float: right;
+    width: 33.33333%;
+    margin-right: 33.33333%;
+    margin-left: -66.66667%;
+  }
+  /* line 4835, ../sass/layouts/_responsive.scss */
+  .events .views-row-3 {
+    float: right;
+    width: 33.33333%;
+    margin-right: 66.66667%;
+    margin-left: -100%;
+  }
+  /* line 4839, ../sass/layouts/_responsive.scss */
+  .events .views-row-4 {
+    display: none;
+  }
+  /* line 4843, ../sass/layouts/_responsive.scss */
+  .events .views-row {
+    padding-top: 30px;
+  }
+  /* line 4846, ../sass/layouts/_responsive.scss */
+  .events .views-row .views-field-field-image {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 4850, ../sass/layouts/_responsive.scss */
+  .events .views-row .views-field-field-image img {
+    width: 100%;
+    height: auto;
+  }
+  /* line 4856, ../sass/layouts/_responsive.scss */
+  .events .views-row .views-field-field-date {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 1.6em;
+    padding: 15px 10px 15px 10px;
+  }
+  /* line 4863, ../sass/layouts/_responsive.scss */
+  .events .views-row .views-field-title {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    font-size: 1.8em;
+    padding-top: 15px;
+  }
+  /* line 4870, ../sass/layouts/_responsive.scss */
+  .events .views-row .views-field-nothing {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    font-size: 2.4em;
+    padding-top: 10px;
+  }
+  /* line 4877, ../sass/layouts/_responsive.scss */
+  .events .views-row .views-field-field-link {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    font-size: 1.4em;
+    padding-bottom: 15px;
+  }
+  /* line 4884, ../sass/layouts/_responsive.scss */
+  .events .views-row .views-field-body {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    font-size: 1.2em;
+  }
+  /* line 4889, ../sass/layouts/_responsive.scss */
+  .events .views-row .views-field-body p {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-top: 1px solid #cccccc;
+  }
+
+  /**
+   * The layout for the events section
+   */
+  /**
+  * The layout for the programs section
+  */
+  /* line 4906, ../sass/layouts/_responsive.scss */
+  .programs {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 4911, ../sass/layouts/_responsive.scss */
+  .programs .block-title {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 2em;
+    line-height: 2em;
+    margin-bottom: 15px;
+  }
+  /* line 4919, ../sass/layouts/_responsive.scss */
+  .programs .views-row {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 4924, ../sass/layouts/_responsive.scss */
+  .programs .views-row .views-field-field-image {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 4928, ../sass/layouts/_responsive.scss */
+  .programs .views-row .views-field-field-image img {
+    width: 100%;
+    height: auto;
+  }
+  /* line 4934, ../sass/layouts/_responsive.scss */
+  .programs .views-row .views-field-title {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-top: 10px;
+    font-size: 1.6em;
+  }
+  /* line 4941, ../sass/layouts/_responsive.scss */
+  .programs .views-row .views-field-body {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    font-size: 1.2em;
+    padding-bottom: 10px;
+  }
+  /* line 4947, ../sass/layouts/_responsive.scss */
+  .programs .views-row .views-field-body p {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  /**
+  * End of the layout for the programs section
+  */
+  /**
+  * The layout for the content left section
+  */
+  /* line 4961, ../sass/layouts/_responsive.scss */
+  .content-left-column {
+    float: right;
+    width: 75%;
+    margin-right: 0%;
+    margin-left: -75%;
+    padding-top: 30px;
+  }
+
+  /**
+   * End of the layout for the content left section
+   */
+  /**
+  * The layout for the subnav section
+  */
+  /* line 4972, ../sass/layouts/_responsive.scss */
+  .sub-nav {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 30px;
+  }
+  /* line 4977, ../sass/layouts/_responsive.scss */
+  .sub-nav .block-title {
+    font-size: 2.2em;
+    line-height: 1em;
+    padding: 15px 10px;
+  }
+  /* line 4983, ../sass/layouts/_responsive.scss */
+  .sub-nav .menu {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+  /* line 4988, ../sass/layouts/_responsive.scss */
+  .sub-nav .menu li {
+    list-style-type: none;
+    list-style-image: none;
+  }
+  /* line 4993, ../sass/layouts/_responsive.scss */
+  .sub-nav .menu a {
+    padding: 10px;
+    font-size: 1.4em;
+    line-height: 1.4em;
+  }
+  /* line 5001, ../sass/layouts/_responsive.scss */
+  .sub-nav .menu .menu a {
+    padding: 10px 10px 10px 20px;
+  }
+
+  /**
+  * End of the layout for the subnav section
+  */
+  /**
+   * The layout for the news section
+   */
+  /* line 5014, ../sass/layouts/_responsive.scss */
+  .news {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 5018, ../sass/layouts/_responsive.scss */
+  .news .block-title {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 2em;
+    line-height: 2em;
+    margin-bottom: 30px;
+  }
+  /* line 5026, ../sass/layouts/_responsive.scss */
+  .news .page-title {
+    font-size: 3.8em;
+    line-height: 1em;
+    padding-bottom: 15px;
+  }
+  /* line 5032, ../sass/layouts/_responsive.scss */
+  .news .views-row {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px dotted #cccccc;
+  }
+  /* line 5040, ../sass/layouts/_responsive.scss */
+  .news .views-row .views-field-field-image {
+    float: right;
+    width: 41.66667%;
+    margin-right: 0%;
+    margin-left: -41.66667%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 5044, ../sass/layouts/_responsive.scss */
+  .news .views-row .views-field-field-image img {
+    width: 100%;
+    height: auto;
+  }
+  /* line 5050, ../sass/layouts/_responsive.scss */
+  .news .views-row .views-field-title {
+    float: right;
+    width: 58.33333%;
+    margin-right: 41.66667%;
+    margin-left: -100%;
+    float: none;
+    font-size: 1.8em;
+  }
+  /* line 5056, ../sass/layouts/_responsive.scss */
+  .news .views-row .views-field-field-date {
+    float: right;
+    width: 58.33333%;
+    margin-right: 41.66667%;
+    margin-left: -100%;
+    float: none;
+    font-size: 1.2em;
+  }
+  /* line 5062, ../sass/layouts/_responsive.scss */
+  .news .views-row .views-field-body {
+    float: right;
+    width: 58.33333%;
+    margin-right: 41.66667%;
+    margin-left: -100%;
+    float: none;
+    font-size: 1.2em;
+  }
+  /* line 5067, ../sass/layouts/_responsive.scss */
+  .news .views-row .views-field-body p {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  /* line 5074, ../sass/layouts/_responsive.scss */
+  .news .views-row-first {
+    padding-top: 0;
+  }
+  /* line 5078, ../sass/layouts/_responsive.scss */
+  .news .views-row-last {
+    padding-bottom: 0;
+  }
+  /* line 5082, ../sass/layouts/_responsive.scss */
+  .news .views-row-last {
+    border-bottom: none;
+  }
+
+  /**
+   * The layout for the news section
+   */
+  /**
+  * The layout for the main right section
+  */
+  /* line 5093, ../sass/layouts/_responsive.scss */
+  .main-right-column {
+    display: initial !important;
+    float: right;
+    width: 33.33333%;
+    margin-right: 66.66667%;
+    margin-left: -100%;
+  }
+
+  /**
+   * End of the layout for the main right section
+   */
+  /**
+  * The layout for the main bottom section
+  */
+  /* line 5104, ../sass/layouts/_responsive.scss */
+  .main-bottom-column {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    margin-top: 60px;
+  }
+
+  /**
+   * End of the layout for the main bottom section
+   */
+  /**
+  * The layout for the notices section
+  */
+  /* line 5116, ../sass/layouts/_responsive.scss */
+  .notices {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 60px;
+  }
+  /* line 5122, ../sass/layouts/_responsive.scss */
+  .notices .block-title {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 2em;
+    line-height: 2em;
+    margin-bottom: 30px;
+  }
+  /* line 5130, ../sass/layouts/_responsive.scss */
+  .notices .views-row {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  /* line 5137, ../sass/layouts/_responsive.scss */
+  .notices .views-row .views-field-title {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    font-size: 1.6em;
+  }
+  /* line 5142, ../sass/layouts/_responsive.scss */
+  .notices .views-row .views-field-field-date {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    font-size: 1.2em;
+  }
+
+  /**
+  * End of the layout for the notices section
+  */
+  /**
+  * The layout for the content middle section
+  */
+  /* line 5156, ../sass/layouts/_responsive.scss */
+  .content-middle-column {
+    float: right;
+    width: 83.33333%;
+    margin-right: 8.33333%;
+    margin-left: -91.66667%;
+    padding-top: 30px;
+  }
+
+  /**
+   * End of the layout for the content middle section
+   */
+  /**
+  * The layout for the content right section
+  */
+  /* line 5167, ../sass/layouts/_responsive.scss */
+  .content-right-column {
+    float: right;
+    width: 25%;
+    margin-right: 75%;
+    margin-left: -100%;
+  }
+
+  /**
+   * End of the layout for the content right section
+   */
+  /**
+  * The layout for the content section
+  */
+  /* line 5177, ../sass/layouts/_responsive.scss */
+  .section-background {
+    width: 100%;
+    height: 300px;
+    position: relative;
+  }
+  /* line 5182, ../sass/layouts/_responsive.scss */
+  .section-background .page-title {
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    font-size: 3.8em;
+  }
+
+  /* line 5190, ../sass/layouts/_responsive.scss */
+  .error-background {
+    width: 100%;
+    height: 400px;
+    position: relative;
+  }
+  /* line 5195, ../sass/layouts/_responsive.scss */
+  .error-background .page-title {
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    font-size: 3.8em;
+  }
+
+  /* line 5203, ../sass/layouts/_responsive.scss */
+  .content-background {
+    width: 100%;
+    height: 400px;
+  }
+
+  /* line 5208, ../sass/layouts/_responsive.scss */
+  .content {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 5212, ../sass/layouts/_responsive.scss */
+  .content .page-title {
+    font-size: 3.8em;
+    line-height: 1em;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+  }
+  /* line 5219, ../sass/layouts/_responsive.scss */
+  .content .profile {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 1.4em;
+  }
+  /* line 5225, ../sass/layouts/_responsive.scss */
+  .content .profile h3 {
+    margin-top: 0;
+  }
+  /* line 5230, ../sass/layouts/_responsive.scss */
+  .content form {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 1.4em;
+  }
+  /* line 5236, ../sass/layouts/_responsive.scss */
+  .content form .form-item {
+    margin-top: 0;
+  }
+  /* line 5241, ../sass/layouts/_responsive.scss */
+  .content .search-results-section {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 1.4em;
+  }
+  /* line 5247, ../sass/layouts/_responsive.scss */
+  .content .search-results-section h2 {
+    margin-top: 0;
+  }
+  /* line 5251, ../sass/layouts/_responsive.scss */
+  .content .search-results-section ul {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  /* line 5256, ../sass/layouts/_responsive.scss */
+  .content .search-results-section ol {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  /* line 5262, ../sass/layouts/_responsive.scss */
+  .content .node {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 5266, ../sass/layouts/_responsive.scss */
+  .content .node .field-name-body {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 1.4em;
+  }
+  /* line 5271, ../sass/layouts/_responsive.scss */
+  .content .node .field-name-body h3 {
+    font-size: 1.2em;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  /* line 5277, ../sass/layouts/_responsive.scss */
+  .content .node .field-name-body table {
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  /* line 5282, ../sass/layouts/_responsive.scss */
+  .content .node .field-name-body table th {
+    padding: 5px;
+  }
+  /* line 5286, ../sass/layouts/_responsive.scss */
+  .content .node .field-name-body table td {
+    padding: 5px;
+  }
+  /* line 5291, ../sass/layouts/_responsive.scss */
+  .content .node .field-name-body .btn {
+    padding: 10px 15px;
+  }
+  /* line 5295, ../sass/layouts/_responsive.scss */
+  .content .node .field-name-body ul {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  /* line 5300, ../sass/layouts/_responsive.scss */
+  .content .node .field-name-body p {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  /**
+  * End of the layout for the content section
+  */
+  /**
+  * The layout for the subcontent section
+  */
+  /* line 5314, ../sass/layouts/_responsive.scss */
+  .subcontent {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 5319, ../sass/layouts/_responsive.scss */
+  .subcontent .block {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+  /* line 5324, ../sass/layouts/_responsive.scss */
+  .subcontent .node:nth-child(3n + 1) {
+    clear: right;
+    float: right;
+    width: 33.33333%;
+    margin-right: 0%;
+    margin-left: -33.33333%;
+  }
+  /* line 5329, ../sass/layouts/_responsive.scss */
+  .subcontent .node:nth-child(3n + 2) {
+    float: right;
+    width: 33.33333%;
+    margin-right: 33.33333%;
+    margin-left: -66.66667%;
+  }
+  /* line 5333, ../sass/layouts/_responsive.scss */
+  .subcontent .node:nth-child(3n + 3) {
+    float: right;
+    width: 33.33333%;
+    margin-right: 66.66667%;
+    margin-left: -100%;
+  }
+  /* line 5337, ../sass/layouts/_responsive.scss */
+  .subcontent .node {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 30px;
+  }
+  /* line 5341, ../sass/layouts/_responsive.scss */
+  .subcontent .node .field-name-field-image {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+  }
+  /* line 5344, ../sass/layouts/_responsive.scss */
+  .subcontent .node .field-name-field-image img {
+    width: 100%;
+    height: auto;
+  }
+  /* line 5350, ../sass/layouts/_responsive.scss */
+  .subcontent .node .node-title {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    font-size: 1.6em;
+  }
+  /* line 5356, ../sass/layouts/_responsive.scss */
+  .subcontent .node .field-name-body {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    font-size: 1.2em;
+  }
+  /* line 5361, ../sass/layouts/_responsive.scss */
+  .subcontent .node .field-name-body p {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  /**
+  * End of the layout for the subcontent section
+  */
+  /**
+   * The layout for the news section
+   */
+  /* line 5375, ../sass/layouts/_responsive.scss */
+  .news-content {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 5379, ../sass/layouts/_responsive.scss */
+  .news-content .page-title {
+    font-size: 3.8em;
+    line-height: 1em;
+    padding-bottom: 10px;
+  }
+  /* line 5385, ../sass/layouts/_responsive.scss */
+  .news-content .view {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+  /* line 5390, ../sass/layouts/_responsive.scss */
+  .news-content .views-row:nth-child(3n + 1) {
+    clear: right;
+    float: right;
+    width: 33.33333%;
+    margin-right: 0%;
+    margin-left: -33.33333%;
+  }
+  /* line 5395, ../sass/layouts/_responsive.scss */
+  .news-content .views-row:nth-child(3n + 2) {
+    float: right;
+    width: 33.33333%;
+    margin-right: 33.33333%;
+    margin-left: -66.66667%;
+  }
+  /* line 5399, ../sass/layouts/_responsive.scss */
+  .news-content .views-row:nth-child(3n + 3) {
+    float: right;
+    width: 33.33333%;
+    margin-right: 66.66667%;
+    margin-left: -100%;
+  }
+  /* line 5403, ../sass/layouts/_responsive.scss */
+  .news-content .views-row {
+    padding-top: 30px;
+  }
+  /* line 5406, ../sass/layouts/_responsive.scss */
+  .news-content .views-row .views-field-field-image {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 5410, ../sass/layouts/_responsive.scss */
+  .news-content .views-row .views-field-field-image img {
+    width: 100%;
+    height: auto;
+  }
+  /* line 5416, ../sass/layouts/_responsive.scss */
+  .news-content .views-row .views-field-title {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 1.8em;
+    padding-top: 15px;
+  }
+  /* line 5424, ../sass/layouts/_responsive.scss */
+  .news-content .views-row .views-field-field-date {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 1.2em;
+  }
+  /* line 5431, ../sass/layouts/_responsive.scss */
+  .news-content .views-row .views-field-body {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 1.2em;
+  }
+  /* line 5437, ../sass/layouts/_responsive.scss */
+  .news-content .views-row .views-field-body p {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  /**
+   * End of the layout for the news section
+   */
+  /**
+   * End of the layout for the news section
+   */
+  /* line 5451, ../sass/layouts/_responsive.scss */
+  .news-page {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 5455, ../sass/layouts/_responsive.scss */
+  .news-page .page-title {
+    font-size: 3.8em;
+    line-height: 1em;
+    padding-bottom: 15px;
+  }
+  /* line 5461, ../sass/layouts/_responsive.scss */
+  .news-page .node {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 5465, ../sass/layouts/_responsive.scss */
+  .news-page .node .node-left-column {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 5469, ../sass/layouts/_responsive.scss */
+  .news-page .node .node-left-column .field-name-field-date {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 1.6em;
+  }
+  /* line 5475, ../sass/layouts/_responsive.scss */
+  .news-page .node .node-left-column .field-name-body {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 1.4em;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  /* line 5483, ../sass/layouts/_responsive.scss */
+  .news-page .node .node-left-column .field-name-body h3 {
+    font-size: 1.2em;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  /* line 5489, ../sass/layouts/_responsive.scss */
+  .news-page .node .node-left-column .field-name-body table {
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  /* line 5494, ../sass/layouts/_responsive.scss */
+  .news-page .node .node-left-column .field-name-body table th {
+    padding: 5px;
+  }
+  /* line 5498, ../sass/layouts/_responsive.scss */
+  .news-page .node .node-left-column .field-name-body table td {
+    padding: 5px;
+  }
+  /* line 5503, ../sass/layouts/_responsive.scss */
+  .news-page .node .node-left-column .field-name-body .btn {
+    padding: 10px 15px;
+  }
+  /* line 5507, ../sass/layouts/_responsive.scss */
+  .news-page .node .node-left-column .field-name-body ul {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  /* line 5512, ../sass/layouts/_responsive.scss */
+  .news-page .node .node-left-column .field-name-body p {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  /* line 5519, ../sass/layouts/_responsive.scss */
+  .news-page .node .node-right-column {
+    display: none;
+  }
+  /* line 5524, ../sass/layouts/_responsive.scss */
+  .news-page .share-buttons {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 5529, ../sass/layouts/_responsive.scss */
+  .news-page .share-buttons a {
+    font-size: 3.2em;
+  }
+
+  /**
+   * End of the layout for the news section
+   */
+  /**
+   * The layout for the events section
+   */
+  /* line 5541, ../sass/layouts/_responsive.scss */
+  .events-content {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 5545, ../sass/layouts/_responsive.scss */
+  .events-content .page-title {
+    font-size: 3.8em;
+    line-height: 1em;
+    padding-bottom: 10px;
+  }
+  /* line 5551, ../sass/layouts/_responsive.scss */
+  .events-content .view {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+  /* line 5556, ../sass/layouts/_responsive.scss */
+  .events-content .views-row:nth-child(3n + 1) {
+    clear: right;
+    float: right;
+    width: 33.33333%;
+    margin-right: 0%;
+    margin-left: -33.33333%;
+  }
+  /* line 5561, ../sass/layouts/_responsive.scss */
+  .events-content .views-row:nth-child(3n + 2) {
+    float: right;
+    width: 33.33333%;
+    margin-right: 33.33333%;
+    margin-left: -66.66667%;
+  }
+  /* line 5565, ../sass/layouts/_responsive.scss */
+  .events-content .views-row:nth-child(3n + 3) {
+    float: right;
+    width: 33.33333%;
+    margin-right: 66.66667%;
+    margin-left: -100%;
+  }
+  /* line 5569, ../sass/layouts/_responsive.scss */
+  .events-content .views-row {
+    padding-top: 30px;
+  }
+  /* line 5572, ../sass/layouts/_responsive.scss */
+  .events-content .views-row .views-field-field-image {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 5576, ../sass/layouts/_responsive.scss */
+  .events-content .views-row .views-field-field-image img {
+    width: 100%;
+    height: auto;
+  }
+  /* line 5582, ../sass/layouts/_responsive.scss */
+  .events-content .views-row .views-field-field-date {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 1.6em;
+    padding: 15px 10px 15px 10px;
+  }
+  /* line 5589, ../sass/layouts/_responsive.scss */
+  .events-content .views-row .views-field-title {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    font-size: 1.8em;
+    padding-top: 15px;
+  }
+  /* line 5596, ../sass/layouts/_responsive.scss */
+  .events-content .views-row .views-field-nothing {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    font-size: 2.4em;
+    padding-top: 10px;
+  }
+  /* line 5603, ../sass/layouts/_responsive.scss */
+  .events-content .views-row .views-field-field-link {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    font-size: 1.4em;
+    padding-bottom: 15px;
+  }
+  /* line 5610, ../sass/layouts/_responsive.scss */
+  .events-content .views-row .views-field-body {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    font-size: 1.2em;
+  }
+  /* line 5615, ../sass/layouts/_responsive.scss */
+  .events-content .views-row .views-field-body p {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-top: 1px solid #cccccc;
+  }
+
+  /**
+   * End of the layout for the events section
+   */
+  /**
+   * The layout for the events section
+   */
+  /* line 5632, ../sass/layouts/_responsive.scss */
+  .events-page {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 5636, ../sass/layouts/_responsive.scss */
+  .events-page .page-title {
+    font-size: 3.8em;
+    line-height: 1em;
+    padding-bottom: 30px;
+  }
+  /* line 5642, ../sass/layouts/_responsive.scss */
+  .events-page .node {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 5646, ../sass/layouts/_responsive.scss */
+  .events-page .node .node-left-column {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 5650, ../sass/layouts/_responsive.scss */
+  .events-page .node .node-left-column .info-wrapper {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  /* line 5656, ../sass/layouts/_responsive.scss */
+  .events-page .node .node-left-column .info-wrapper .date-wrapper {
+    float: right;
+    width: 33.33333%;
+    margin-right: 0%;
+    margin-left: -33.33333%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 5660, ../sass/layouts/_responsive.scss */
+  .events-page .node .node-left-column .info-wrapper .date-wrapper .icon-calendar {
+    font-size: 2.4em;
+  }
+  /* line 5664, ../sass/layouts/_responsive.scss */
+  .events-page .node .node-left-column .info-wrapper .date-wrapper .field-name-field-date {
+    font-size: 1.6em;
+  }
+  /* line 5669, ../sass/layouts/_responsive.scss */
+  .events-page .node .node-left-column .info-wrapper .time-wrapper {
+    float: right;
+    width: 33.33333%;
+    margin-right: 33.33333%;
+    margin-left: -66.66667%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 5673, ../sass/layouts/_responsive.scss */
+  .events-page .node .node-left-column .info-wrapper .time-wrapper .icon-clock {
+    font-size: 2.4em;
+  }
+  /* line 5677, ../sass/layouts/_responsive.scss */
+  .events-page .node .node-left-column .info-wrapper .time-wrapper .field-name-field-time {
+    font-size: 1.6em;
+  }
+  /* line 5682, ../sass/layouts/_responsive.scss */
+  .events-page .node .node-left-column .info-wrapper .location-wrapper {
+    float: right;
+    width: 33.33333%;
+    margin-right: 66.66667%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 5686, ../sass/layouts/_responsive.scss */
+  .events-page .node .node-left-column .info-wrapper .location-wrapper .icon-location {
+    font-size: 2.4em;
+  }
+  /* line 5690, ../sass/layouts/_responsive.scss */
+  .events-page .node .node-left-column .info-wrapper .location-wrapper .field-name-field-link {
+    font-size: 1.6em;
+  }
+  /* line 5696, ../sass/layouts/_responsive.scss */
+  .events-page .node .node-left-column .field-name-body {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-size: 1.4em;
+  }
+  /* line 5704, ../sass/layouts/_responsive.scss */
+  .events-page .node .node-left-column .field-name-body h3 {
+    font-size: 1.2em;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  /* line 5710, ../sass/layouts/_responsive.scss */
+  .events-page .node .node-left-column .field-name-body table {
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  /* line 5715, ../sass/layouts/_responsive.scss */
+  .events-page .node .node-left-column .field-name-body table th {
+    padding: 5px;
+  }
+  /* line 5719, ../sass/layouts/_responsive.scss */
+  .events-page .node .node-left-column .field-name-body table td {
+    padding: 5px;
+  }
+  /* line 5724, ../sass/layouts/_responsive.scss */
+  .events-page .node .node-left-column .field-name-body .btn {
+    padding: 10px 15px;
+  }
+  /* line 5728, ../sass/layouts/_responsive.scss */
+  .events-page .node .node-left-column .field-name-body ul {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  /* line 5733, ../sass/layouts/_responsive.scss */
+  .events-page .node .node-left-column .field-name-body p {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  /* line 5740, ../sass/layouts/_responsive.scss */
+  .events-page .node .node-right-column {
+    display: none;
+  }
+  /* line 5745, ../sass/layouts/_responsive.scss */
+  .events-page .share-buttons {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 5750, ../sass/layouts/_responsive.scss */
+  .events-page .share-buttons a {
+    font-size: 3.2em;
+  }
+
+  /**
+   * End of the layout for the events section
+   */
+  /**
+   * The layout for the notices section
+   */
+  /* line 5762, ../sass/layouts/_responsive.scss */
+  .notices-content {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 5766, ../sass/layouts/_responsive.scss */
+  .notices-content .page-title {
+    font-size: 3.8em;
+    line-height: 1em;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+  }
+  /* line 5773, ../sass/layouts/_responsive.scss */
+  .notices-content .views-row {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  /* line 5780, ../sass/layouts/_responsive.scss */
+  .notices-content .views-row .views-field-title {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 1.6em;
+  }
+  /* line 5786, ../sass/layouts/_responsive.scss */
+  .notices-content .views-row .views-field-field-date {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 1.2em;
+  }
+  /* line 5794, ../sass/layouts/_responsive.scss */
+  .notices-content .views-row-first {
+    padding-top: 0;
+  }
+  /* line 5798, ../sass/layouts/_responsive.scss */
+  .notices-content .views-row-last {
+    padding-bottom: 0;
+  }
+
+  /**
+   * The layout for the notices section
+   */
+  /**
+   * End of the layout for the notices section
+   */
+  /* line 5809, ../sass/layouts/_responsive.scss */
+  .notices-page {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 5813, ../sass/layouts/_responsive.scss */
+  .notices-page .page-title {
+    font-size: 3.8em;
+    line-height: 1em;
+    padding-bottom: 15px;
+  }
+  /* line 5819, ../sass/layouts/_responsive.scss */
+  .notices-page .node {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 5823, ../sass/layouts/_responsive.scss */
+  .notices-page .node .field-name-field-date {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 1.6em;
+  }
+  /* line 5830, ../sass/layouts/_responsive.scss */
+  .notices-page .node .field-name-body {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 1.4em;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  /* line 5838, ../sass/layouts/_responsive.scss */
+  .notices-page .node .field-name-body h3 {
+    font-size: 1.2em;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  /* line 5844, ../sass/layouts/_responsive.scss */
+  .notices-page .node .field-name-body table {
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  /* line 5849, ../sass/layouts/_responsive.scss */
+  .notices-page .node .field-name-body table th {
+    padding: 5px;
+  }
+  /* line 5853, ../sass/layouts/_responsive.scss */
+  .notices-page .node .field-name-body table td {
+    padding: 5px;
+  }
+  /* line 5858, ../sass/layouts/_responsive.scss */
+  .notices-page .node .field-name-body .btn {
+    padding: 10px 15px;
+  }
+  /* line 5862, ../sass/layouts/_responsive.scss */
+  .notices-page .node .field-name-body ul {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  /* line 5867, ../sass/layouts/_responsive.scss */
+  .notices-page .node .field-name-body p {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  /* line 5874, ../sass/layouts/_responsive.scss */
+  .notices-page .share-buttons {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 5879, ../sass/layouts/_responsive.scss */
+  .notices-page .share-buttons a {
+    font-size: 3.2em;
+  }
+
+  /**
+   * End of the layout for the notices section
+   */
+  /**
+   * The layout for the footer section
+   */
+  /* line 5891, ../sass/layouts/_responsive.scss */
+  .footer-top-outter {
+    width: 100%;
+  }
+
+  /* line 5895, ../sass/layouts/_responsive.scss */
+  .footer-middle-outter {
+    width: 100%;
+  }
+
+  /* line 5899, ../sass/layouts/_responsive.scss */
+  .footer-bottom-outter {
+    width: 100%;
+  }
+
+  /* line 5903, ../sass/layouts/_responsive.scss */
+  .footer-top-inner {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  /* line 5908, ../sass/layouts/_responsive.scss */
+  .footer-middle-inner {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  /* line 5913, ../sass/layouts/_responsive.scss */
+  .footer-bottom-inner {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  /* line 5918, ../sass/layouts/_responsive.scss */
+  .footer-top {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  /* line 5923, ../sass/layouts/_responsive.scss */
+  .footer-top ul {
+    font-size: 1.2em;
+    margin: 0;
+    padding: 0;
+  }
+  /* line 5928, ../sass/layouts/_responsive.scss */
+  .footer-top ul a {
+    line-height: 3.2em;
+    padding: 0 10px;
+  }
+
+  /* line 5935, ../sass/layouts/_responsive.scss */
+  .footer-middle {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  /* line 5941, ../sass/layouts/_responsive.scss */
+  .footer-middle ul {
+    font-size: 1.4em;
+    margin: 0;
+    padding: 0;
+  }
+  /* line 5946, ../sass/layouts/_responsive.scss */
+  .footer-middle ul a {
+    padding: 20px 30px;
+  }
+  /* line 5949, ../sass/layouts/_responsive.scss */
+  .footer-middle ul a span {
+    font-size: 2.4em;
+    padding-bottom: 10px;
+  }
+
+  /* line 5957, ../sass/layouts/_responsive.scss */
+  .footer-bottom {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  /* line 5963, ../sass/layouts/_responsive.scss */
+  .footer-bottom p {
+    line-height: 3.2em;
+    font-size: 1em;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  /**
+   * End of the layout for the footer section
+   */
+}
+/* Component (SMACSS module) rules */
+/**
+ * @file
+ * RTL companion for the modular-styles.css file.
+ */
+/**
+ * Branding header.
+ */
+/* Wrapping link for logo. */
+/* line 11, ../sass/components/_misc-rtl.scss */
+.header__logo {
+  float: right;
+}
+
+/* The secondary menu (login, etc.) */
+/* line 16, ../sass/components/_misc-rtl.scss */
+.header__secondary-menu {
+  float: left;
+}
+
+/**
+ * Navigation bar.
+ */
+/* Main menu and secondary menu links and menu block links. */
+/* line 27, ../sass/components/_misc-rtl.scss */
+#navigation .links,
+#navigation .menu {
+  text-align: right;
+}
+/* line 30, ../sass/components/_misc-rtl.scss */
+#navigation .links li,
+#navigation .menu li {
+  /* A simple method to get navigation links to appear in one line. */
+  float: right;
+  padding: 0 0 0 10px;
+}
+
+/**
+ * Messages.
+ */
+/* line 41, ../sass/components/_misc-rtl.scss */
+.messages, .messages--status, .messages--warning, .messages--error {
+  padding: 10px 50px 10px 10px;
+  background-position: 99% 8px;
+}
+
+/**
+ * Tabs.
+ */
+/* line 58, ../sass/components/_misc-rtl.scss */
+.tabs-primary__tab, .tabs-primary__tab.is-active, .tabs-secondary__tab,
+.tabs-secondary__tab.is-active {
+  float: right;
+}
+
+/**
+ * Inline styles.
+ */
+/* List of links */
+/* line 77, ../sass/components/_misc-rtl.scss */
+.inline li {
+  /* Bug in Safari causes display: inline to fail. */
+  display: inline-block;
+  padding: 0 0 0 1em;
+}
+
+/* The inline field label used by the Fences.module */
+/* line 84, ../sass/components/_misc-rtl.scss */
+span.field-label {
+  padding: 0 0 0 1em;
+}
+
+/**
+ * "More" links.
+ */
+/* line 91, ../sass/components/_misc-rtl.scss */
+.more-link {
+  text-align: left;
+}
+
+/* line 94, ../sass/components/_misc-rtl.scss */
+.more-help-link {
+  text-align: left;
+}
+
+/* line 97, ../sass/components/_misc-rtl.scss */
+.more-help-link a {
+  background-position: 100% 50%;
+  padding: 1px 20px 1px 0;
+}
+
+/**
+ * Menus.
+ */
+/* line 105, ../sass/components/_misc-rtl.scss */
+.menu__item.is-collapsed {
+  list-style-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHAQMAAAD+nMWQAAAABlBMVEX///8AAABVwtN+AAAAAXRSTlMAQObYZgAAABNJREFUCB1j4GASYFJgcmD+A4IADUIDfIUMT4wAAAAASUVORK5CYII=');
+}
+
+/**
+ * Forms.
+ */
+/* Drupal's default login form block */
+/* line 117, ../sass/components/_misc-rtl.scss */
+#user-login-form {
+  text-align: right;
+}
+
+/* line 122, ../sass/components/_misc-rtl.scss */
+html.js #user-login-form li.openid-link,
+#user-login-form li.openid-link {
+  /* Un-do some of the padding on the ul list. */
+  margin-left: 0;
+  margin-right: -20px;
+}
+
+/*
+ * Drupal admin tables.
+ */
+/* line 132, ../sass/components/_misc-rtl.scss */
+form th {
+  text-align: right;
+  padding-left: 1em;
+  padding-right: 0;
+}
+
+/**
+ * Collapsible fieldsets.
+ *
+ * @see collapse.js
+ */
+/* line 145, ../sass/components/_misc-rtl.scss */
+html.js .collapsible .fieldset-legend {
+  background-position: 98% 75%;
+  padding-left: 0;
+  padding-right: 15px;
+}
+/* line 150, ../sass/components/_misc-rtl.scss */
+html.js .collapsed .fieldset-legend {
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHAQMAAAD+nMWQAAAABlBMVEX///8AAABVwtN+AAAAAXRSTlMAQObYZgAAABNJREFUCB1j4GASYFJgcmD+A4IADUIDfIUMT4wAAAAASUVORK5CYII=');
+  background-position: 98% 50%;
+}
+
+/* SMACSS theme rules */
+/* @import "theme-A-rtl"; */
+/* @import "theme-B-rtl"; */
